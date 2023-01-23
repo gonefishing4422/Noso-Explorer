@@ -27,7 +27,7 @@ crossorigin="anonymous">
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
     <!--style-->
   </head>
-  <body>
+  <body color="#222222" style="background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -280,7 +280,7 @@ crossorigin="anonymous">
               <div class="panel-head">
                 <h3 class="panel-title"><i class="ndDiv"></i> POPW POOLS</h3>
               </div>
-              <div class="panel-body"> 
+              <div class="panel-body">
                 <div id="chartdiv">
                   <div id="chartpool"></div>
                 </div>
@@ -300,7 +300,7 @@ crossorigin="anonymous">
             </div>
             <div class="panel-body">
               <div class="table-responsive">
-                <table class="table table-bordered table-hover table-striped tablesorter">
+                <table class="table table-bordered table-hover tablesorter">
                   <thead>
                     <tr>
                       <th>Height <i class="fa fa-sort"></i></th>
@@ -373,7 +373,7 @@ crossorigin="anonymous">
             </div>
             <div class="panel-body">
               <div class="table-responsive">
-                <table class="table table-bordered table-hover table-striped tablesorter">
+                <table class="table table-bordered table-hover tablesorter">
                   <thead>
                     <tr>
                       <th>Node Address <i class="fa fa-sort"></i></th>
@@ -446,7 +446,7 @@ crossorigin="anonymous">
             </div>
             <div class="panel-body">
               <div class="table-responsive">
-                <table class="table table-bordered table-hover table-striped tablesorter">
+                <table class="table table-bordered table-hover  tablesorter">
                   <thead>
                     <tr>
                       <th>Noso_Address </th>
