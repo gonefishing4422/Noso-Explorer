@@ -125,22 +125,26 @@ div {
   margin: 0;
   color: white;
   background-color: #222222;
-    display: flex;
-  align-items: center 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .announcement-text {
   margin: 0;
    color: darkgrey;
   background-color: #222222;
-      display: flex;
-  align-items: center
+   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .announcement-bottom {
   margin: 0;
    color: #fbe04d;
   background-color: #222222;
+
 }
 
 /* Nav Panel */
