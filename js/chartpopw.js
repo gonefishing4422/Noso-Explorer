@@ -32,7 +32,7 @@ am5.ready(function() {
             am5.Circle.new(root, {
               radius: 20,
               fillOpacity: 0.7,
-              fill: am5.color(0x5882FA), //
+              fill: am5.color(0xffffff), //
               cursorOverStyle: "pointer",
               tooltipText: `{name}: [bold]{value}[/]`
             }, circleTemplate)
@@ -92,7 +92,7 @@ am5.ready(function() {
             }
         }
         async function updateData() {
-          let response = await fetch('https://nosostats.com:49443/api/popwGlobe');
+          let response = await fetch('https://nosostats2.nosofish.xyz:49443/api/popwGlobe');
           let data = await response.json();
           bubbleSeries.data.setAll(data);
     	}
