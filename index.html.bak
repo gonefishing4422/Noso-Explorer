@@ -10,10 +10,8 @@
     <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
-
-integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
 crossorigin="anonymous">
 </script><!---chart-->
     <script src="js/chartpopw.js"></script>
@@ -27,17 +25,15 @@ crossorigin="anonymous">
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
     <!--style-->
   </head>
-  <body color="#222222" style="background-image: url(&quot;&quot;);">
+  <body color="#222222" style="     background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header"> <button type="button" class="navbar-toggle"
-
+        <div class="navbar-header"> <button type="button" class="navbar-toggle"
             data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle
               navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-            <span class="icon-bar"></span> </button><a class="navbar-brand" href="index.html"><img
-
+            <span class="icon-bar"></span> </button><a class="navbar-brand" href="index.html"><img
               src="img/logo_clearbg.png" alt="nosologo" title="nosologo" style="width: 20px; height: 20px;">
             Noso</a> </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -54,8 +50,7 @@ crossorigin="anonymous">
             <li><a href="bootstrap-grid.html"><i class="fa fa-wrench"></i>
                 Statistics</a></li>
             <li><a href="blank-page.html"><i class="fa fa-file"></i> Markets</a></li>
-            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
                   class="fa fa-caret-square-o-down"></i> About <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Dropdown Item</a></li>
@@ -79,9 +74,10 @@ crossorigin="anonymous">
             <div class="panel panel-info">
               <div class="panel-head">
                 <div class="row">
-                  <div class="col-xs-6 text-right">
-                    <p class="announcement-heading">93846</p>
-                    <p class="announcement-text">Last Block</p>
+                  <div class="col-xs-6">
+                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;">93846</p>
+                    <p class="announcement-text" style="width: 176px;">Last
+                      Block</p>
                   </div>
                 </div>
               </div>
@@ -121,8 +117,9 @@ crossorigin="anonymous">
               <div class="panel-head">
                 <div class="row">
                   <div class="col-xs-6 text-right">
-                    <p class="announcement-heading">2,564,200</p>
-                    <p class="announcement-text">MN Locked coins</p>
+                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;">2,564,200</p>
+                    <p class="announcement-text" style="width: 176px;">Locked
+                      coins</p>
                   </div>
                 </div>
               </div>
@@ -141,8 +138,9 @@ crossorigin="anonymous">
               <div class="panel-head">
                 <div class="row">
                   <div class="col-xs-6 text-right">
-                    <p class="announcement-heading">56</p>
-                    <p class="announcement-text">New Orders!</p>
+                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;">56</p>
+                    <p class="announcement-text" style="width: 176px;">New
+                      Orders!</p>
                   </div>
                 </div>
               </div>
@@ -165,8 +163,9 @@ crossorigin="anonymous">
               <div class="panel-head">
                 <div class="row">
                   <div class="col-xs-6 text-right">
-                    <p class="announcement-heading">1,000,000</p>
-                    <p class="announcement-text">Total Addresses</p>
+                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;">1,000,000</p>
+                    <p class="announcement-text" style="width: 176px;">Total
+                      Addresses</p>
                   </div>
                 </div>
               </div>
@@ -187,7 +186,7 @@ crossorigin="anonymous">
                 <div class="row">
                   <div class="col-xs-6 text-right">
                     <p class="announcement-heading" style="margin-left: 26px; width: 164px;">100ms</p>
-                    <p class="announcement-text">Network Latency</p>
+                    <p class="announcement-text" style="width: 176px;">Latency</p>
                   </div>
                 </div>
               </div>
@@ -207,7 +206,7 @@ crossorigin="anonymous">
                 <div class="row">
                   <div class="col-xs-6 text-right">
                     <p class="announcement-heading">49 </p>
-                    <p class="announcement-text">TPS</p>
+                    <p class="announcement-text" style="width: 176px;">TPS</p>
                   </div>
                 </div>
               </div>
@@ -226,8 +225,8 @@ crossorigin="anonymous">
               <div class="panel-head">
                 <div class="row">
                   <div class="col-xs-6 text-right">
-                    <p class="announcement-heading">$.04</p>
-                    <p class="announcement-text" style="width: 201px;">Average
+                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;">$.04</p>
+                    <p class="announcement-text" style="width: 176px;">Average
                       Coin Price (USD)</p>
                   </div>
                 </div>
