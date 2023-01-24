@@ -12,18 +12,18 @@ For more info and more free Bootstrap 3 HTML themes, visit http://startbootstrap
 
 body {
   margin-top: 50px;
-  background: #222222;
+  background: black;
 }
 h1 {
-  background-color: #222222;
+  background-color: black;
   color: white;
 }
 h3 {
-  background-color: #222222;
+  background-color: black;
   color: white;
 }
 h3 {
-  background-color: #222222;
+  background-color: black;
   color: white;
 }
 div {
@@ -32,13 +32,13 @@ div {
 
 #wrapper {
   padding-left: 0;
-  background: #222222;
+  background: black;
 }
 
 #page-wrapper {
   width: 100%;
   padding: 5px 15px;
-  background: #222222;
+  background: black;
 }
 
 /* Nav Messages */
@@ -66,43 +66,52 @@ div {
 .messages-dropdown .dropdown-menu .message-preview .time {
   font-size: 12px;
 }
-
+/* Nav header */
+.navbar-header {
+  margin: 0;
+  background-color: black;
+}
+.navbar-fixed-top {
+  margin: 0;
+  background-color: black;
+}  
 /* Nav col */
 .col-lg-3 {
   margin: 0;
-  background-color: #222222;
+  background-color: black;
 
 }
 .col-xs-6  {
   margin: 0;
-  background-color: #222222;
   color: #fbe04d;
-  
+ white-space: nowrap;
+}
+
+.text-right {
+  margin: 0;
 
 }
 
 .col-lg-12 {
   margin: 0;
-  background-color: #222222;
+  background-color: black;
 
 
 }
 /* Nav Panel */
 .panel {
   margin: 0;
-  background-color: #222222;
-  border: 1px solid black;
+  background-color: black;
+  border: 10px solid black;
 
 }
 .panel-info {
   margin: 0;
-  background-color: #222222;
-  border: 0px solid black;
+  background-color: black;
+  border: 5px solid black;
 
 }
-
-
-.panel-head {
+.panel-head-tiles {
   margin: 0;
   padding: 10px;
   background-color: #222222;
@@ -110,13 +119,33 @@ div {
 
 }
 
+.panel-head {
+  margin: 0;
+  padding: 10px;
+  background-color: black;
+  border: 0px solid darkgrey;
+
+}
+.panel-footer {
+  margin: 0;
+  padding: 10px;
+  background-color: #222222;
+  border: 0px solid darkgrey;
+
+}
+/* Nav Panel circle arrows */
+.fa-arrow-circle-right {
+ white-space: nowrap;
+
+}
 
 /* Nav row */
 .row {
   margin: 0;
-  background-color: #222222;
+  border: 0px solid black;
 
 }
+
 
 /* Nav Announcements */
 
@@ -124,26 +153,26 @@ div {
   font-size: 20px;
   margin: 0;
   color: white;
-  background-color: #222222;
+  
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
 
 }
 
 .announcement-text {
   margin: 0;
    color: darkgrey;
-  background-color: #222222;
+
    display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
 }
 
 .announcement-bottom {
   margin: 0;
    color: #fbe04d;
-  background-color: #222222;
+ 
 
 }
 
@@ -165,17 +194,17 @@ table.tablesorter thead tr th:hover {
 .table {
   margin: 0;
    color: darkgrey;
-  background-color: #222222;
+  background-color: black;
 }
 .table-bordered {
   margin: 0;
    color: darkgrey;
-  background-color: #222222;
+  background-color: black;
 }
 .table-hover {
   margin: 0;
    color: darkgrey;
-  background-color: #222222;
+  background-color: black;
 }
 .table-striped  {
   margin: 0;
@@ -185,7 +214,7 @@ table.tablesorter thead tr th:hover {
 .tablesorter  {
   margin: 0;
    color: darkgrey;
-  background-color: #222222;
+  background-color: black;
 }
 
 
@@ -208,12 +237,12 @@ table.tablesorter thead tr th:hover {
 
   #wrapper {
 	padding-left: 225px;
-	background: #222222;
+	background: black;
   }
 
   #page-wrapper {
 	padding: 15px 25px;
-	background: #222222;
+	background: black;
   }
 
   /* Side Nav */
@@ -227,7 +256,7 @@ table.tablesorter thead tr th:hover {
 	height: 100%;
 	border-radius: 0;
 	border: none;
-	background-color: #222222;
+	background-color: black;
 	overflow-y: auto;
   }
 
@@ -279,7 +308,7 @@ table.tablesorter thead tr th:hover {
 }
   /* charts */
 #chartdiv{
-  background-color: #222222;
+  background-color: black;
   border-color: #2c3e50;
   color: #FFF;
   border-radius: 25px;
@@ -291,7 +320,7 @@ table.tablesorter thead tr th:hover {
   height: 400px;
 }
 #chartdiv2{
-  background-color: #222222;
+  background-color: black;
   border-color: #2c3e50;
   color: #FFF;
   border-radius: 25px;
