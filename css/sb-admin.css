@@ -150,9 +150,9 @@ div {
 /* Nav Announcements */
 
 .announcement-heading {
-  font-size: 20px;
+  font-size: 30px;
   margin: 0;
-  color: white;
+  color: #fbe04d;
   
   display: flex;
   align-items: left;
