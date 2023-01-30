@@ -16,15 +16,36 @@ crossorigin="anonymous">
 </script><!---chart-->
     <script src="js/chartpopw.js"></script>
     <script src="js/chartnodes.js"></script>
-   <script type="text/javascript" src="main.js"></script>
+    <script>
+	var myArray = [
+	    {'name':'Michael', 'age':'30', 'birthdate':'11/10/1989'},
+	    {'name':'Mila', 'age':'32', 'birthdate':'10/1/1989'},
+	    {'name':'Paul', 'age':'29', 'birthdate':'10/14/1990'},
+	    {'name':'Dennis', 'age':'25', 'birthdate':'11/29/1993'},
+	    {'name':'Tim', 'age':'27', 'birthdate':'3/12/1991'},
+	    {'name':'Erik', 'age':'24', 'birthdate':'10/31/1995'},
+	]
+	
+	buildTable(myArray)
 
 
 
+	function buildTable(data){
+		var table = document.getElementById('myTable')
+
+		for (var i = 0; i < data.length; i++){
+			var row = `<tr>
+							<td>${data[i].name}</td>
+							<td>${data[i].age}</td>
+							<td>${data[i].birthdate}</td>
+					  </tr>`
+			table.innerHTML += row
 
 
+		}
+	}
 
-
-    <!-- Bootstrap core CSS -->
+</script> <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Add custom CSS here -->
     <link href="css/sb-admin.css" rel="stylesheet">
@@ -33,7 +54,7 @@ crossorigin="anonymous">
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
     <!--style-->
   </head>
-  <body color="#222222" style="         background-image: url(&quot;&quot;);">
+  <body color="#222222" style="           background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -66,7 +87,8 @@ crossorigin="anonymous">
               </ul>
             </li>
           </ul>
-        <!-- /.navbar-collapse --> </nav>
+          <!-- /.navbar-collapse --> </div>
+      </nav>
       <div id="page-wrapper">
         <div class="row">
           <div class="col-lg-12">
@@ -74,291 +96,75 @@ crossorigin="anonymous">
           </div>
         </div>
         <!-- /.row --> </div>
+      <div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+        <style>
+    th{ 
+        color:#fff;
+            }
+</style>
+        <table class="table table-striped">
+          <tbody>
+            <tr class="bg-info">
+              <th>Name</th>
+              <th>Age</th>
+              <th>Birthday</th>
+            </tr>
+          </tbody>
+          <tbody id="myTable">
+          </tbody>
+        </table>
       </div>
-      <div class="header">
-            
-            <div class="headerElement">
-                <div id="chartLabel"></div>
-                <div id ='ss'>
-                  <canvas id="networkStats"></canvas>
-                </div>
-            </div>
-            <div class="headerElement">
-                <div id="chartLabel">Mn's</div>
-                <div id ='ss'>
-                  <canvas id="blockTime"></canvas>
-                </div>
-            </div>
-            <div class="headerElement">
-                <div  id="chartLabel">Orders per Block</div>
-                  <div id ='ss'>
-                <canvas id="mini"></canvas>
-              </div>
-            </div>
-            <div class="headerElement">
-                <div id="chartLabel">Amounts per block</div>
-                  <div id ='ss'>
-                <canvas id="mid"></canvas>
-              </div>
-            </div>
-            <div class="headerElement">
-                <div id="chartLabel">Pending Orders</div>
-                <div id="big"></div>
-            </div>
-            </div>
-        <div class="mainPart">
-            <div class="menu">
-                <div id='newCounter'></div>
-    
-                <div id ='menuCharts'>
-                  <canvas id="distributionCanvas"></canvas>
-                </div>
-                <div id ='menuCharts'>
-                  <canvas id="clientCanvas"></canvas>
-                </div>
-                <div id ='menuCharts'>
-                  <canvas id="solCanvas"></canvas>
-                  </div>
-                </div>
-              <div class="result">
-                <div id='explorerBox'>
-                  <input id = 'searchBox'  name="blockNumber" placeholder="Search for Block ...">
-                </div>
-                <div class="halfVerical">
-                  <div id="blockChart"></div>
-                </div>
-                <div class="halfVerical">
-                  <div id="feesChart"></div>
-                </div>
-              
-
-                <div class="halfVerical">
-                  <div id="mnsChart"></div>
-                </div>
-                <div class="halfVerical">
-                  <div id="posChart"></div>
-                </div>
-              </div>
-
-            </div>
-        <script>
-            console.log('state :' , sessionStorage.state)
-            if (window.menuState === 'explorer1'){
-                document.getElementById("explorer1").style.backgroundColor = "RGBA(96, 125, 139)";
-                sessionStorage.setItem("state", 'explorer1')
-                //refreshExplorer1()
-              }
-              else {
-                //pendingOrders()
-              async function firstPass(){
-                let response2 = await fetch(sessionStorage.apiServer + 'dBheight');
-                let  dbHeight= await response2.json();
-                console.log('height' , dbHeight)
-                block = sessionStorage.getItem('searchedBlock');
-                state = sessionStorage.getItem('state');
-                document.getElementById('searchBox').value = block;
-                refreshExplorer1 (block)
-                console.log( 'out of fun' , window.blockData)
-                renderHTML();
-                }
-                firstPass()
-              //document.getElementById("explorer1").style.backgroundColor = "RGBA(207,207,0,0.56)";
-              sessionStorage.setItem("state", 'explorer1');
-              var el = document.getElementById("searchBox");
-              var target = document.getElementById('searchBox').value
-              el.addEventListener("keydown", function(event) {
-                  if (event.key === "Enter") {
-                    console.log( document.getElementById('searchBox').value)
-                    refreshExplorer1( document.getElementById('searchBox').value)
-                  }
-                });
-              block = sessionStorage.getItem('searchedBlock');
-              state = sessionStorage.getItem('state');
-              document.getElementById('searchBox').value = block;
-              document.getElementById("explorer1").style.backgroundColor = "RGBA(96, 125, 139)";
-              window.menuState = 'explorer1' ;
-              //refreshExplorer1() ;
-              }
-              //------------------------------------------------------------------------------------
-            async function refreshExplorer1(target){
-              console.log('state inside refresh :' , window.menuState)
-              document.getElementById("explorer1").style.backgroundColor = "RGBA(96, 125, 139)";
-              let response = await fetch(sessionStorage.apiServer + 'chartBlock/'+target);
-              let data = await response.json();
-              let blockData = data[0]
-              let mnsData  = data[1]
-              let posData = data[2]
-              let feeData = data[3]
-              //sessionStorage.setItem("blockData", blockData);
-              console.log('blockData' , blockData)
-              window.chartblock = target
-              window.blockFlag = 'True'
-              window.feeFlag = 'True'
-              window.mnsFlag = 'True'
-              window.posFlag = 'True'
-              window.blockData = blockData
-              window.mnsData = mnsData
-              window.posData = posData
-              window.feeData = feeData
-              
-
-              };
-              //------------------------------------------------------------------------------------------
-            function renderHTML() {
-              
-    
-                am5.ready(function() {
-                    var root = am5.Root.new("blockChart");
-                    root.setThemes([
-                      am5themes_Animated.new(root)
-                    ]);
-                    var series = root.container.children.push(am5flow.ChordDirected.new(root, {
-                      startAngle: 40,
-                      padAngle: 2,
-                      linkHeadRadius: undefined,
-                      sourceIdField: "from",
-                      targetIdField: "to",
-                      valueField: "value"
-                    }));
-                    series.nodes.labels.template.setAll({
-                      textType: "radial",
-                      centerX: 0,
-                      fontSize: 10
-                    });
-                    series.links.template.set("fillStyle", "source");
-                    setInterval(function() {
-                       updateData();
-                      }, 2000)
-                    async function updateData() {
-                        blockFlag = window.blockFlag
-                        if (blockFlag==='True'){
-                          series.hide(1000).then(function(ev) {
-                              console.log("Series finished hiding");
-                              data = window.blockData
-                              series.data.setAll(data);
-                              series.appear(1000, 100);
-                              window.blockFlag = 'False'
-                            })
-                        }
-                      }
-                    series.appear(100, 100);
-                  }); 
-                  //---------------------------------------------------------------------------------
-                
-                am5.ready(function() {
-                    var root = am5.Root.new("feesChart");
-                    root.setThemes([
-                      am5themes_Animated.new(root)
-                    ]);
-                    var series = root.container.children.push(am5flow.ChordDirected.new(root, {
-                      startAngle: 40,
-                      padAngle: 4,
-                      linkHeadRadius: undefined,
-                      sourceIdField: "from",
-                      targetIdField: "to",
-                      valueField: "value"
-                    }));
-                    series.nodes.labels.template.setAll({
-                      textType: "radial",
-                      centerX: 0,
-                      fontSize: 10
-                    });
-                    series.links.template.set("fillStyle", "source");
-                    setInterval(function() {
-                       updateData();
-                      }, 2000)
-                      async function updateData() {
-                        feeFlag = window.feeFlag
-                        if (feeFlag==='True'){
-                          series.hide(1000).then(function(ev) {
-                            console.log("Series finished hiding");
-                            data = window.feeData
-                            console.log('feeData' , feeData)
-                            series.data.setAll(data);
-                            series.appear(1000, 100);
-                            window.feeFlag = 'False'
-                          })
-                        }
-                      }
-                  }); 
-                  //---------------------------------------------------------------------------------
-                am5.ready(function() {
-                    var root = am5.Root.new("mnsChart");
-                    root.setThemes([
-                      am5themes_Animated.new(root)
-                    ]);
-                    var series = root.container.children.push(am5flow.ChordDirected.new(root, {
-                      startAngle: 185,
-                      padAngle: 1,
-                      linkHeadRadius: undefined,
-                      sourceIdField: "from",
-                      targetIdField: "to",
-                      valueField: "value"
-                    }));
-                    series.nodes.labels.template.setAll({
-                      textType: "radial",
-                      centerX: 0,
-                      fontSize: 10
-                    });
-                    series.links.template.set("fillStyle", "source");
-                    setInterval(function() {
-                       updateData();
-                      }, 2000)
-                      async function updateData() {
-                        mnsFlag = window.mnsFlag
-                        if (mnsFlag==='True'){
-                          series.hide(1000).then(function(ev) {
-                            console.log("Series finished hiding");
-                            data = window.mnsData
-                            series.data.setAll(data);
-                            series.appear(1000, 100);
-                            window.mnsFlag = 'False'
-                          })
-                        }
-                      } 
-                  }); 
-                  //---------------------------------------------------------------------------------
-                am5.ready(function() {
-                    var root = am5.Root.new("posChart");
-                    root.setThemes([
-                      am5themes_Animated.new(root)
-                    ]);
-                    var series = root.container.children.push(am5flow.ChordDirected.new(root, {
-                      startAngle: 180,
-                      padAngle: 1.2,
-                      linkHeadRadius: undefined,
-                      sourceIdField: "from",
-                      targetIdField: "to",
-                      valueField: "value"
-                    }));
-                    series.nodes.labels.template.setAll({
-                      textType: "radial",
-                      centerX: 0,
-                      fontSize: 11
-                    });
-                    series.links.template.set("fillStyle", "source");
-                    setInterval(function() {
-                       updateData();
-                      }, 2000)
-                      async function updateData() {
-                        posFlag = window.posFlag
-                        if (posFlag==='True'){
-                          series.hide(1000).then(function(ev) {
-                            console.log("Series finished hiding");
-                            data = window.posData
-                            series.data.setAll(data);
-                            series.appear(1000, 100);
-                            window.posFlag = 'False'
-                          })
-                        }
-                      }
-                  }); 
-                  //---------------------------------------------------------------------------------------
-                  
-              }
-
-
-
+    </div>
+    <div class="header">
+      <div class="headerElement">
+        <div id="chartLabel"></div>
+        <div id="ss"> <canvas id="networkStats"></canvas> </div>
+      </div>
+      <div class="headerElement">
+        <div id="chartLabel">Mn's</div>
+        <div id="ss"> <canvas id="blockTime"></canvas> </div>
+      </div>
+      <div class="headerElement">
+        <div id="chartLabel">Orders per Block</div>
+        <div id="ss"> <canvas id="mini"></canvas> </div>
+      </div>
+      <div class="headerElement">
+        <div id="chartLabel">Amounts per block</div>
+        <div id="ss"> <canvas id="mid"></canvas> </div>
+      </div>
+      <div class="headerElement">
+        <div id="chartLabel">Pending Orders</div>
+        <div id="big"></div>
+      </div>
+    </div>
+    <div class="mainPart">
+      <div class="menu">
+        <div id="newCounter"></div>
+        <div id="menuCharts"> <canvas id="distributionCanvas"></canvas> </div>
+        <div id="menuCharts"> <canvas id="clientCanvas"></canvas> </div>
+        <div id="menuCharts"> <canvas id="solCanvas"></canvas> </div>
+      </div>
+      <div class="result">
+        <div id="explorerBox"> <input id="searchBox" name="blockNumber" placeholder="Search for Block ...">
+        </div>
+        <div class="halfVerical">
+          <div id="blockChart"></div>
+        </div>
+        <div class="halfVerical">
+          <div id="feesChart"></div>
+        </div>
+        <div class="halfVerical">
+          <div id="mnsChart"></div>
+        </div>
+        <div class="halfVerical">
+          <div id="posChart"></div>
+        </div>
+      </div>
+    </div>
     <!-- /.row -->
     <!-- /#page-wrapper -->
     <!-- /#wrapper -->

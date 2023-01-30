@@ -32,7 +32,7 @@ am5.ready(function() {
             am5.Circle.new(root, {
               radius: 20,
               fillOpacity: 0.7,
-              fill: am5.color(0xffffff), //
+              fill: am5.color(0xbb9f06), //
               cursorOverStyle: "pointer",
               tooltipText: `{name}: [bold]{value}[/]`
             }, circleTemplate)

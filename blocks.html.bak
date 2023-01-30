@@ -16,6 +16,14 @@ crossorigin="anonymous">
 </script><!---chart-->
     <script src="js/chartpopw.js"></script>
     <script src="js/chartnodes.js"></script>
+   <script type="text/javascript" src="main.js"></script>
+
+
+
+
+
+
+
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Add custom CSS here -->
@@ -25,7 +33,7 @@ crossorigin="anonymous">
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
     <!--style-->
   </head>
-  <body color="#222222" style="     background-image: url(&quot;&quot;);">
+  <body color="#222222" style="         background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -41,15 +49,13 @@ crossorigin="anonymous">
           <ul class="nav navbar-nav side-nav">
             <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i>
                 Overview</a></li>
-            <li><a href="blocks.html"><i class="fa fa-bar-chart-o"></i> Blocks</a></li>
-            <li><a href="tables.html"> Coin Distribution</a></li>
-            <li><a href="forms.html"> Top Addresses</a></li>
-            <li><a href="typography.html"><i class="fa fa-font"></i> Masternodes</a></li>
-            <li><a href="bootstrap-elements.html"><i class="fa fa-desktop"></i>
-                Earning</a></li>
-            <li><a href="bootstrap-grid.html"><i class="fa fa-wrench"></i>
-                Statistics</a></li>
-            <li><a href="blank-page.html"><i class="fa fa-file"></i> Markets</a></li>
+            <li><a href="blocks.html">&nbsp;Blocks</a></li>
+            <li><a href="coins.html"> Coin Distribution</a></li>
+            <li><a href="addresses.html"> Top Addresses</a></li>
+            <li><a href="masternodes.html">Masternodes</a></li>
+            <li><a href="earning.html"> Earning</a></li>
+            <li><a href="statistics.html">Statistic</a></li>
+            <li><a href="markets.html">&nbsp;Markets</a></li>
             <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
                   class="fa fa-caret-square-o-down"></i> About <b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -60,450 +66,300 @@ crossorigin="anonymous">
               </ul>
             </li>
           </ul>
-        </div>
         <!-- /.navbar-collapse --> </nav>
       <div id="page-wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <h1>Noso <small>Explorer Overview</small></h1>
-          </div>
-        </div>
-        <!-- /.row -->
-        <div class="row">
-          <div class="col-lg-3">
-            <div class="panel panel-info">
-              <div class="panel-head">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;">93846</p>
-                    <p class="announcement-text" style="width: 176px;">Last
-                      Block</p>
-                  </div>
-                </div>
-              </div>
-              <a href="blocks.html">
-                <div class="panel-footer announcement-bottom">
-                  <div class="row">
-                    <div class="col-xs-6">Last Block</div>
-                    <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
-                    </div>
-                  </div>
-                </div>
-              </a> </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="panel panel-info">
-              <div class="panel-head">
-                <div class="row">
-                  <div class="col-xs-6 text-right">
-                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;">4,720,603</p>
-                    <p class="announcement-text" style="width: 176px;">Coins
-                      Circulating (NOSO)</p>
-                  </div>
-                </div>
-              </div>
-              <a href="#">
-                <div class="panel-footer announcement-bottom">
-                  <div class="row">
-                    <div class="col-xs-6">Coin Supply</div>
-                    <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
-                    </div>
-                  </div>
-                </div>
-              </a> </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="panel panel-info">
-              <div class="panel-head">
-                <div class="row">
-                  <div class="col-xs-6 text-right">
-                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;">2,564,200</p>
-                    <p class="announcement-text" style="width: 176px;">Locked
-                      coins</p>
-                  </div>
-                </div>
-              </div>
-              <a href="#">
-                <div class="panel-footer announcement-bottom">
-                  <div class="row">
-                    <div class="col-xs-6">Coins Locked in MN</div>
-                    <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
-                    </div>
-                  </div>
-                </div>
-              </a> </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="panel panel-info">
-              <div class="panel-head">
-                <div class="row">
-                  <div class="col-xs-6 text-right">
-                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;">56</p>
-                    <p class="announcement-text" style="width: 176px;">New
-                      Orders!</p>
-                  </div>
-                </div>
-              </div>
-              <a href="#">
-                <div class="panel-footer announcement-bottom">
-                  <div class="row">
-                    <div class="col-xs-6">New Orders</div>
-                    <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
-                    </div>
-                  </div>
-                </div>
-              </a> </div>
-          </div>
-        </div>
-        <!-- /.row -->
-        <!-- /.row -->
-        <div class="row">
-          <div class="col-lg-3">
-            <div class="panel panel-info">
-              <div class="panel-head">
-                <div class="row">
-                  <div class="col-xs-6 text-right">
-                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;">1,000,000</p>
-                    <p class="announcement-text" style="width: 176px;">Total
-                      Addresses</p>
-                  </div>
-                </div>
-              </div>
-              <a href="#">
-                <div class="panel-footer announcement-bottom">
-                  <div class="row">
-                    <div class="col-xs-6" style="margin-left: -2px; width: 190px;">Total
-                      Noso Addresses</div>
-                    <div class="col-xs-6 text-right" style="margin-left: 33px; width: 61px;">
-                      <i class="fa fa-arrow-circle-right"></i> </div>
-                  </div>
-                </div>
-              </a> </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="panel panel-info">
-              <div class="panel-head">
-                <div class="row">
-                  <div class="col-xs-6 text-right">
-                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;">100ms</p>
-                    <p class="announcement-text" style="width: 176px;">Latency</p>
-                  </div>
-                </div>
-              </div>
-              <a href="#">
-                <div class="panel-footer announcement-bottom">
-                  <div class="row">
-                    <div class="col-xs-6">Network Latency</div>
-                    <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
-                    </div>
-                  </div>
-                </div>
-              </a> </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="panel panel-info">
-              <div class="panel-head">
-                <div class="row">
-                  <div class="col-xs-6 text-right">
-                    <p class="announcement-heading">49 </p>
-                    <p class="announcement-text" style="width: 176px;">TPS</p>
-                  </div>
-                </div>
-              </div>
-              <a href="#">
-                <div class="panel-footer announcement-bottom">
-                  <div class="row">
-                    <div class="col-xs-6">Transactions/second</div>
-                    <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
-                    </div>
-                  </div>
-                </div>
-              </a> </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="panel panel-info">
-              <div class="panel-head">
-                <div class="row">
-                  <div class="col-xs-6 text-right">
-                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;">$.04</p>
-                    <p class="announcement-text" style="width: 176px;">Average
-                      Coin Price (USD)</p>
-                  </div>
-                </div>
-              </div>
-              <a href="#">
-                <div class="panel-footer announcement-bottom">
-                  <div class="row">
-                    <div class="col-xs-6">Average Price</div>
-                    <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
-                    </div>
-                  </div>
-                </div>
-              </a> </div>
-          </div>
-        </div>
-        <!-- /.row -->
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="panel panel-primary">
-              <div class="panel-head">
-                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i>
-                  MASTERNODES</h3>
-              </div>
-              <div class="panel-body">
-                <div id="chartdiv">
-                  <div id="chartnodes"></div>
-                </div>
-                <div class="text-right"> <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="panel panel-primary">
-              <div class="panel-head">
-                <h3 class="panel-title"><i class="fa fa-clock-o"></i> POPW
-                  PARTICIPATION</h3>
-              </div>
-              <div class="panel-body">
-                <div id="chartdiv2">
-                  <div id="chartpopw"></div>
-                </div>
-                <div class="text-right"> <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="panel panel-primary">
-              <div class="panel-head">
-                <h3 class="panel-title"><i class="ndDiv"></i> POPW POOLS</h3>
-              </div>
-              <div class="panel-body">
-                <div id="chartdiv">
-                  <div id="chartpool"></div>
-                </div>
-                <div class="text-right"><a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-              </div>
-            </div>
+            <h1>Noso <small>Block Explorer</small></h1>
           </div>
         </div>
         <!-- /.row --> </div>
-      <!-- /.row -->
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="panel panel-primary">
-            <div class="panel-head">
-              <h3 class="panel-title"> LATEST BLOCKS</h3>
-            </div>
-            <div class="panel-body">
-              <div class="table-responsive">
-                <table class="table table-bordered table-hover tablesorter">
-                  <thead>
-                    <tr>
-                      <th>Height <i class="fa fa-sort"></i></th>
-                      <th>Date </th>
-                      <th>Creator <i class="fa fa-sort"></i></th>
-                      <th>Orders <i class="fa fa-sort"></i></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>93326</td>
-                      <td>10/212013</td>
-                      <td>Gonefishing</td>
-                      <td>15</td>
-                    </tr>
-                    <tr>
-                      <td>93325</td>
-                      <td>10/21/2013</td>
-                      <td>Estripia</td>
-                      <td>19</td>
-                    </tr>
-                    <tr>
-                      <td>93324</td>
-                      <td>10/21/2013</td>
-                      <td>Propool</td>
-                      <td>30</td>
-                    </tr>
-                    <tr>
-                      <td>93323</td>
-                      <td>10/21/2013</td>
-                      <td>NosoMN</td>
-                      <td>200</td>
-                    </tr>
-                    <tr>
-                      <td>93322</td>
-                      <td>10/21/2013</td>
-                      <td>Auspool</td>
-                      <td>300</td>
-                    </tr>
-                    <tr>
-                      <td>93321</td>
-                      <td>10/21/2013</td>
-                      <td>Gonefishing</td>
-                      <td>3</td>
-                    </tr>
-                    <tr>
-                      <td>93320</td>
-                      <td>10/21/2013</td>
-                      <td>ProPool</td>
-                      <td>8</td>
-                    </tr>
-                    <tr>
-                      <td>93319</td>
-                      <td>10/21/2013</td>
-                      <td>Estripia</td>
-                      <td>54</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="text-right"> <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="panel panel-primary">
-            <div class="panel-head">
-              <h3 class="panel-title"> TOP MASTERNODES</h3>
-            </div>
-            <div class="panel-body">
-              <div class="table-responsive">
-                <table class="table table-bordered table-hover tablesorter">
-                  <thead>
-                    <tr>
-                      <th>Node Address <i class="fa fa-sort"></i></th>
-                      <th>Node IP<i class="fa fa-sort"></i></th>
-                      <th>Order Time <i class="fa fa-sort"></i></th>
-                      <th>Region<i class="fa fa-sort"></i></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>N43kqHxEFTnhw13PDv</td>
-                      <td>1.2.3.4</td>
-                      <td>3:29 PM</td>
-                      <td>Beijing</td>
-                    </tr>
-                    <tr>
-                      <td>N43kqHxEFTnhw13PDv</td>
-                      <td>1.2.3.4</td>
-                      <td>3:20 PM</td>
-                      <td>Beijing</td>
-                    </tr>
-                    <tr>
-                      <td>N43kqHxEFTnhw13PDv</td>
-                      <td>1.2.3.4</td>
-                      <td>3:03 PM</td>
-                      <td>Beijing</td>
-                    </tr>
-                    <tr>
-                      <td>N43kqHxEFTnhw13PDv</td>
-                      <td>1.2.3.4</td>
-                      <td>3:00 PM</td>
-                      <td>Beijing</td>
-                    </tr>
-                    <tr>
-                      <td>N43kqHxEFTnhw13PDv</td>
-                      <td>1.2.3.4</td>
-                      <td>2:49 PM</td>
-                      <td>Beijing</td>
-                    </tr>
-                    <tr>
-                      <td>N43kqHxEFTnhw13PDv</td>
-                      <td>1.2.3.4</td>
-                      <td>2:23 PM</td>
-                      <td>Beijing</td>
-                    </tr>
-                    <tr>
-                      <td>N43kqHxEFTnhw13PDv</td>
-                      <td>1.2.3.4</td>
-                      <td>2:15 PM</td>
-                      <td>Beijing</td>
-                    </tr>
-                    <tr>
-                      <td>N43kqHxEFTnhw13PDv</td>
-                      <td>1.2.3.4</td>
-                      <td>2:13 PM</td>
-                      <td>Beijing</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="text-right"> <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="panel panel-primary">
-            <div class="panel-head">
-              <h3 class="panel-title"> TOP NOSO ADDRESSES</h3>
-            </div>
-            <div class="panel-body">
-              <div class="table-responsive">
-                <table class="table table-bordered table-hover  tablesorter">
-                  <thead>
-                    <tr>
-                      <th>Noso_Address </th>
-                      <th>Address_Age </th>
-                      <th>Amount (NOSO) <i class="fa fa-sort"></i></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>N33kqHxEFTnhw13PDv</td>
-                      <td>10/212013</td>
-                      <td>100,995</td>
-                    </tr>
-                    <tr>
-                      <td>N33kqHxEFTnhw13PDv</td>
-                      <td>10/21/2013</td>
-                      <td>99,555</td>
-                    </tr>
-                    <tr>
-                      <td>N33kqHxEFTnhw13PDv</td>
-                      <td>10/21/2013</td>
-                      <td>20,002</td>
-                    </tr>
-                    <tr>
-                      <td>N33kqHxEFTnhw13PDv</td>
-                      <td>10/21/2013</td>
-                      <td>15,520</td>
-                    </tr>
-                    <tr>
-                      <td>N33kqHxEFTnhw13PDv</td>
-                      <td>10/21/2013</td>
-                      <td>12,564</td>
-                    </tr>
-                    <tr>
-                      <td>N33kqHxEFTnhw13PDv</td>
-                      <td>10/21/2013</td>
-                      <td>11,154</td>
-                    </tr>
-                    <tr>
-                      <td>N33kqHxEFTnhw13PDv</td>
-                      <td>10/21/2013</td>
-                      <td>11,300</td>
-                    </tr>
-                    <tr>
-                      <td>N33kqHxEFTnhw13PDv</td>
-                      <td>10/21/2013</td>
-                      <td>10,601</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="text-right"><a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-      <!-- /.row --> </div>
+      <div class="header">
+            
+            <div class="headerElement">
+                <div id="chartLabel"></div>
+                <div id ='ss'>
+                  <canvas id="networkStats"></canvas>
+                </div>
+            </div>
+            <div class="headerElement">
+                <div id="chartLabel">Mn's</div>
+                <div id ='ss'>
+                  <canvas id="blockTime"></canvas>
+                </div>
+            </div>
+            <div class="headerElement">
+                <div  id="chartLabel">Orders per Block</div>
+                  <div id ='ss'>
+                <canvas id="mini"></canvas>
+              </div>
+            </div>
+            <div class="headerElement">
+                <div id="chartLabel">Amounts per block</div>
+                  <div id ='ss'>
+                <canvas id="mid"></canvas>
+              </div>
+            </div>
+            <div class="headerElement">
+                <div id="chartLabel">Pending Orders</div>
+                <div id="big"></div>
+            </div>
+            </div>
+        <div class="mainPart">
+            <div class="menu">
+                <div id='newCounter'></div>
+    
+                <div id ='menuCharts'>
+                  <canvas id="distributionCanvas"></canvas>
+                </div>
+                <div id ='menuCharts'>
+                  <canvas id="clientCanvas"></canvas>
+                </div>
+                <div id ='menuCharts'>
+                  <canvas id="solCanvas"></canvas>
+                  </div>
+                </div>
+              <div class="result">
+                <div id='explorerBox'>
+                  <input id = 'searchBox'  name="blockNumber" placeholder="Search for Block ...">
+                </div>
+                <div class="halfVerical">
+                  <div id="blockChart"></div>
+                </div>
+                <div class="halfVerical">
+                  <div id="feesChart"></div>
+                </div>
+              
+
+                <div class="halfVerical">
+                  <div id="mnsChart"></div>
+                </div>
+                <div class="halfVerical">
+                  <div id="posChart"></div>
+                </div>
+              </div>
+
+            </div>
+        <script>
+            console.log('state :' , sessionStorage.state)
+            if (window.menuState === 'explorer1'){
+                document.getElementById("explorer1").style.backgroundColor = "RGBA(96, 125, 139)";
+                sessionStorage.setItem("state", 'explorer1')
+                //refreshExplorer1()
+              }
+              else {
+                //pendingOrders()
+              async function firstPass(){
+                let response2 = await fetch(sessionStorage.apiServer + 'dBheight');
+                let  dbHeight= await response2.json();
+                console.log('height' , dbHeight)
+                block = sessionStorage.getItem('searchedBlock');
+                state = sessionStorage.getItem('state');
+                document.getElementById('searchBox').value = block;
+                refreshExplorer1 (block)
+                console.log( 'out of fun' , window.blockData)
+                renderHTML();
+                }
+                firstPass()
+              //document.getElementById("explorer1").style.backgroundColor = "RGBA(207,207,0,0.56)";
+              sessionStorage.setItem("state", 'explorer1');
+              var el = document.getElementById("searchBox");
+              var target = document.getElementById('searchBox').value
+              el.addEventListener("keydown", function(event) {
+                  if (event.key === "Enter") {
+                    console.log( document.getElementById('searchBox').value)
+                    refreshExplorer1( document.getElementById('searchBox').value)
+                  }
+                });
+              block = sessionStorage.getItem('searchedBlock');
+              state = sessionStorage.getItem('state');
+              document.getElementById('searchBox').value = block;
+              document.getElementById("explorer1").style.backgroundColor = "RGBA(96, 125, 139)";
+              window.menuState = 'explorer1' ;
+              //refreshExplorer1() ;
+              }
+              //------------------------------------------------------------------------------------
+            async function refreshExplorer1(target){
+              console.log('state inside refresh :' , window.menuState)
+              document.getElementById("explorer1").style.backgroundColor = "RGBA(96, 125, 139)";
+              let response = await fetch(sessionStorage.apiServer + 'chartBlock/'+target);
+              let data = await response.json();
+              let blockData = data[0]
+              let mnsData  = data[1]
+              let posData = data[2]
+              let feeData = data[3]
+              //sessionStorage.setItem("blockData", blockData);
+              console.log('blockData' , blockData)
+              window.chartblock = target
+              window.blockFlag = 'True'
+              window.feeFlag = 'True'
+              window.mnsFlag = 'True'
+              window.posFlag = 'True'
+              window.blockData = blockData
+              window.mnsData = mnsData
+              window.posData = posData
+              window.feeData = feeData
+              
+
+              };
+              //------------------------------------------------------------------------------------------
+            function renderHTML() {
+              
+    
+                am5.ready(function() {
+                    var root = am5.Root.new("blockChart");
+                    root.setThemes([
+                      am5themes_Animated.new(root)
+                    ]);
+                    var series = root.container.children.push(am5flow.ChordDirected.new(root, {
+                      startAngle: 40,
+                      padAngle: 2,
+                      linkHeadRadius: undefined,
+                      sourceIdField: "from",
+                      targetIdField: "to",
+                      valueField: "value"
+                    }));
+                    series.nodes.labels.template.setAll({
+                      textType: "radial",
+                      centerX: 0,
+                      fontSize: 10
+                    });
+                    series.links.template.set("fillStyle", "source");
+                    setInterval(function() {
+                       updateData();
+                      }, 2000)
+                    async function updateData() {
+                        blockFlag = window.blockFlag
+                        if (blockFlag==='True'){
+                          series.hide(1000).then(function(ev) {
+                              console.log("Series finished hiding");
+                              data = window.blockData
+                              series.data.setAll(data);
+                              series.appear(1000, 100);
+                              window.blockFlag = 'False'
+                            })
+                        }
+                      }
+                    series.appear(100, 100);
+                  }); 
+                  //---------------------------------------------------------------------------------
+                
+                am5.ready(function() {
+                    var root = am5.Root.new("feesChart");
+                    root.setThemes([
+                      am5themes_Animated.new(root)
+                    ]);
+                    var series = root.container.children.push(am5flow.ChordDirected.new(root, {
+                      startAngle: 40,
+                      padAngle: 4,
+                      linkHeadRadius: undefined,
+                      sourceIdField: "from",
+                      targetIdField: "to",
+                      valueField: "value"
+                    }));
+                    series.nodes.labels.template.setAll({
+                      textType: "radial",
+                      centerX: 0,
+                      fontSize: 10
+                    });
+                    series.links.template.set("fillStyle", "source");
+                    setInterval(function() {
+                       updateData();
+                      }, 2000)
+                      async function updateData() {
+                        feeFlag = window.feeFlag
+                        if (feeFlag==='True'){
+                          series.hide(1000).then(function(ev) {
+                            console.log("Series finished hiding");
+                            data = window.feeData
+                            console.log('feeData' , feeData)
+                            series.data.setAll(data);
+                            series.appear(1000, 100);
+                            window.feeFlag = 'False'
+                          })
+                        }
+                      }
+                  }); 
+                  //---------------------------------------------------------------------------------
+                am5.ready(function() {
+                    var root = am5.Root.new("mnsChart");
+                    root.setThemes([
+                      am5themes_Animated.new(root)
+                    ]);
+                    var series = root.container.children.push(am5flow.ChordDirected.new(root, {
+                      startAngle: 185,
+                      padAngle: 1,
+                      linkHeadRadius: undefined,
+                      sourceIdField: "from",
+                      targetIdField: "to",
+                      valueField: "value"
+                    }));
+                    series.nodes.labels.template.setAll({
+                      textType: "radial",
+                      centerX: 0,
+                      fontSize: 10
+                    });
+                    series.links.template.set("fillStyle", "source");
+                    setInterval(function() {
+                       updateData();
+                      }, 2000)
+                      async function updateData() {
+                        mnsFlag = window.mnsFlag
+                        if (mnsFlag==='True'){
+                          series.hide(1000).then(function(ev) {
+                            console.log("Series finished hiding");
+                            data = window.mnsData
+                            series.data.setAll(data);
+                            series.appear(1000, 100);
+                            window.mnsFlag = 'False'
+                          })
+                        }
+                      } 
+                  }); 
+                  //---------------------------------------------------------------------------------
+                am5.ready(function() {
+                    var root = am5.Root.new("posChart");
+                    root.setThemes([
+                      am5themes_Animated.new(root)
+                    ]);
+                    var series = root.container.children.push(am5flow.ChordDirected.new(root, {
+                      startAngle: 180,
+                      padAngle: 1.2,
+                      linkHeadRadius: undefined,
+                      sourceIdField: "from",
+                      targetIdField: "to",
+                      valueField: "value"
+                    }));
+                    series.nodes.labels.template.setAll({
+                      textType: "radial",
+                      centerX: 0,
+                      fontSize: 11
+                    });
+                    series.links.template.set("fillStyle", "source");
+                    setInterval(function() {
+                       updateData();
+                      }, 2000)
+                      async function updateData() {
+                        posFlag = window.posFlag
+                        if (posFlag==='True'){
+                          series.hide(1000).then(function(ev) {
+                            console.log("Series finished hiding");
+                            data = window.posData
+                            series.data.setAll(data);
+                            series.appear(1000, 100);
+                            window.posFlag = 'False'
+                          })
+                        }
+                      }
+                  }); 
+                  //---------------------------------------------------------------------------------------
+                  
+              }
+
+
+
+    <!-- /.row -->
     <!-- /#page-wrapper -->
     <!-- /#wrapper -->
     <!-- JavaScript -->
