@@ -17,6 +17,9 @@ integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6h
 
 crossorigin="anonymous">
     </script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	 <script src="app.js"></script>
+    
     <script src="js/chartpopw.js"></script>
     <script src="js/chartnodes.js"></script>
     <script src="js/chartpool.js"></script>
@@ -37,7 +40,7 @@ crossorigin="anonymous">
   </head>
   <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();"
 
-    color="#222222" style="                                     background-image: url(&quot;&quot;);">
+    color="#222222" style="                                      background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -69,29 +72,29 @@ crossorigin="anonymous">
         <div class="row">
           <div class="col-lg-12">
             <!-- /.place Search here -->
-                 <div class="row">
-          <div class="container mt-5">
-            <p class="announcement-heading" style="margin-left: 26px; width: 300px;">Block
-              Search</p>
-            <br>
-            <form id="block-number-form">
-              <div class="mb-3"> <label for="block-number-input" class="form-label"><font
+            <div class="row">
+              <div class="container mt-5">
+                <p class="announcement-heading" style="margin-left: 26px; width: 300px;">Block
+                  Search</p>
+                <br>
+                <form id="block-number-form">
+                  <div class="mb-3"> <label for="block-number-input" class="form-label"><font
 
-                    color="white">Block Number:</font></label> <input class="form-control"
+                        color="white">Block Number:</font></label> <input
 
-                  id="block-number-input" name="blockNumber" required="" type="text">
+                      class="form-control" id="block-number-input" name="blockNumber"
+
+                      required="" type="text"> </div>
+                  <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+                <div id="block-number-results" class="mt-3">
+                  <!-- Results will be displayed here --> </div>
               </div>
-              <button type="submit" class="btn btn-primary">Search</button> </form>
-            <div id="block-number-results" class="mt-3">
-              <!-- Results will be displayed here --> </div>
+            </div>
           </div>
         </div>
-          </div>
-        </div>
-        <!-- /.row -->
-
-        </div>
-        <!-- /.row --> </font></div>
+        <!-- /.row --> </div>
+      <!-- /.row --> </div>
     <font size="2">
       <!-- /#page-wrapper -->
       <!-- /#wrapper -->
