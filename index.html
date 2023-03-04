@@ -24,6 +24,7 @@ crossorigin="anonymous">
     <script src="js/supply.js"></script>
     <script src="js/circulating.js"></script>
     <script src="js/pendingorders.js"></script>
+    <script src="js/countdown.js"></script>
     <!---chart-->
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -34,9 +35,9 @@ crossorigin="anonymous">
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
     <!--style-->
   </head>
-  <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();"
+  <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();fetchCountdown();"
 
-    color="#222222" style="                                     background-image: url(&quot;&quot;);">
+    color="#222222" style="                                          background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -178,16 +179,18 @@ crossorigin="anonymous">
                 <div class="panel-head-tiles">
                   <div class="row">
                     <div class="col-xs-6 text-right">
-                      <p class="announcement-heading" style="margin-left: 26px; width: 164px;">5,642</p>
-                      <p class="announcement-text" style="width: 176px;">Total
-                        Addresses</p>
+                      <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
+
+                          id="countdown-timer">0</span></p>
+                      <p class="announcement-text" style="width: 176px;">Block
+                        Time Remaining</p>
                     </div>
                   </div>
                 </div>
-                <a href="charts.html">
+                <a href="explorer.html">
                   <div class="panel-footer announcement-bottom">
                     <div class="row">
-                      <div class="col-xs-6">Total&nbsp; Addresses</div>
+                      <div class="col-xs-6">Block Explorer</div>
                       <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
                       </div>
                     </div>
