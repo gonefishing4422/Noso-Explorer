@@ -36,7 +36,7 @@ crossorigin="anonymous">
   </head>
   <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();"
 
-    color="#222222" style="                          background-image: url(&quot;&quot;);">
+    color="#222222" style="                              background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -77,14 +77,14 @@ crossorigin="anonymous">
                 <div class="row">
                   <div class="col-xs-6">
                     <p class="announcement-heading" style="margin-left: 26px; width: 164px;">
-                      <span id="bestheight"></span> <br>
-                      <font class="announcement-subheading">&nbsp;</font></p>
+                      <span id="bestheight">0</span> <br>
+                      <font class="announcement-subheading"></font></p>
                     <p class="announcement-text" style="width: 176px;"><font color="white">
                       </font>&nbsp; Block Height<font size="2"></font></p>
                   </div>
                 </div>
               </div>
-              <a href="blocks.html">
+              <a href="explorer.html">
                 <div class="panel-footer announcement-bottom">
                   <div class="row">
                     <div class="col-xs-6">Block Explorer</div>
@@ -100,7 +100,7 @@ crossorigin="anonymous">
                 <div class="row">
                   <div class="col-xs-6 text-right">
                     <p class="announcement-heading" style="margin-left: 26px; width: 164px;">
-                      <span id="supply"></span> <br>
+                      <span id="supply">0</span> <br>
                       <font class="announcement-subheading">21M</font> </p>
                     <font size="2">
                       <p class="announcement-text" style="width: 176px;"><font &gt;=""
@@ -110,15 +110,17 @@ crossorigin="anonymous">
                     </font></div>
                 </div>
               </div>
-              <font size="2"> <a href="#">
-                  <div class="panel-footer announcement-bottom">
+              <font size="2"> <a href="#"> </a>
+                <div class="panel-footer announcement-bottom"><a href="#"> </a><a
+
+                    href="coins.html">
                     <div class="row">
                       <div class="col-xs-6">Coin Supply</div>
                       <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
                       </div>
                     </div>
-                  </div>
-                </a> </font></div>
+                  </a></div>
+                <a href="coins.html"> </a> </font></div>
             <font size="2"> </font></div>
           <font size="2">
             <div class="col-lg-3">
