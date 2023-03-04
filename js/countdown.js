@@ -10,7 +10,7 @@ function fetchCountdown() {
       document.getElementById('countdown-timer').innerHTML = `${minutes}m ${seconds}s`;
       if (distance < 0) {
         clearInterval(countdownTimer);
-        document.getElementById('countdown-timer').innerHTML = 'EXPIRED';
+        document.getElementById('countdown-timer').innerHTML = 'Block Created';
       }
     })
     .catch(error => {
