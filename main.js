@@ -3,9 +3,7 @@
             //--------------------------------------------------------------------------------
             //let apiServer = 'http://nosostatsmirror.ddns.net:49001/api/' 
             //let apiServer = 'http://nosostats.ddns.net:49001/api/' 
-            //let apiServer = 'http://iscal.ddns.net:49001/api/' 
-            //let apiServer = 'http://nosostats.nosofish.xyz:49001/api/' 
-            let apiServer = 'https://nosostats2.nosofish.xyz:49443/api/' 
+            let apiServer = 'https://nosostats.com:49443/api/' 
             sessionStorage.setItem("apiServer", apiServer);  
             //--------------------------------------------------------------------------------
             //------------------------------xxxxxxxxxxxxxx------------------------------------

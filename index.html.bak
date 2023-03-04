@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="refresh" content="120">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="refresh" content="120">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -11,8 +11,10 @@
     <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
-integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+
+integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+
 crossorigin="anonymous">
     </script>
     <script src="js/chartpopw.js"></script>
@@ -21,6 +23,7 @@ crossorigin="anonymous">
     <script src="js/height.js"></script>
     <script src="js/supply.js"></script>
     <script src="js/circulating.js"></script>
+    <script src="js/pendingorders.js"></script>
     <!---chart-->
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -31,16 +34,19 @@ crossorigin="anonymous">
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
     <!--style-->
   </head>
-  <body onload="loadBestHeight();loadSupply();loadCirculating();" color="#222222"
-    style="                      background-image: url(&quot;&quot;);">
+  <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();"
+
+    color="#222222" style="                          background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header"> <button type="button" class="navbar-toggle"
+        <div class="navbar-header"> <button type="button" class="navbar-toggle"
+
             data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle
               navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-            <span class="icon-bar"></span> </button><a class="navbar-brand" href="index.html"><img
+            <span class="icon-bar"></span> </button><a class="navbar-brand" href="index.html"><img
+
               src="img/logo_clearbg.png" alt="nosologo" title="nosologo" style="width: 20px; height: 20px;">&nbsp;
             Noso Explorer</a> </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -48,15 +54,13 @@ crossorigin="anonymous">
           <ul class="nav navbar-nav side-nav">
             <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i>
                 NosoStats</a></li>
-            <li><a href="explorer.html"><i class="fa fa-bar-chart-o"></i>
-                Explorer</a></li>
+            <li><a href="explorer.html">Explorer</a></li>
             <li><a href="coins.html"> Coin Distribution</a></li>
             <li><a href="addresses.html"> Top Addresses</a></li>
-            <li><a href="Masternodes.html"><i class="fa fa-font"></i> Master
-                nodes</a></li>
-            <li><a href="earn.html"><i class="fa fa-desktop"></i> Earning</a></li>
-            <li><a href="charts.html"><i class="fa fa-wrench"></i> Charts</a></li>
-            <li><a href="market.html"><i class="fa fa-file"></i> Markets</a></li>
+            <li><a href="masternodes.html"> Masternodes</a></li>
+            <li><a href="earn.html">Earning</a></li>
+            <li><a href="charts.html">Charts</a></li>
+            <li><a href="market.html">&nbsp;Markets</a></li>
           </ul>
         </div>
         <!-- /.navbar-collapse --> </nav>
@@ -99,7 +103,8 @@ crossorigin="anonymous">
                       <span id="supply"></span> <br>
                       <font class="announcement-subheading">21M</font> </p>
                     <font size="2">
-                      <p class="announcement-text" style="width: 176px;"><font &gt;=""
+                      <p class="announcement-text" style="width: 176px;"><font &gt;=""
+
                           color="white"><span id="circulating">10%</span> </font>&nbsp;
                         Circulating<font size="2"></font></p>
                     </font></div>
@@ -143,7 +148,9 @@ crossorigin="anonymous">
                 <div class="panel-head-tiles">
                   <div class="row">
                     <div class="col-xs-6 text-right">
-                      <p class="announcement-heading" style="margin-left: 26px; width: 164px;">56</p>
+                      <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
+
+                          id="pendingorders">0</span></p>
                       <p class="announcement-text" style="width: 176px;">New
                         Orders</p>
                     </div>
