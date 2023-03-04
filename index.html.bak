@@ -34,7 +34,7 @@ crossorigin="anonymous">
   </head>
   <body onload="loadBestHeight();loadSupply();loadCirculating();" color="#222222"
 
-    style="            background-image: url(&quot;&quot;);">
+    style="              background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -86,9 +86,9 @@ crossorigin="anonymous">
               <div class="panel-head-tiles">
                 <div class="row">
                   <div class="col-xs-6">
-                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;"
-
-                      id="bestheight"></p>
+                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;">
+                      
+                    <span id="bestheight"></span>
                     <p class="announcement-text" style="width: 176px;"><font color="white">
                       </font>&nbsp; Block Height<font size="2"></font></p>
                   </div>
@@ -110,14 +110,12 @@ crossorigin="anonymous">
                 <div class="row">
                   <div class="col-xs-6 text-right">
                     <p class="announcement-heading" style="margin-left: 26px; width: 164px;">
-
                       <span id="supply"></span> <br>
-                      <font class="announcement-subheading">21M</font>
-                    </p>
+                      <font class="announcement-subheading">21M</font> </p>
                     <font size="2">
                       <p class="announcement-text" style="width: 176px;"><font &gt;=""
 
-                          color="white"><span id="circulating"></span> </font>&nbsp;
+                          color="white"><span id="circulating">33</span> </font>&nbsp;
                         Circulating<font size="2"></font></p>
                     </font></div>
                 </div>
