@@ -20,6 +20,8 @@ crossorigin="anonymous">
     <script src="js/chartnodes.js"></script>
     <script src="js/chartpool.js"></script>
     <script src="js/height.js"></script>
+    <script src="js/supply.js"></script>
+    <script src="js/circulating.js"></script>
     <!---chart-->
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -30,7 +32,9 @@ crossorigin="anonymous">
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
     <!--style-->
   </head>
-  <body onload="loadBestHeight()" color="#222222" style="               background-image: url(&quot;&quot;);">
+  <body onload="loadBestHeight();loadSupply();loadCirculating();" color="#222222"
+
+    style="            background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -85,8 +89,9 @@ crossorigin="anonymous">
                     <p class="announcement-heading" style="margin-left: 26px; width: 164px;"
 
                       id="bestheight"></p>
-                    <p class="announcement-text" style="width: 176px;"><font color="white"> </font>&nbsp;
-                      Block Height<font size="2"></font></p> </div>
+                    <p class="announcement-text" style="width: 176px;"><font color="white">
+                      </font>&nbsp; Block Height<font size="2"></font></p>
+                  </div>
                 </div>
               </div>
               <a href="blocks.html">
@@ -104,11 +109,16 @@ crossorigin="anonymous">
               <div class="panel-head-tiles">
                 <div class="row">
                   <div class="col-xs-6 text-right">
-                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;">4.7M
-                      /<font class="announcement-subheading">21M</font></p>
+                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;">
+
+                      <span id="supply"></span> <br>
+                      <font class="announcement-subheading">21M</font>
+                    </p>
                     <font size="2">
-                      <p class="announcement-text" style="width: 176px;"><font color="white">
-                          22% </font>&nbsp; Circulating<font size="2"></font></p>
+                      <p class="announcement-text" style="width: 176px;"><font &gt;=""
+
+                          color="white"><span id="circulating"></span> </font>&nbsp;
+                        Circulating<font size="2"></font></p>
                     </font></div>
                 </div>
               </div>

@@ -373,4 +373,19 @@ table.tablesorter thead tr th:hover {
   align-items: left;
   justify-content: left;
 }
-
+#supply {
+  font-size: 25px;
+  margin: 0;
+  color: #fbe04d;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+#circulating {
+  font-size: 14px;
+  margin: 0;
+  color: white;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
