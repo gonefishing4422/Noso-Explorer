@@ -22,9 +22,11 @@ crossorigin="anonymous">
     <script src="js/chartpool.js"></script>
     <script src="js/height.js"></script>
     <script src="js/supply.js"></script>
+    <script src="js/supply2.js"></script>
     <script src="js/circulating.js"></script>
     <script src="js/pendingorders.js"></script>
     <script src="js/countdown.js"></script>
+    <script src="js/nodelockfunds.js"></script>
     <!---chart-->
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -35,9 +37,9 @@ crossorigin="anonymous">
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
     <!--style-->
   </head>
-  <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();fetchCountdown();"
+  <body onload="loadBestHeight();loadSupply();loadSupply2();loadCirculating();loadPendingOrders();fetchCountdown();"
 
-    color="#222222" style="                                          background-image: url(&quot;&quot;);">
+    color="#222222" style="                                                      background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -129,9 +131,14 @@ crossorigin="anonymous">
                 <div class="panel-head-tiles">
                   <div class="row">
                     <div class="col-xs-6 text-right">
-                      <p class="announcement-heading" style="margin-left: 26px; width: 164px;">2.5M
-                        /<font class="announcement-subheading">4.7M</font></p>
-                      <p class="announcement-text" style="width: 176px;"><font color="white">53%</font>&nbsp;
+                      <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
+
+                          id="nodelockedfunds">0</span> <font class="announcement-subheading"><span
+
+                            id="supply2">0</span></font></p>
+                      <p class="announcement-text" style="width: 176px;"><font color="white"><span
+
+                            id="percentcoinslocked">0</span></font>&nbsp; NOSO
                         Coins Locked</p>
                     </div>
                   </div>
@@ -139,7 +146,7 @@ crossorigin="anonymous">
                 <a href="coins.html">
                   <div class="panel-footer announcement-bottom">
                     <div class="row">
-                      <div class="col-xs-6">MN Locked coins</div>
+                      <div class="col-xs-6">Masternode Coins</div>
                       <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
                       </div>
                     </div>
@@ -153,7 +160,7 @@ crossorigin="anonymous">
                     <div class="col-xs-6 text-right">
                       <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
 
-                          id="pendingorders">10</span></p>
+                          id="pendingorders">0</span></p>
                       <p class="announcement-text" style="width: 176px;">New
                         Orders</p>
                     </div>

@@ -381,6 +381,15 @@ table.tablesorter thead tr th:hover {
   align-items: left;
   justify-content: left;
 }
+#supply2 {
+  font-size: 12px;
+  margin: 0;
+  color: darkgrey;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  padding: 1px;
+}
 #circulating {
   font-size: 14px;
   margin: 0;
@@ -398,6 +407,14 @@ table.tablesorter thead tr th:hover {
   justify-content: left;
 }
 #countdown-timer {
+  font-size: 25px;
+  margin: 0;
+  color: #fbe04d;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+#nodelockedfunds {
   font-size: 25px;
   margin: 0;
   color: #fbe04d;
