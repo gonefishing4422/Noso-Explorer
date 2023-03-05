@@ -7,23 +7,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Noso Exporer</title>
-    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
-
-integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
 crossorigin="anonymous">
     </script>
-    <script src="js/chartpopw.js"></script>
-    <script src="js/chartnodes.js"></script>
-    <script src="js/chartpool.js"></script>
-    <script src="js/height.js"></script>
-    <script src="js/supply.js"></script>
-    <script src="js/circulating.js"></script>
-    <script src="js/pendingorders.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/app.js"></script>
     <!---chart-->
     <!-- Bootstrap core CSS -->
@@ -35,19 +23,16 @@ crossorigin="anonymous">
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
     <!--style-->
   </head>
-  <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();"
-
-    color="#222222" style="                                     background-image: url(&quot;&quot;);">
+  <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();"
+    color="#222222" style="                                           background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header"> <button type="button" class="navbar-toggle"
-
+        <div class="navbar-header"> <button type="button" class="navbar-toggle"
             data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle
               navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-            <span class="icon-bar"></span> </button><a class="navbar-brand" href="index.html"><img
-
+            <span class="icon-bar"></span> </button><a class="navbar-brand" href="index.html"><img
               src="img/logo_clearbg.png" alt="nosologo" title="nosologo" style="width: 20px; height: 20px;">&nbsp;
             Noso Explorer</a> </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -69,40 +54,32 @@ crossorigin="anonymous">
         <div class="row">
           <div class="col-lg-12">
             <!-- /.place Search here -->
-                 <div class="row">
-          <div class="container mt-5">
-            <p class="announcement-heading" style="margin-left: 26px; width: 300px;">Block
-              Search</p>
-            <br>
-            <form id="block-number-form">
-              <div class="mb-3"> <label for="block-number-input" class="form-label"><font
-
-                    color="white">Block Number:</font></label> <input class="form-control"
-
-                  id="block-number-input" name="blockNumber" required="" type="text">
+            <div>
+              <div class="search-width">
+                <p class="announcement-heading" style="margin-left: 26px; width: 300px;">Block
+                  Search</p>
+                <br>
+                <form id="block-number-form">
+                  <div class="mb-3"> <label for="block-number-input" class="form-label"><font
+                        color="white">Block Number:</font></label> <input class="form-control"
+                      id="block-number-input" name="blockNumber" required="" type="text">
+                  </div>
+                  <button type="submit1" class="btn btn-primary">Search</button>
+                </form>
+                <div id="block-number-results" class="mt-3">
+                  <!-- Results will be displayed here --> </div>
               </div>
-              <button type="submit" class="btn btn-primary">Search</button> </form>
-            <div id="block-number-results" class="mt-3">
-              <!-- Results will be displayed here --> </div>
+            </div>
           </div>
         </div>
-          </div>
-        </div>
-        <!-- /.row -->
-
-        </div>
-        <!-- /.row --> </font></div>
+        <!-- /.row --> </div>
+      <!-- /.row --> </div>
     <font size="2">
       <!-- /#page-wrapper -->
       <!-- /#wrapper -->
       <!-- JavaScript -->
       <script src="js/jquery-1.10.2.js"></script>
       <script src="js/bootstrap.js"></script>
-      <!-- Page Specific Plugins -->
-      <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-      <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
-      <script src="js/morris/chart-data-morris.js"></script>
-      <script src="js/tablesorter/jquery.tablesorter.js"></script>
-      <script src="js/tablesorter/tables.js"></script> </font>
+      <!-- Page Specific Plugins --> </font>
   </body>
 </html>
