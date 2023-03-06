@@ -29,7 +29,7 @@ $(function() {
 		tableHtml += '<tr><th>Time Total</th><td>' + response.data.timeTotal + '</td></tr>';
 		tableHtml += '<tr><th>Masternodes</th><td>' + response.data.mnsQ + '</td></tr>';
 		tableHtml += '<tr><th>Masternode Reward</th><td>' + response.data.mns.mnsRewardInPedro + '</td></tr>';
-		tableHtml += '<tr><th>Masternode Addresses</th><td>' + response.data.mns.mnsAddresses + '</td></tr>';
+		tableHtml += '<tr><th><a href="masternodes.html">Masternode Addresses</a></th><td>' + response.data.mns.mnsAddresses + '</td></tr>';
 		tableHtml += '<tr><th>PoS</th><td>' + response.data.posQ + '</td></tr>';
 		tableHtml += '<tr><th>PoS Reward</th><td>' + response.data.pos.posRewardInPedro + '</td></tr>';
 		tableHtml += '<tr><th>PoS Addresses</th><td>' + response.data.pos.posAddresses + '</td></tr>';
