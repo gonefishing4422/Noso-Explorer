@@ -7,10 +7,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Noso Exporer</title>
-    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
 
 integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
@@ -19,7 +15,6 @@ crossorigin="anonymous">
     </script>
     <script src="js/chartpopw.js"></script>
     <script src="js/chartnodes.js"></script>
-    <script src="js/chartpool.js"></script>
     <script src="js/height.js"></script>
     <script src="js/supply.js"></script>
     <script src="js/supply2.js"></script>
