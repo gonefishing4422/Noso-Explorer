@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="refresh" content="120">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="refresh" content="120">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -11,17 +11,16 @@
     <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
-integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+
+integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+
 crossorigin="anonymous">
     </script>
-    <script src="js/chartpopw.js"></script>
-    <script src="js/chartnodes.js"></script>
-    <script src="js/chartpool.js"></script>
-    <script src="js/height.js"></script>
-    <script src="js/supply.js"></script>
-    <script src="js/circulating.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/app.js"></script>
     <!---chart-->
+    <script src="js/chartnodes.js"></script>    
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Add custom CSS here -->
@@ -31,501 +30,69 @@ crossorigin="anonymous">
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
     <!--style-->
   </head>
-  <body onload="loadBestHeight();loadSupply();loadCirculating();" color="#222222"
-    style="                      background-image: url(&quot;&quot;);">
+  <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();"
+
+    color="#222222" style="                                                    background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header"> <button type="button" class="navbar-toggle"
+        <div class="navbar-header"> <button type="button" class="navbar-toggle"
+
             data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle
               navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-            <span class="icon-bar"></span> </button><a class="navbar-brand" href="index.html"><img
+            <span class="icon-bar"></span> </button><a class="navbar-brand" href="index.html"><img
+
               src="img/logo_clearbg.png" alt="nosologo" title="nosologo" style="width: 20px; height: 20px;">&nbsp;
             Noso Explorer</a> </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
-            <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i>
-                NosoStats</a></li>
-            <li><a href="explorer.html"><i class="fa fa-bar-chart-o"></i>
-                Explorer</a></li>
-            <li><a href="coins.html"> Coin Distribution</a></li>
-            <li><a href="addresses.html"> Top Addresses</a></li>
-            <li><a href="masternodes.html"><i class="fa fa-font"></i> Master
-                nodes</a></li>
-            <li><a href="earn.html"><i class="fa fa-desktop"></i> Earning</a></li>
-            <li><a href="charts.html"><i class="fa fa-wrench"></i> Charts</a></li>
-            <li><a href="market.html"><i class="fa fa-file"></i> Markets</a></li>
+            <li class="active"><a href="index.html">NosoStats</a></li>
+            <li><a href="explorer.html">Explorer</a></li>
+            <!--  <li><a href="coins.html"> Coin Distribution</a></li>
+            <li><a href="addresses.html"> Top Addresses</a></li> -->
+            <li><a href="masternodes.html"> Masternodes</a></li>
+            <li><a href="earn.html">PoPW </a></li>
+            <li><a href="charts.html">Charts</a></li>
+            <!-- <li><a href="market.html">&nbsp;Markets</a></li> -->
           </ul>
         </div>
         <!-- /.navbar-collapse --> </nav>
       <div id="page-wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <!-- /.place Search here --> </div>
-        </div>
-        <!-- /.row -->
-        <div class="row">
-          <div class="col-lg-3">
-            <div class="panel panel-info">
-              <div class="panel-head-tiles">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;">
-                      <span id="bestheight"></span> <br>
-                      <font class="announcement-subheading">&nbsp;</font></p>
-                    <p class="announcement-text" style="width: 176px;"><font color="white">
-                      </font>&nbsp; Block Height<font size="2"></font></p>
-                  </div>
-                </div>
-              </div>
-              <a href="blocks.html">
-                <div class="panel-footer announcement-bottom">
-                  <div class="row">
-                    <div class="col-xs-6">Block Explorer</div>
-                    <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
+            <div>
+              <div id="chartpool"></div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="panel panel-primary">
+                    <div class="panel-head">
+                      <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i>
+                        MASTERNODES</h3>
                     </div>
-                  </div>
-                </div>
-              </a> </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="panel panel-info">
-              <div class="panel-head-tiles">
-                <div class="row">
-                  <div class="col-xs-6 text-right">
-                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;">
-                      <span id="supply"></span> <br>
-                      <font class="announcement-subheading">21M</font> </p>
-                    <font size="2">
-                      <p class="announcement-text" style="width: 176px;"><font &gt;=""
-                          color="white"><span id="circulating">10%</span> </font>&nbsp;
-                        Circulating<font size="2"></font></p>
-                    </font></div>
-                </div>
-              </div>
-              <font size="2"> <a href="#">
-                  <div class="panel-footer announcement-bottom">
-                    <div class="row">
-                      <div class="col-xs-6">Coin Supply</div>
-                      <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
+                    <div class="panel-body">
+                      <div id="chartdiv">
+                        <div id="chartnodes"></div>
+                      </div>
+                      <div class="text-right"> <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
                       </div>
                     </div>
                   </div>
-                </a> </font></div>
-            <font size="2"> </font></div>
-          <font size="2">
-            <div class="col-lg-3">
-              <div class="panel panel-info">
-                <div class="panel-head-tiles">
-                  <div class="row">
-                    <div class="col-xs-6 text-right">
-                      <p class="announcement-heading" style="margin-left: 26px; width: 164px;">2.5M
-                        /<font class="announcement-subheading">4.7M</font></p>
-                      <p class="announcement-text" style="width: 176px;"><font color="white">53%</font>&nbsp;
-                        Coins Locked</p>
-                    </div>
-                  </div>
-                </div>
-                <a href="#">
-                  <div class="panel-footer announcement-bottom">
-                    <div class="row">
-                      <div class="col-xs-6">MN Locked coins</div>
-                      <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
-                      </div>
-                    </div>
-                  </div>
-                </a> </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="panel panel-info">
-                <div class="panel-head-tiles">
-                  <div class="row">
-                    <div class="col-xs-6 text-right">
-                      <p class="announcement-heading" style="margin-left: 26px; width: 164px;">56</p>
-                      <p class="announcement-text" style="width: 176px;">New
-                        Orders</p>
-                    </div>
-                  </div>
-                </div>
-                <a href="#">
-                  <div class="panel-footer announcement-bottom">
-                    <div class="row">
-                      <div class="col-xs-6">New Orders</div>
-                      <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
-                      </div>
-                    </div>
-                  </div>
-                </a> </div>
-            </div>
-          </font></div>
-        <font size="2">
-          <!-- /.row -->
-          <!-- /.row -->
-          <div class="row">
-            <div class="col-lg-3">
-              <div class="panel panel-info">
-                <div class="panel-head-tiles">
-                  <div class="row">
-                    <div class="col-xs-6 text-right">
-                      <p class="announcement-heading" style="margin-left: 26px; width: 164px;">5,642</p>
-                      <p class="announcement-text" style="width: 176px;">Total
-                        Addresses</p>
-                    </div>
-                  </div>
-                </div>
-                <a href="#">
-                  <div class="panel-footer announcement-bottom">
-                    <div class="row">
-                      <div class="col-xs-6">Total&nbsp; Addresses</div>
-                      <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
-                      </div>
-                    </div>
-                  </div>
-                </a> </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="panel panel-info">
-                <div class="panel-head-tiles">
-                  <div class="row">
-                    <div class="col-xs-6 text-right">
-                      <p class="announcement-heading" style="margin-left: 26px; width: 164px;">100
-                        <font class="announcement-subheading">ms</font></p>
-                      <p class="announcement-text" style="width: 176px;">Network
-                        latency</p>
-                    </div>
-                  </div>
-                </div>
-                <a href="#">
-                  <div class="panel-footer announcement-bottom">
-                    <div class="row">
-                      <div class="col-xs-6">Network Stats</div>
-                      <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
-                      </div>
-                    </div>
-                  </div>
-                </a> </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="panel panel-info">
-                <div class="panel-head-tiles">
-                  <div class="row">
-                    <div class="col-xs-6 text-right">
-                      <p class="announcement-heading" style="margin-left: 26px; width: 164px;">49
-                        <font class="announcement-subheading">TPS</font></p>
-                      <p class="announcement-text" style="width: 176px;">Transactions
-                        per Second</p>
-                    </div>
-                  </div>
-                </div>
-                <a href="#"> </a>
-                <div class="panel-footer announcement-bottom"><a href="#">
-                    <div class="row">
-                      <div class="col-xs-6">Network Stats</div>
-                      <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
-                      </div>
-                    </div>
-                  </a> </div>
-              </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="panel panel-info">
-                <div class="panel-head-tiles">
-                  <div class="row">
-                    <div class="col-xs-6 text-right">
-                      <p class="announcement-heading" style="margin-left: 26px; width: 164px;">$0.03</p>
-                      <p class="announcement-text" style="width: 176px;">Price
-                        USD / NOSO</p>
-                    </div>
-                  </div>
-                </div>
-                <a href="#">
-                  <div class="panel-footer announcement-bottom">
-                    <div class="row">
-                      <div class="col-xs-6">Average Price</div>
-                      <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
-                      </div>
-                    </div>
-                  </div>
-                </a> </div>
-            </div>
-          </div>
-          <!-- /.row -->
-          <div id="chartpool"></div>
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="panel panel-primary">
-                <div class="panel-head">
-                  <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i>
-                    MASTERNODES</h3>
-                </div>
-                <div class="panel-body">
-                  <div id="chartdiv">
-                    <div id="chartnodes"></div>
-                  </div>
-                  <div class="text-right"> <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="panel panel-primary">
-                <div class="panel-head">
-                  <h3 class="panel-title"><i class="fa fa-clock-o"></i> POPW
-                    PARTICIPATION</h3>
-                </div>
-                <div class="panel-body">
-                  <div id="chartdiv2">
-                    <div id="chartpopw"></div>
-                  </div>
-                  <div class="text-right"> <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="panel panel-primary">
-                <div class="panel-head">
-                  <h3 class="panel-title"><i class="ndDiv"></i> POPW POOLS</h3>
-                </div>
-                <div class="panel-body">
-                  <div id="chartdiv2">
-                    <div id="chartpool"></div>
-                  </div>
-                  <div class="text-right"><a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /.row --> </font></div>
-      <font size="2">
-        <!-- /.row -->
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="panel panel-primary">
-              <div class="panel-head">
-                <h3 class="panel-title"> LATEST BLOCKS</h3>
-              </div>
-              <div class="panel-body">
-                <div class="table-responsive">
-                  <table class="table table-bordered table-hover tablesorter">
-                    <thead>
-                      <tr>
-                        <th>Height <i class="fa fa-sort"></i></th>
-                        <th>Date </th>
-                        <th>Creator <i class="fa fa-sort"></i></th>
-                        <th>Orders <i class="fa fa-sort"></i></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>93326</td>
-                        <td>10/212013</td>
-                        <td>Gonefishing</td>
-                        <td>15</td>
-                      </tr>
-                      <tr>
-                        <td>93325</td>
-                        <td>10/21/2013</td>
-                        <td>Estripia</td>
-                        <td>19</td>
-                      </tr>
-                      <tr>
-                        <td>93324</td>
-                        <td>10/21/2013</td>
-                        <td>Propool</td>
-                        <td>30</td>
-                      </tr>
-                      <tr>
-                        <td>93323</td>
-                        <td>10/21/2013</td>
-                        <td>NosoMN</td>
-                        <td>200</td>
-                      </tr>
-                      <tr>
-                        <td>93322</td>
-                        <td>10/21/2013</td>
-                        <td>Auspool</td>
-                        <td>300</td>
-                      </tr>
-                      <tr>
-                        <td>93321</td>
-                        <td>10/21/2013</td>
-                        <td>Gonefishing</td>
-                        <td>3</td>
-                      </tr>
-                      <tr>
-                        <td>93320</td>
-                        <td>10/21/2013</td>
-                        <td>ProPool</td>
-                        <td>8</td>
-                      </tr>
-                      <tr>
-                        <td>93319</td>
-                        <td>10/21/2013</td>
-                        <td>Estripia</td>
-                        <td>54</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="text-right"> <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="panel panel-primary">
-              <div class="panel-head">
-                <h3 class="panel-title"> TOP MASTERNODES</h3>
-              </div>
-              <div class="panel-body">
-                <div class="table-responsive">
-                  <table class="table table-bordered table-hover tablesorter">
-                    <thead>
-                      <tr>
-                        <th>Node Address <i class="fa fa-sort"></i></th>
-                        <th>Node IP<i class="fa fa-sort"></i></th>
-                        <th>Order Time <i class="fa fa-sort"></i></th>
-                        <th>Region<i class="fa fa-sort"></i></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>N43kqHxEFTnhw13PDv</td>
-                        <td>1.2.3.4</td>
-                        <td>3:29 PM</td>
-                        <td>Beijing</td>
-                      </tr>
-                      <tr>
-                        <td>N43kqHxEFTnhw13PDv</td>
-                        <td>1.2.3.4</td>
-                        <td>3:20 PM</td>
-                        <td>Beijing</td>
-                      </tr>
-                      <tr>
-                        <td>N43kqHxEFTnhw13PDv</td>
-                        <td>1.2.3.4</td>
-                        <td>3:03 PM</td>
-                        <td>Beijing</td>
-                      </tr>
-                      <tr>
-                        <td>N43kqHxEFTnhw13PDv</td>
-                        <td>1.2.3.4</td>
-                        <td>3:00 PM</td>
-                        <td>Beijing</td>
-                      </tr>
-                      <tr>
-                        <td>N43kqHxEFTnhw13PDv</td>
-                        <td>1.2.3.4</td>
-                        <td>2:49 PM</td>
-                        <td>Beijing</td>
-                      </tr>
-                      <tr>
-                        <td>N43kqHxEFTnhw13PDv</td>
-                        <td>1.2.3.4</td>
-                        <td>2:23 PM</td>
-                        <td>Beijing</td>
-                      </tr>
-                      <tr>
-                        <td>N43kqHxEFTnhw13PDv</td>
-                        <td>1.2.3.4</td>
-                        <td>2:15 PM</td>
-                        <td>Beijing</td>
-                      </tr>
-                      <tr>
-                        <td>N43kqHxEFTnhw13PDv</td>
-                        <td>1.2.3.4</td>
-                        <td>2:13 PM</td>
-                        <td>Beijing</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="text-right"> <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="panel panel-primary">
-              <div class="panel-head">
-                <h3 class="panel-title"> TOP NOSO ADDRESSES</h3>
-              </div>
-              <div class="panel-body">
-                <div class="table-responsive">
-                  <table class="table table-bordered table-hover  tablesorter">
-                    <thead>
-                      <tr>
-                        <th>Noso_Address </th>
-                        <th>Address_Age </th>
-                        <th>Amount (NOSO) <i class="fa fa-sort"></i></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>N33kqHxEFTnhw13PDv</td>
-                        <td>10/212013</td>
-                        <td>100,995</td>
-                      </tr>
-                      <tr>
-                        <td>N33kqHxEFTnhw13PDv</td>
-                        <td>10/21/2013</td>
-                        <td>99,555</td>
-                      </tr>
-                      <tr>
-                        <td>N33kqHxEFTnhw13PDv</td>
-                        <td>10/21/2013</td>
-                        <td>20,002</td>
-                      </tr>
-                      <tr>
-                        <td>N33kqHxEFTnhw13PDv</td>
-                        <td>10/21/2013</td>
-                        <td>15,520</td>
-                      </tr>
-                      <tr>
-                        <td>N33kqHxEFTnhw13PDv</td>
-                        <td>10/21/2013</td>
-                        <td>12,564</td>
-                      </tr>
-                      <tr>
-                        <td>N33kqHxEFTnhw13PDv</td>
-                        <td>10/21/2013</td>
-                        <td>11,154</td>
-                      </tr>
-                      <tr>
-                        <td>N33kqHxEFTnhw13PDv</td>
-                        <td>10/21/2013</td>
-                        <td>11,300</td>
-                      </tr>
-                      <tr>
-                        <td>N33kqHxEFTnhw13PDv</td>
-                        <td>10/21/2013</td>
-                        <td>10,601</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="text-right"><a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- /.row --> </font></div>
+        <!-- /.row --> </div>
+      <!-- /.row --> </div>
     <font size="2">
       <!-- /#page-wrapper -->
       <!-- /#wrapper -->
       <!-- JavaScript -->
       <script src="js/jquery-1.10.2.js"></script>
       <script src="js/bootstrap.js"></script>
-      <!-- Page Specific Plugins -->
-      <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-      <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
-      <script src="js/morris/chart-data-morris.js"></script>
-      <script src="js/tablesorter/jquery.tablesorter.js"></script>
-      <script src="js/tablesorter/tables.js"></script> </font>
+      <!-- Page Specific Plugins --> </font>
+    
   </body>
 </html>
