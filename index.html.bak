@@ -7,8 +7,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Noso Exporer</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
-integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+
+integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+
 crossorigin="anonymous">
     </script>
     <script src="js/chartpopw.js"></script>
@@ -31,16 +33,19 @@ crossorigin="anonymous">
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
     <!--style-->
   </head>
-  <body onload="loadBestHeight();loadSupply();loadSupply2();loadCirculating();loadPendingOrders();fetchCountdown();loadNodeIpAddressCount();"
+  <body onload="loadBestHeight();loadSupply();loadSupply2();loadCirculating();loadPendingOrders();fetchCountdown();loadNodeIpAddressCount();"
+
     color="#222222" style="                                                                                   background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header"> <button type="button" class="navbar-toggle"
+        <div class="navbar-header"> <button type="button" class="navbar-toggle"
+
             data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle
               navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-            <span class="icon-bar"></span> </button><a class="navbar-brand" href="index.html"><img
+            <span class="icon-bar"></span> </button><a class="navbar-brand" href="index.html"><img
+
               src="img/logo_clearbg.png" alt="nosologo" title="nosologo" style="width: 20px; height: 20px;">&nbsp;
             Noso Explorer</a> </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -92,7 +97,8 @@ crossorigin="anonymous">
               <div class="panel-head-tiles">
                 <div class="row">
                   <div class="col-xs-6 text-right">
-                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
+                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
+
                         id="countdown-timer">0</span></p>
                     <p class="announcement-text" style="width: 176px;">Block
                       Time Remaining</p>
@@ -119,14 +125,16 @@ crossorigin="anonymous">
                         <span id="supply">0</span> <br>
                         <font class="announcement-subheading">21M</font> </p>
                       <font size="2">
-                        <p class="announcement-text" style="width: 176px;"><font
+                        <p class="announcement-text" style="width: 176px;"><font
+
                             &gt;="" color="white"><span id="circulating">10%</span>
                           </font>&nbsp; Circulating<font size="2"></font></p>
                       </font></div>
                   </div>
                 </div>
                 <font size="2"> <a href="#"> </a>
-                  <div class="panel-footer announcement-bottom"><a href="#"> </a><a
+                  <div class="panel-footer announcement-bottom"><a href="#"> </a><a
+
                       href="coins.html">
                       <div class="row">
                         <div class="col-xs-6">Coin Supply</div>
@@ -141,10 +149,13 @@ crossorigin="anonymous">
                 <div class="panel-head-tiles">
                   <div class="row">
                     <div class="col-xs-6 text-right">
-                      <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
-                          id="nodelockedfunds">0</span> <font class="announcement-subheading"><span
+                      <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
+
+                          id="nodelockedfunds">0</span> <font class="announcement-subheading"><span
+
                             id="supply2">0</span></font></p>
-                      <p class="announcement-text" style="width: 176px;"><font color="white"><span
+                      <p class="announcement-text" style="width: 176px;"><font color="white"><span
+
                             id="percentcoinslocked">0</span></font>&nbsp; NOSO
                         Coins Locked</p>
                     </div>
@@ -168,7 +179,8 @@ crossorigin="anonymous">
               <div class="panel-head-tiles">
                 <div class="row">
                   <div class="col-xs-6 text-right">
-                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
+                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
+
                         id="nodeIpAddressCount">0</span></p>
                     <p class="announcement-text" style="width: 176px;">Active
                       Masternodes</p>
@@ -190,7 +202,8 @@ crossorigin="anonymous">
               <div class="panel-head-tiles">
                 <div class="row">
                   <div class="col-xs-6 text-right">
-                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
+                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
+
                         id="pendingorders">0</span></p>
                     <p class="announcement-text" style="width: 176px;">Pending
                       Orders on Block</p>
@@ -223,7 +236,8 @@ crossorigin="anonymous">
                   </div>
                 </div>
                 <font size="2"> <a href="#"> </a>
-                  <div class="panel-footer announcement-bottom"><a href="#"> </a><a
+                  <div class="panel-footer announcement-bottom"><a href="#"> </a><a
+
                       href="coins.html">
                       <div class="row">
                         <div class="col-xs-6">Coin Supply</div>
@@ -238,7 +252,8 @@ crossorigin="anonymous">
                 <div class="panel-head-tiles">
                   <div class="row">
                     <div class="col-xs-6 text-right">
-                      <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
+                      <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
+
                           id="pendingorders">0</span></p>
                       <p class="announcement-text" style="width: 176px;">***</p>
                     </div>
@@ -263,7 +278,8 @@ crossorigin="anonymous">
                 <div class="panel-head-tiles">
                   <div class="row">
                     <div class="col-xs-6 text-right">
-                      <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
+                      <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
+
                           id="countdown-timer">0</span></p>
                       <p class="announcement-text" style="width: 176px;">***</p>
                     </div>
@@ -346,104 +362,7 @@ crossorigin="anonymous">
             </div>
           </div>
           <!-- /.row -->
-          <div class="row">
-            <div class="col-lg-3">
-              <div class="panel panel-info">
-                <div class="panel-head-tiles">
-                  <div class="row">
-                    <div class="col-xs-6">
-                      <p class="announcement-heading" style="margin-left: 26px; width: 164px;">
-                        <span id="bestheight">0</span> <br>
-                        <font class="announcement-subheading"></font></p>
-                      <p class="announcement-text" style="width: 176px;"><font color="white">
-                        </font>&nbsp; Block Height<font size="2"></font></p>
-                    </div>
-                  </div>
-                </div>
-                <a href="explorer.html">
-                  <div class="panel-footer announcement-bottom">
-                    <div class="row">
-                      <div class="col-xs-6">Block Explorer</div>
-                      <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
-                      </div>
-                    </div>
-                  </div>
-                </a> </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="panel panel-info">
-                <div class="panel-head-tiles">
-                  <div class="row">
-                    <div class="col-xs-6 text-right">
-                      <p class="announcement-heading" style="margin-left: 26px; width: 164px;">
-                        <span id="supply">0</span> <br>
-                        <font class="announcement-subheading">21M</font> </p>
-                      <font size="2">
-                        <p class="announcement-text" style="width: 176px;"><font
-                            &gt;="" color="white"><span id="circulating">10%</span>
-                          </font>&nbsp; Circulating<font size="2"></font></p>
-                      </font></div>
-                  </div>
-                </div>
-                <font size="2"> <a href="#"> </a>
-                  <div class="panel-footer announcement-bottom"><a href="#"> </a><a
-                      href="coins.html">
-                      <div class="row">
-                        <div class="col-xs-6">Coin Supply</div>
-                        <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
-                        </div>
-                      </div>
-                    </a></div>
-                  <a href="coins.html"> </a> </font></div>
-              <font size="2"> </font></div>
-            <font size="2">
-              <div class="col-lg-3">
-                <div class="panel panel-info">
-                  <div class="panel-head-tiles">
-                    <div class="row">
-                      <div class="col-xs-6 text-right">
-                        <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
-                            id="nodelockedfunds">0</span> <font class="announcement-subheading"><span
-                              id="supply2">0</span></font></p>
-                        <p class="announcement-text" style="width: 176px;"><font
-                            color="white"><span id="percentcoinslocked">0</span></font>&nbsp;
-                          NOSO Coins Locked</p>
-                      </div>
-                    </div>
-                  </div>
-                  <a href="coins.html">
-                    <div class="panel-footer announcement-bottom">
-                      <div class="row">
-                        <div class="col-xs-6">Masternode Coins</div>
-                        <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </a> </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="panel panel-info">
-                  <div class="panel-head-tiles">
-                    <div class="row">
-                      <div class="col-xs-6 text-right">
-                        <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
-                            id="pendingorders">0</span></p>
-                        <p class="announcement-text" style="width: 176px;">New
-                          Orders</p>
-                      </div>
-                    </div>
-                  </div>
-                  <a href="charts.html">
-                    <div class="panel-footer announcement-bottom">
-                      <div class="row">
-                        <div class="col-xs-6">New Orders</div>
-                        <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </a> </div>
-              </div>
-            </font></div>
+          
           <!-- /.row --> </font></div>
       <font size="2">
         <!-- /.row --> </font></div>

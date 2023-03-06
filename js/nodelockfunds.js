@@ -1,4 +1,4 @@
-const url = "https://nosostats.com:49443/api/mynodes";
+const url = "https://nosostats.com:49443/api/nodeListS";
 
 // Make a GET request to the API endpoint
 fetch(url)
