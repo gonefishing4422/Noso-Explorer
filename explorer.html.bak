@@ -27,7 +27,7 @@ crossorigin="anonymous">
   </head>
   <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();"
 
-    color="#222222" style="                                            background-image: url(&quot;&quot;);">
+    color="#222222" style="                                               background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -43,15 +43,14 @@ crossorigin="anonymous">
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
-            <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i>
-                NosoStats</a></li>
+            <li class="active"><a href="index.html">NosoStats</a></li>
             <li><a href="explorer.html">Explorer</a></li>
-            <li><a href="coins.html"> Coin Distribution</a></li>
-            <li><a href="addresses.html"> Top Addresses</a></li>
+            <!--  <li><a href="coins.html"> Coin Distribution</a></li>
+            <li><a href="addresses.html"> Top Addresses</a></li> -->
             <li><a href="masternodes.html"> Masternodes</a></li>
-            <li><a href="earn.html">Earning</a></li>
+            <li><a href="earn.html">PoPW </a></li>
             <li><a href="charts.html">Charts</a></li>
-            <li><a href="market.html">&nbsp;Markets</a></li>
+            <!-- <li><a href="market.html">&nbsp;Markets</a></li> -->
           </ul>
         </div>
         <!-- /.navbar-collapse --> </nav>
@@ -65,12 +64,9 @@ crossorigin="anonymous">
                   Search</p>
                 <br>
                 <form id="block-number-form">
-                  <div class="mb-3"> <label for="block-number-input" class="form-label"><font
+                  <div class="mb-3"> <label for="block-number-input" class="form-label"></label> <input class="form-control" id="block-number-input"
 
-                        color="white">Block Number:</font></label> <input class="form-control"
-
-                      id="block-number-input" name="blockNumber" required="" type="text">
-                  </div>
+                      name="blockNumber" required="" type="text"> </div>
                   <button type="submit" class="btn btn-primary">Search</button>
                 </form>
                 <div id="block-number-results" class="mt-3">
@@ -86,7 +82,7 @@ crossorigin="anonymous">
       <!-- /#wrapper -->
       <!-- JavaScript -->
       <script src="js/jquery-1.10.2.js"></script>
-      <script src="js/bootstrap.js"></script> <!-- Page Specific Plugins -->
-    </font>
+      <script src="js/bootstrap.js"></script>
+      <!-- Page Specific Plugins --> </font>
   </body>
 </html>
