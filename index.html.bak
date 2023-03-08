@@ -254,15 +254,16 @@ crossorigin="anonymous">
                     <div class="col-xs-6 text-right">
                       <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
 
-                          id="pendingorders">0</span></p>
-                      <p class="announcement-text" style="width: 176px;">***</p>
+                          id="pendingorders">4321</span></p>
+                      <p class="announcement-text" style="width: 176px;">Active
+                        NOSO Addresses</p>
                     </div>
                   </div>
-                </div>
+                   </div>
                 <a href="charts.html">
                   <div class="panel-footer announcement-bottom">
                     <div class="row">
-                      <div class="col-xs-6">***</div>
+                      <div class="col-xs-6">Noso Explorer</div>
                       <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
                       </div>
                     </div>
@@ -280,15 +281,18 @@ crossorigin="anonymous">
                     <div class="col-xs-6 text-right">
                       <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
 
-                          id="countdown-timer">0</span></p>
-                      <p class="announcement-text" style="width: 176px;">***</p>
+                          id="countdown-timer">0.0001</span><font size="2"> <font
+
+                            class="announcement-subheading">NOSO</font></font></p>
+                      <p class="announcement-text" style="width: 176px;">Average
+                        Cost Per Transaction</p>
                     </div>
                   </div>
                 </div>
                 <a href="explorer.html">
                   <div class="panel-footer announcement-bottom">
                     <div class="row">
-                      <div class="col-xs-6">***</div>
+                      <div class="col-xs-6">Noso Explorer</div>
                       <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
                       </div>
                     </div>
@@ -362,7 +366,6 @@ crossorigin="anonymous">
             </div>
           </div>
           <!-- /.row -->
-          
           <!-- /.row --> </font></div>
       <font size="2">
         <!-- /.row --> </font></div>
