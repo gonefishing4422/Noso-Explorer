@@ -418,32 +418,6 @@ table.tablesorter thead tr th:hover {
   max-width: 100%;
  } 
  
-.btnz {
-color:#fff;
-background-color:#fbe04d; /* Yellow */
-border-color:#fbe04d;
-
-
-}
- 
-
-.btn-primaryz {
-  background-color: white;
-  color: #fbe04d;
-  border-color: #222222;
-  background-color: #222222;
-
-}
-
-
-.btn-primaryz:hover {
-color:#fff;
-background-color:black; /* Black */
-border-color:#fbe04d;
-text-decoration: none;
-color:#fbe04d; /* Yellow */
-
-}
 
 /*Clearing Floats*/
 .cf:before, .cf:after{
@@ -461,7 +435,7 @@ color:#fbe04d; /* Yellow */
 /* Form wrapper styling */
 
 .search-wrapper {
-    width: 450px;
+    width: 360px;
     margin: 1px auto 1px auto;
     border-radius: 40px;
   background: transparent;
@@ -472,7 +446,7 @@ color:#fbe04d; /* Yellow */
 
 .search-wrapper input {
   padding-left: 200px;
-    width: 330px;
+    width: 250px;
     height: 20px;
     padding: 20px 10px;
     float: left;   
