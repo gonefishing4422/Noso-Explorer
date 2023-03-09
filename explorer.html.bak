@@ -27,7 +27,7 @@ crossorigin="anonymous">
   </head>
   <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();"
 
-    color="#222222" style="                                                                    background-image: url(&quot;&quot;);">
+    color="#222222" style="                                                                     background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -62,13 +62,9 @@ crossorigin="anonymous">
           <div class="row">
             <form id="block-number-form"> <input id="block-number-input" name="blockNumber"
 
-                required="required" style="box-shadow: none" placeholder="Block Number or Address"
-
-                type="search"> <button type="submit">Search</button> </form>
+                required="" placeholder="Search Block Number or Address" type="search">
+              <button type="submit">Search</button> </form>
           </div>
-          <br>
-          <br>
-          <br>
           <br>
           <br>
           <div id="block-number-results">
