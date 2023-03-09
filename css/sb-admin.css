@@ -301,7 +301,7 @@ table.tablesorter thead tr th:hover {
 }
 
 .styled-table tbody tr:last-of-type {
-    border-bottom: 2px solid #fbe04d;;
+    border-bottom: 2px solid #222222;
 }
 .styled-table tbody tr.active-row {
     font-weight: bold;
