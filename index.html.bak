@@ -259,7 +259,7 @@ crossorigin="anonymous">
                         NOSO Addresses</p>
                     </div>
                   </div>
-                   </div>
+                </div>
                 <a href="charts.html">
                   <div class="panel-footer announcement-bottom">
                     <div class="row">
@@ -354,7 +354,7 @@ crossorigin="anonymous">
                     </div>
                   </div>
                 </div>
-                <a href="markets.html">
+                <a href="market.html">
                   <div class="panel-footer announcement-bottom">
                     <div class="row">
                       <div class="col-xs-6">Average Price</div>
