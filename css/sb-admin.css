@@ -435,7 +435,7 @@ table.tablesorter thead tr th:hover {
 /* Form wrapper styling */
 
 .search-wrapper {
-    width: 360px;
+    width: 330px;
     margin: 1px auto 1px auto;
     border-radius: 40px;
   background: transparent;
@@ -446,7 +446,7 @@ table.tablesorter thead tr th:hover {
 
 .search-wrapper input {
   padding-left: 200px;
-    width: 250px;
+    width: 220px;
     height: 20px;
     padding: 20px 10px;
     float: left;   
