@@ -36,7 +36,7 @@ crossorigin="anonymous">
   </head>
   <body onload="loadBestHeight();loadSupply();loadSupply2();loadCirculating();loadPendingOrders();fetchCountdown();loadNodeIpAddressCount();"
 
-    color="#222222" style="                                                                                         background-image: url(&quot;&quot;);">
+    color="#222222" style="                                                                                          background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -69,12 +69,14 @@ crossorigin="anonymous">
             <!-- /.place Search here -->
             <div class="exprow">
               <form id="block-number-form"> <input id="block-number-input" name="blockNumber"
-
                   required="" placeholder="Search Block Number or Address" type="search">
                 <button type="submit">Search</button> </form>
             </div>
-            <div> <br>
-              <br>
+            <div> <br><br>
+             <div id="block-number-results">
+            <!-- Results will be displayed here -->
+              </div>
+        </div>
             </div>
           </div>
         </div>

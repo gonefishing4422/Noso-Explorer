@@ -23,6 +23,7 @@ crossorigin="anonymous">
     <script src="js/countdown.js"></script>
     <script src="js/nodelockfunds.js"></script>
     <script src="js/nodecount.js"></script>
+    <script src="js/search.js"></script>
     <!---chart-->
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -35,7 +36,7 @@ crossorigin="anonymous">
   </head>
   <body onload="loadBestHeight();loadSupply();loadSupply2();loadCirculating();loadPendingOrders();fetchCountdown();loadNodeIpAddressCount();"
 
-    color="#222222" style="                                                                                        background-image: url(&quot;&quot;);">
+    color="#222222" style="                                                                                          background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -67,14 +68,16 @@ crossorigin="anonymous">
           <div class="col-lg-12">
             <!-- /.place Search here -->
             <div class="exprow">
-              <form id="block-number-form"> <input id="block-number-input"
+              <form id="block-number-form"> <input id="block-number-input" name="blockNumber"
 
-                  name="blockNumber" required="" placeholder="Search Block Number or Address"
-
-                  type="search"> <button type="submit">Search</button> </form>
+                  required="" placeholder="Search Block Number or Address" type="search">
+                <button type="submit">Search</button> </form>
             </div>
-            <div>
-              <br><br>
+            <div> <br>
+              <br>
+                        <div id="block-number-results">
+            <!-- Results will be displayed here --> </div>
+        </div>
             </div>
           </div>
         </div>
