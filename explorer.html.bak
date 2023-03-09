@@ -27,7 +27,7 @@ crossorigin="anonymous">
   </head>
   <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();"
 
-    color="#222222" style="                                                                                                                                               background-image: url(&quot;&quot;);">
+    color="#222222" style="                                                                                                                                                background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -94,7 +94,12 @@ crossorigin="anonymous">
               <table style="color: darkgrey; background-color: #222222; border: 1px solid black; min-width: 300px; max-width: 800px;">
                 <tbody>
                   <tr>
-                    <td colspan="4">Genesys Block: March 7th, 2021</td>
+                    <td>Genesys Block:</td>
+                    <td><br>
+                    </td>
+                    <td><br>
+                    </td>
+                    <td> March 7th, 2021</td>
                   </tr>
                   <tr>
                     <td>Current Supply</td>
