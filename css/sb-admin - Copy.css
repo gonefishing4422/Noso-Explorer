@@ -414,29 +414,30 @@ table.tablesorter thead tr th:hover {
 }
 
   /* Block search */
-.search-widthz{
+.search-width{
   max-width: 100%;
  } 
  
-.btnz {
+.btn {
 color:#fff;
 background-color:#fbe04d; /* Yellow */
 border-color:#fbe04d;
-
+  margin-top: 1.45em;
+  margin-bottom: 2em;
 
 }
  
 
-.btn-primaryz {
+.btn-primary {
   background-color: white;
   color: #fbe04d;
   border-color: #222222;
   background-color: #222222;
-
+  margin-left: 1%;
 }
 
 
-.btn-primaryz:hover {
+.btn-primary:hover {
 color:#fff;
 background-color:black; /* Black */
 border-color:#fbe04d;
@@ -445,111 +446,42 @@ color:#fbe04d; /* Yellow */
 
 }
 
-/*Clearing Floats*/
-.cf:before, .cf:after{
-    content:"";
-    display:table;
+
+
+.mb-3 { 
+margin-bottom:1rem!important 
+
+} 
+.mt-3 {
+margin-top:1rem!important
+
+
+} 
+ .form-label {
+ margin-bottom:.5rem
+ 
+ } 
+ 
+ #block-number-form {
+  background-color: black;
+  display: flex;
 }
 
-.cf:after{
-    clear:both;
+#block-number-input {
+  border: none;
+  background-color: #222222;
+  color:  #fbe04d;
+}
+ #block-number-form {
+  background-color: black;
+  display: flex;
 }
 
-.cf{
-    zoom:1;
-}    
-/* Form wrapper styling */
 
-.search-wrapper {
-    width: 450px;
-    margin: 1px auto 1px auto;
-    border-radius: 40px;
-  background: transparent;
-    box-shadow: 0 4px 20px -2px #fbe04d;
+#block-number-results {
+  color: #8B8000
+   width: 520px;
 }
-
-/* Form text input */
-
-.search-wrapper input {
-  padding-left: 200px;
-    width: 330px;
-    height: 20px;
-    padding: 20px 10px;
-    float: left;   
-    font: bold 13px 'lucida sans', 'trebuchet MS', 'Tahoma';
-    border: 0;
-    background: #222222;
-    border-radius: 40px;
-    border-top-style: none;
-}
-
-.search-wrapper input:focus {
-    outline: 0;
-    background: #999;
-    box-shadow: 0 0 2px rgba(0,0,0,0.8) inset;
-}
-
-.search-wrapper input::-webkit-input-placeholder {
-   color: #999;
-   font-weight: normal;
-   font-style: italic;
-  padding-left: 20px;
-}
-
-.search-wrapper input:-moz-placeholder {
-
-    color: #999;
-    font-weight: normal;
-    font-style: italic;
-}
-
-.search-wrapper input:-ms-input-placeholder {
-    color: #999;
-    font-weight: normal;
-    font-style: italic;
-  border-style: none;
-}   
-
-/* Form explorer search button */
-.search-wrapper button {
-    overflow: visible;
-    position: relative;
-    float: right;
-    border: 1;
-    padding: 0px;
-    cursor: pointer;
-    height: 40px;
-    width: 110px;
-    font: 13px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
-    color: #fff;
-    text-transform: uppercase;
-    background: #222222;
-    border-radius: 40px;
-    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
-}  
-
-
-.search-wrapper button:hover{    
-     background: #999;
-         color: black;
-}  
-
-.search-wrapper button:active,
-.search-wrapper button:focus{  
-    background: #222222;
-    color: white;
-    outline: 0;  
-}
-
-    
-
-.search-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
-    border: 0;
-    padding: 0;
-        background: #222222;
-}   
-
-
 
 
  

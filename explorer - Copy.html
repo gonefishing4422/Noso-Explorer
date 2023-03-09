@@ -14,7 +14,7 @@ integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6h
 crossorigin="anonymous">
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/search.js"></script>
     <!---chart-->
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -28,7 +28,8 @@ crossorigin="anonymous">
   <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();"
 
     color="#222222" style="                                                    background-image: url(&quot;&quot;);">
-    <div id="wrapper"> <!-- Sidebar -->
+    <div id="wrapper">
+      <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header"> <button type="button" class="navbar-toggle"
@@ -57,18 +58,33 @@ crossorigin="anonymous">
         <div class="row">
           <div class="col-lg-12">
             <!-- /.place Search here -->
-            <div> <iframe seamless="" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTLyxjOqh8xFNEsLb6TYv_uN05NKmgmRBJZin_H_5cmu6Gcwxnqt63OApP37sXsZtB5Repeh6HPPd2L/pubchart?oid=1892922716&amp;format=interactive"
+            <div>
+              <div class="search-width">
+                <p class="announcement-heading" style="margin-left: 26px; width: 300px;">Block
+                  Search</p>
+                <br>
+                <form id="block-number-form">
+                  <div class="mb-3"> <label for="block-number-input" class="form-label"></label>
+                    <input class="form-control" id="block-number-input" name="blockNumber"
 
-                height="446" frameborder="0" width="721"></iframe> </div>
+                      required="required" placeholder="Block Number" type="text">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+                <div id="block-number-results" class="mt-3">
+                  <!-- Results will be displayed here --> </div>
+              </div>
+            </div>
           </div>
-          <!-- /.row --> </div>
+        </div>
         <!-- /.row --> </div>
-      <font size="2">
-        <!-- /#page-wrapper -->
-        <!-- /#wrapper -->
-        <!-- JavaScript -->
-        <script src="js/jquery-1.10.2.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <!-- Page Specific Plugins --> </font> </div>
+      <!-- /.row --> </div>
+    <font size="2">
+      <!-- /#page-wrapper -->
+      <!-- /#wrapper -->
+      <!-- JavaScript -->
+      <script src="js/jquery-1.10.2.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <!-- Page Specific Plugins --> </font>
   </body>
 </html>
