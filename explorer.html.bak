@@ -60,7 +60,7 @@ crossorigin="anonymous">
               <button type="submit">Search</button> </form>
           </div>
           <div> <br>
-            <div> <font color="white">Genesys block: March 7th, 2021 </font> </div>
+            <div> <font color="white">Genesys Block: March 7th, 2021 </font> </div>
             <div> <font color="white">Current Supply: </font> </div>
             <div> <font color="white">Maximum Supply: 21,000,000 </font> </div>
             <div> <font color="white">Current Block Height: </font> </div>

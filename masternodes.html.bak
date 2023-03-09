@@ -19,7 +19,6 @@ crossorigin="anonymous">
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/app.js"></script>
-
     <!---chart-->
     <script src="js/chartnodes.js"></script>
     <script src="js/nosonodes.js"></script>
@@ -34,7 +33,7 @@ crossorigin="anonymous">
   </head>
   <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();"
 
-    color="#222222" style="                                                                background-image: url(&quot;&quot;);">
+    color="#222222" style="                                                                 background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -67,18 +66,7 @@ crossorigin="anonymous">
             <div>
               <div class="mn-row">
                 <div class="col-lg-4">
-                  <div class="panel panel-primary">
-                    <div class="panel-head">
-                      <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i>
-                        ACTIVE MASTERNODES</h3>
-                    </div>
-                    <div class="panel-body">
-                      <div id="chartdiv">
-                        <div id="chartnodes"></div>
- 
-                      </div>
-                    </div>
-                  </div>
+
                 </div>
               </div>
             </div>
@@ -112,5 +100,6 @@ crossorigin="anonymous">
         <script src="js/jquery-1.10.2.js"></script>
         <script src="js/bootstrap.js"></script>
         <!-- Page Specific Plugins --> </font> </div>
+    
   </body>
 </html>

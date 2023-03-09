@@ -36,7 +36,7 @@ crossorigin="anonymous">
   </head>
   <body onload="loadBestHeight();loadSupply();loadSupply2();loadCirculating();loadPendingOrders();fetchCountdown();loadNodeIpAddressCount();"
 
-    color="#222222" style="                                                                                            background-image: url(&quot;&quot;);">
+    color="#222222" style="                                                                                                                         background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -61,22 +61,48 @@ crossorigin="anonymous">
             <li><a href="charts.html">Charts</a></li>
             <!-- <li><a href="market.html">&nbsp;Markets</a></li> -->
           </ul>
+          <!-- /.navbar-top-right -->
+          <div class="toprow">
+            <ul class="nav navbar-nav navbar-right navbar-user">
+              <li><a href="https://twitter.com/NosoCoin" target="_blank"> <img src="img/twitter_bird.png"
+
+                    style="width: 20px; height: 16px;" alt="Noso on Twitter"></a> </li>
+              <li><a href="https://discord.gg/PktseKHJH5" target="_blank"> <img src="img/discord.png"
+
+                    style="width: 24px; height: 22px;"></a></li>
+              <li><a href="https://t.me/nosocoin" target="_blank"> <img src="img/telegram.png"
+
+                    style="width: 24px; height: 23px;"></a></li>
+              <li><a href="https://nosocoin.com/"> <img src="img/nosoN.png" style="width: 24px; height: 23px;"></a></li>
+              <li><a href="https://docs.nosocoin.com/noso-developers-portal/rpc-connection/running-a-noso-json-rpc-node-for-development-utilizing-nosos-rest-api" target="_blank">
+                  <img src="img/api.png" style="width: 28px; height: 24px;"></a></li>
+            </ul>
+          </div>
         </div>
         <!-- /.navbar-collapse --> </nav>
       <div id="page-wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <!-- /.place Search here --> <br>
+            <!-- /.Top row search --> <br>
             <div class="exprow">
-              <form action="explorer.html?blockNumbe"> <input id="search"
+              <form id="block-form" action="explorer.html?blockNumber" method="get"
 
-                  name="r" placeholder="Search Block Number or Address"
+                style="display: none;"> <input id="block-search" name="blockNumber"
 
-                  type="search"> <button type="submit">Search</button> </form>
-            </div>
+                  placeholder="Search Block Number" type="search"> <button type="submit">Search
+                  Block</button> </form>
+              <form id="address-form" action="explorer.html?addresslookup" method="get"
+
+                style="display: none;"> <input id="address-search" name="addresslookup"
+
+                  placeholder="Search Address" type="search"> <button type="submit">Search
+                  Address</button> </form>
+              <div class="search1-wrapper"> <input id="search" placeholder="Search Block Number or Address"
+
+                  type="search1"> <button type="submit1" onclick="search()"></button>
+              </div>
+              <!-- Results will be displayed on Explorer page --> </div>
             <br>
-            <div id="block-number-results">
-              <!-- Results will be displayed here --> </div>
           </div>
         </div>
       </div>
@@ -385,17 +411,38 @@ crossorigin="anonymous">
         <!-- /.row --> </font></div>
     <font size="2">
       <!-- /.row --> </font> <font size="2">
-      <!-- /.row --> </font> <font size="2">
-      <!-- /#page-wrapper -->
-      <!-- /#wrapper -->
-      <!-- JavaScript -->
-      <script src="js/jquery-1.10.2.js"></script>
-      <script src="js/bootstrap.js"></script>
-      <!-- Page Specific Plugins -->
-      <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-      <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
-      <script src="js/morris/chart-data-morris.js"></script>
-      <script src="js/tablesorter/jquery.tablesorter.js"></script>
-      <script src="js/tablesorter/tables.js"></script> </font>
+      <!-- /.row --> </font>
+    <!-- /#page-wrapper -->
+    <!-- /#wrapper -->
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!-- Page Specific Plugins -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+    <script src="js/morris/chart-data-morris.js"></script>
+    <script src="js/tablesorter/jquery.tablesorter.js"></script>
+    <script src="js/tablesorter/tables.js"></script>
+    <script>
+function search() {
+  const input = document.getElementById('search').value.trim();
+  if (/^\d{1,10}$/.test(input)) {
+    // Show block form and hide address form
+    document.getElementById('block-form').style.display = '';
+    document.getElementById('address-form').style.display = 'none';
+    document.getElementById('block-search').value = input;
+    document.getElementById('block-form').submit();
+  } else if (/^[a-zA-Z0-9]{1,31}$/.test(input)) {
+    // Show address form and hide block form
+    document.getElementById('address-form').style.display = '';
+    document.getElementById('block-form').style.display = 'none';
+    document.getElementById('address-search').value = input;
+    document.getElementById('address-form').submit();
+  } else {
+    // Invalid input, do nothing
+    return;
+  }
+}
+</script>
   </body>
 </html>

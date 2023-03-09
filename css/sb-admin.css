@@ -30,6 +30,13 @@ div {
   color: #222222;
 }
 
+.tooltip .tooltiptext {
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
 #wrapper {
   padding-left: 0;
   background: black;
@@ -148,10 +155,18 @@ div {
  white-space: nowrap;
 
 }
+/* Explorer row */
 .exprow {
   margin: 0;
   border: 0px solid black;
     max-width:1200px;
+
+}
+/* Top social media row */
+.toprow {
+  margin: 0;
+  border: 0px solid black;
+    max-width:1450px;
 
 }
 
@@ -160,8 +175,6 @@ div {
   margin: 0;
   border: 0px solid black;
   max-width:1280px;
-
-
 
 }
 
@@ -495,43 +508,8 @@ table.tablesorter thead tr th:hover {
 }   
 
 /* Form explorer search button */
-.search-wrapper button {
-    overflow: visible;
-    position: relative;
-    float: right;
-    border: 1;
-    padding: 0px;
-    cursor: pointer;
-    height: 40px;
-    width: 110px;
-    font: 13px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
-    color: #fff;
-    text-transform: uppercase;
-    background: #222222;
-    border-radius: 40px;
-    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
-}  
+   
 
-
-.search-wrapper button:hover{    
-     background: #999;
-         color: black;
-}  
-
-.search-wrapper button:active,
-.search-wrapper button:focus{  
-    background: #222222;
-    color: white;
-    outline: 0;  
-}
-
-    
-
-.search-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
-    border: 0;
-    padding: 0;
-        background: #222222;
-}   
 
 form {
   color: #555;
@@ -542,19 +520,67 @@ form {
 }
 input[type="search"] {
   border: none;
-  background: transparent;
+  background: #222222;
   margin: 0;
   padding: 7px 8px;
   font-size: 14px;
-  color: inherit;
+  color: #bbb;
   border: 1px solid transparent;
   border-radius: inherit;
-  width: 100%;
+ width: 100%;
 }
-
 input[type="search"]::placeholder {
   color: #bbb;
 }
+
+
+.search1-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  color: #555;
+  display: flex;
+  padding: 2px;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+}
+
+input[type="search1"] {
+  border: none;
+  background: #222222;
+  margin: 0;
+  padding: 7px 8px;
+  font-size: 14px;
+  color: #bbb;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  width: 100%;
+  
+}
+
+input[type="search1"]::placeholder {
+  color: #bbb;
+}
+
+button[type="submit1"] {
+  position: absolute;
+  top: -10;
+   right: 0;
+  width: 40px;
+  height: 35px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #fbe04d;
+  border-radius: inherit;
+  background: #fbe04d url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+button[type="submit1"]:hover {
+  opacity: 1;
+}
+
 
 button[type="submit"] {
   text-indent: 9999px;
@@ -573,14 +599,8 @@ button[type="submit"]:hover {
   opacity: 1;
 }
  
- button[type="submit"]:focus,
-input[type="search"]:focus {
-  box-shadow: 0 0 3px 0 #1183d6;
-  border-color: #1183d6;
-  outline: none;
 
-}
-  
+
   /* charts */
 #chartdiv{
   background-color: black;
