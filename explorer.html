@@ -14,7 +14,7 @@ integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6h
 crossorigin="anonymous">
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/search.js"></script>
+    <script src="js/blocklookup.js"></script>
     <!---chart-->
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -27,7 +27,7 @@ crossorigin="anonymous">
   </head>
   <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();"
 
-    color="#222222" style="                                                                                                                          background-image: url(&quot;&quot;);">
+    color="#222222" style="                                                                                                                                                background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -78,40 +78,90 @@ crossorigin="anonymous">
           </div>
         </div>
         <!-- /.navbar-collapse --> </nav>
-      </nav>
       <div id="page-wrapper">
         <div class="col-lg-12">
           <!-- /.place Search here --> <br>
           <div class="exprow">
-            <form id="block-number-form"> <input id="block-number-input" name="blockNumber"
+            <form id="block-number-form"> <input id="block-number-input" name="blocknumber"
 
                 required="" placeholder="Search Block Number or Address" type="search">
               <button type="submit">Search</button> </form>
           </div>
-          <div> <br>
-            <div> <font color="white">Genesys Block: March 7th, 2021 </font> </div>
-            <div> <font color="white">Current Supply: </font> </div>
-            <div> <font color="white">Maximum Supply: 21,000,000 </font> </div>
-            <div> <font color="white">Current Block Height: </font> </div>
-            <div> <font color="white">Block time: 600 Seconds </font> </div>
-          </div>
-          <br>
-          <div id="block-number-results" class="exprow">
-            <!-- Results will be displayed here --> </div>
-          <div><br>
+          <div class="row">
+            <div> </div>
             <br>
+            <div>
+              <table style="color: darkgrey; background-color: #222222; border: 1px solid black; min-width: 300px; max-width: 800px;">
+                <tbody>
+                  <tr>
+                    <td>Genesys Block:</td>
+                    <td><br>
+                    </td>
+                    <td><br>
+                    </td>
+                    <td> March 7th, 2021</td>
+                  </tr>
+                  <tr>
+                    <td>Current Supply</td>
+                    <td><br>
+                    </td>
+                    <td><br>
+                    </td>
+                    <td>N/A</td>
+                  </tr>
+                  <tr>
+                    <td>Maximum Supply</td>
+                    <td><br>
+                    </td>
+                    <td><br>
+                    </td>
+                    <td>21,000,000</td>
+                  </tr>
+                  <tr>
+                    <td>Current Block Height</td>
+                    <td><br>
+                    </td>
+                    <td><br>
+                    </td>
+                    <td>N/A</td>
+                  </tr>
+                  <tr>
+                    <td>Block Time</td>
+                    <td><br>
+                    </td>
+                    <td><br>
+                    </td>
+                    <td>600 Seconds</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <br>
+            <div id="block-number-results" class="exprow">
+              <!-- Results will be displayed here --> </div>
+            <div><br>
+              <br>
+              <br>
+            </div>
           </div>
-        </div>
-      </div>
+          <!-- /.row -->
+          <!-- /.row --> <font size="2">
+            <!-- /#page-wrapper -->
+            <!-- /#wrapper -->
+            <!-- JavaScript -->
+            <script src="js/jquery-1.10.2.js"></script>
+            <script src="js/bootstrap.js"></script>
+            <!-- Page Specific Plugins --> </font> </div>
+        <script>
+		// extract uri parameter
+		const params = new URLSearchParams(window.location.search);
+		const uriString = params.get('uristring');
+
+		if (uriString !== null) {
+			$('#block-number-input').val(uriString);
+			$('#block-number-form').submit();
+		}
+	</script> </div>
     </div>
-    <!-- /.row -->
-    <!-- /.row --> <font size="2">
-      <!-- /#page-wrapper -->
-      <!-- /#wrapper -->
-      <!-- JavaScript -->
-      <script src="js/jquery-1.10.2.js"></script>
-      <script src="js/bootstrap.js"></script>
-      <!-- Page Specific Plugins --> </font>
   </body>
 </html>
