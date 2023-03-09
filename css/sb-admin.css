@@ -151,7 +151,7 @@ div {
 .exprow {
   margin: 0;
   border: 0px solid black;
-    max-width:300px;
+    max-width:1280px;
 
 }
 
@@ -159,6 +159,7 @@ div {
 .row {
   margin: 0;
   border: 0px solid black;
+  max-width:1280px;
 
 
 
@@ -548,7 +549,7 @@ input[type="search"] {
   color: inherit;
   border: 1px solid transparent;
   border-radius: inherit;
-  width: 300px;
+  width: 100%;
 }
 
 input[type="search"]::placeholder {
@@ -556,7 +557,7 @@ input[type="search"]::placeholder {
 }
 
 button[type="submit"] {
-  text-indent: 999px;
+  text-indent: 9999px;
   overflow: hidden;
   width: 40px;
   padding: 0;

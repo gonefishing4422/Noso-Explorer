@@ -35,7 +35,7 @@ crossorigin="anonymous">
   </head>
   <body onload="loadBestHeight();loadSupply();loadSupply2();loadCirculating();loadPendingOrders();fetchCountdown();loadNodeIpAddressCount();"
 
-    color="#222222" style="                                                                                   background-image: url(&quot;&quot;);">
+    color="#222222" style="                                                                                        background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -65,7 +65,18 @@ crossorigin="anonymous">
       <div id="page-wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <!-- /.place Search here --> </div>
+            <!-- /.place Search here -->
+            <div class="exprow">
+              <form id="block-number-form"> <input id="block-number-input"
+
+                  name="blockNumber" required="" placeholder="Search Block Number or Address"
+
+                  type="search"> <button type="submit">Search</button> </form>
+            </div>
+            <div>
+              <br><br>
+            </div>
+          </div>
         </div>
         <!-- /.row -->
         <div class="row">
@@ -132,7 +143,7 @@ crossorigin="anonymous">
                       </font></div>
                   </div>
                 </div>
-                <font size="2"> <a href="#"> </a>
+                <font size="2"> <a href="charts.html"> </a>
                   <div class="panel-footer announcement-bottom"><a href="#"> </a><a
 
                       href="coins.html">
@@ -161,7 +172,7 @@ crossorigin="anonymous">
                     </div>
                   </div>
                 </div>
-                <a href="coins.html">
+                <a href="masternodes.html">
                   <div class="panel-footer announcement-bottom">
                     <div class="row">
                       <div class="col-xs-6">Masternodes</div>
@@ -187,7 +198,7 @@ crossorigin="anonymous">
                   </div>
                 </div>
               </div>
-              <a href="charts.html">
+              <a href="masternodes.html">
                 <div class="panel-footer announcement-bottom">
                   <div class="row">
                     <div class="col-xs-6">Masternodes</div>
@@ -260,7 +271,7 @@ crossorigin="anonymous">
                     </div>
                   </div>
                 </div>
-                <a href="charts.html">
+                <a href="explorer.html">
                   <div class="panel-footer announcement-bottom">
                     <div class="row">
                       <div class="col-xs-6">Noso Explorer</div>
