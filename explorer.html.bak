@@ -27,7 +27,7 @@ crossorigin="anonymous">
   </head>
   <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();"
 
-    color="#222222" style="                                                                                                                                                background-image: url(&quot;&quot;);">
+    color="#222222" style="                                                                                                                                                   background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -80,55 +80,51 @@ crossorigin="anonymous">
         <!-- /.navbar-collapse --> </nav>
       <div id="page-wrapper">
         <div class="col-lg-12">
-          <!-- /.place Search here --> <br>
+          <!-- / .search-form --> <br>
           <div class="exprow">
             <form id="block-number-form"> <input id="block-number-input" name="blocknumber"
 
-                required="" placeholder="Search Block Number or Address" type="search">
-              <button type="submit">Search</button> </form>
+                required="" placeholder="Search Block Number" type="search"> <button
+
+                type="submit">Search</button> </form>
           </div>
-          <div class="row">
+          <div class="exprow">
             <div> </div>
             <br>
             <div>
-              <table style="color: darkgrey; background-color: #222222; border: 1px solid black; min-width: 300px; max-width: 800px;">
+              <table class="styled-table">
                 <tbody>
                   <tr>
-                    <td>Genesys Block:</td>
-                    <td><br>
-                    </td>
+                    <td>Genesys Block</td>
+
                     <td><br>
                     </td>
                     <td> March 7th, 2021</td>
                   </tr>
                   <tr>
                     <td>Current Supply</td>
-                    <td><br>
-                    </td>
+
                     <td><br>
                     </td>
                     <td>N/A</td>
                   </tr>
                   <tr>
                     <td>Maximum Supply</td>
-                    <td><br>
-                    </td>
+
                     <td><br>
                     </td>
                     <td>21,000,000</td>
                   </tr>
                   <tr>
                     <td>Current Block Height</td>
-                    <td><br>
-                    </td>
+
                     <td><br>
                     </td>
                     <td>N/A</td>
                   </tr>
                   <tr>
                     <td>Block Time</td>
-                    <td><br>
-                    </td>
+
                     <td><br>
                     </td>
                     <td>600 Seconds</td>

@@ -37,7 +37,7 @@ $(function() {
 		tableHtml += '<tr><th>Time End</th><td>' + response.data.timeEnd + '</td></tr>';
 		tableHtml += '<tr><th>Time Total</th><td>' + response.data.timeTotal + '</td></tr>';
 		//tableHtml += '<tr><th>Masternode Count</th><td>' + response.data.mnsQ + '</td></tr>';
-		tableHtml += '<tr><th>Masternode Count</th><td><a href="explorer.html?uristring=' + response.data.mnsQ + '">' + response.data.mnsQ + '</a></td></tr>';
+		tableHtml += '<tr><th>Masternode Count</th><td><a href="masternodes.html?uristring=' + response.data.mnsQ + '">' + response.data.mnsQ + '</a></td></tr>';
 		tableHtml += '<tr><th>Masternode Reward</th><td>' + response.data.mns.mnsRewardInPedro + '</td></tr>';
 		//tableHtml += '<tr><th><a href="masternodes.html">Masternode Addresses</a></th><td>' + response.data.mns.mnsAddresses + '</td></tr>';
 	// table for Masternode and PoS addresses needs created
