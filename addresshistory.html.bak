@@ -24,10 +24,13 @@ crossorigin="anonymous">
     <!-- Page Specific CSS -->
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
     <!--style-->
+    <style>
+    	#addresshistory-form {
+			display: none;
+	}
+    </style>
   </head>
-  <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();"
-
-    color="#222222" style="                                                                                                                                        background-image: url(&quot;&quot;);">
+  <body color="#222222" style="                                                                                                                                            background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -82,26 +85,46 @@ crossorigin="anonymous">
         <div class="col-lg-12">
           <!-- /.search-form --> <br>
           <div class="exprow">
-            <form id="api-form"> <input id="addresslookup" name="addresslookup"
-
-                type="search"> <button type="submit">submit</button> </form>
-            <br>
-            <br>
-            <div id="spinner" class="spinner" style="display:none;"></div>
-            <!-- Add the spinner element -->
-            <table class="styled-table">
-              <thead class="styled-table">
-                <tr class="styled-table">
-                  <th class="styled-table">Property</th>
-                  <th class="styled-table">Value</th>
-                </tr>
-              </thead>
-              <tbody class="styled-table" id="table-body">
-              </tbody>
-            </table>
-          </div>
-          <script src="js/addresslookup.js"></script> </div>
-
+            
+          
+          <h3> Addresses with a large history can take up to 5 minutes</h3>
+          <br>
+          <form id="addresshistory-form"> <label for="input-field">Enter Noso
+              Address</label> <input id="nosoAddress" name="nosoAddress" type="text">
+            <input value="Submit" type="submit"> </form>
+          <div id="loader"></div>
+          <div id="spinner" class="spinner" style="display:none;"></div>
+          <table id="api-table" class="styled-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Block</th>
+                <th>Receive From</th>
+                <th>Reference</th>
+                <th>Timestamp</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+            </div>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+          <script src="js/addresshistory.js"></script>
+          <script>
+		$(document).ready(function() {
+			// Get the search parameter from the URL
+			const urlParams = new URLSearchParams(window.location.search);
+			const inputVal = urlParams.get('nosoAddress');
+			if (inputVal) {
+				// If the search parameter is present, populate the input field with it
+				$('#nosoAddress').val(inputVal);
+				// Trigger the form submit event
+				$('#addresshistory-form').submit();
+			}
+		});
+	</script> </div>
+      </div>
     </div>
     
   </body>

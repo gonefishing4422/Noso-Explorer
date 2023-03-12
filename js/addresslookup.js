@@ -39,7 +39,7 @@ function submitForm() {
 
         propCell.textContent = key;
 
-        // Check if the value is a number with 10 or fewer digits - COMBINE WORK IN PROGRESS
+        // Check if the value is a number with 10 or fewer digits
         if (/^\d{1,10}$/.test(value)) {
           // If so, create a hyperlink to "https://example.com/number/{value}"
           const link = document.createElement('a');
@@ -55,6 +55,24 @@ function submitForm() {
         row.appendChild(valueCell);
         tableBody.appendChild(row);
       }
+
+// Create a custom row for NosoAddress
+const nosoAddressRow = document.createElement('tr');
+const nosoAddressPropCell = document.createElement('td');
+const nosoAddressValueCell = document.createElement('td');
+
+nosoAddressPropCell.textContent = 'NosoAddress';
+
+// Create a hyperlink to "addresshistory.html" for the NosoAddress value
+const link = document.createElement('a');
+link.href = `addresshistory.html?nosoAddress=${encodeURIComponent(inputAddresslookup)}`;
+link.textContent = inputAddresslookup;
+nosoAddressValueCell.appendChild(link);
+
+nosoAddressRow.appendChild(nosoAddressPropCell);
+nosoAddressRow.appendChild(nosoAddressValueCell);
+tableBody.appendChild(nosoAddressRow);
+
 
       // Hide the spinner once the content is rendered on the page
       spinner.style.display = 'none';
