@@ -94,7 +94,7 @@ crossorigin="anonymous">
           <div><br>
             <br>
             <br>
-            <table id="apiTable"></table>
+     
 
           </div>
         </div>
@@ -105,7 +105,7 @@ crossorigin="anonymous">
           <!-- JavaScript -->
           <script src="js/jquery-1.10.2.js"></script>
           <script src="js/bootstrap.js"></script>
-            <script src="nosochain.js"></script>
+
           <!-- Page Specific Plugins --> </font> </div>
       <script>
 		// extract uri parameter
