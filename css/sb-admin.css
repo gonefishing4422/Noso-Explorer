@@ -156,10 +156,10 @@ div {
 
 }
 /* Explorer row */
-.exprow {
-  margin: 0;
+.exprow-table {
+  margin:10px;
   border: 0px solid black;
-    max-width:1200px;
+    max-width:1280px;
 
 }
 /* Top social media row */
@@ -174,10 +174,16 @@ div {
 .row {
   margin: 0;
   border: 0px solid black;
-  max-width:1280px;
+  max-width:1300x;
 
 }
+/* Table Nav row */
+.row {
+  margin: 0;
+  border: 0px solid black;
+  max-width:1300px;
 
+}
 
 /* Nav Announcements */
 

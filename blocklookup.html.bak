@@ -24,7 +24,7 @@ crossorigin="anonymous">
     <!--style-->
   </head>
   <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();"
-    color="#222222" style="                                                                                                                                                       background-image: url(&quot;&quot;);">
+    color="#222222" style="                                                                                                                                                    background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -67,56 +67,78 @@ crossorigin="anonymous">
         </div>
         <!-- /.navbar-collapse --> </nav>
       <div id="page-wrapper">
-        <div class="row">
-          <div class="col-lg-12">
-            <!-- /.Top row search --> <br>
-            <div class="exprow">
-              <form id="block-form" action="blocklookup.html?blocknumber" method="get"
-                style="display: none;"> <input id="block-search" name="blocknumber"
-                  placeholder="Search Block Number" type="search"> <button type="submit">Search
-                  Block</button> </form>
-              <form id="address-form" action="addresslookup.html?addresslookup"
-                method="get" style="display: none;"> <input id="address-search"
-                  name="addresslookup" placeholder="Search Address" type="search">
-                <button type="submit">Search Address</button> </form>
-              <div class="search1-wrapper"> <input id="search" placeholder="Search Block Number or Address"
-                  type="search1"> <button type="submit1" onclick="search()"></button>
-              </div>
-              <!-- Results will be displayed on Explorer page --> </div>
-            <br>
+        <div class="col-lg-12">
+          <!-- / .search-form --> <br>
+          <div class="exprow">
+            <form id="block-number-form"> <input id="block-number-input" name="blocknumber"
+                required="" placeholder="Search Block Number" type="search"> <button
+                type="submit">Search</button> </form>
           </div>
-        </div>
-      </div>
-      <!-- /.row -->
-      <!-- /.row --> <font size="2">
-        <!-- /#page-wrapper -->
-        <!-- /#wrapper -->
-        <!-- JavaScript -->
-        <script src="js/jquery-1.10.2.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <!-- Page Specific Plugins --> </font> </div>
-    <script src="js/tablesorter/jquery.tablesorter.js"></script>
-    <script src="js/tablesorter/tables.js"></script>
-    <script>
-function search() {
-  const input = document.getElementById('search').value.trim();
-  if (/^\d{1,10}$/.test(input)) {
-    // Show block form and hide address form
-    document.getElementById('block-form').style.display = '';
-    document.getElementById('address-form').style.display = 'none';
-    document.getElementById('block-search').value = input;
-    document.getElementById('block-form').submit();
-  } else if (/^[a-zA-Z0-9]{1,31}$/.test(input)) {
-    // Show address form and hide block form
-    document.getElementById('address-form').style.display = '';
-    document.getElementById('block-form').style.display = 'none';
-    document.getElementById('address-search').value = input;
-    document.getElementById('address-form').submit();
-  } else {
-    // Invalid input, do nothing
-    return;
-  }
-}
-</script>
+          <div class="exprow">
+            <div> </div>
+            <br>
+            <div>
+              <table class="styled-table">
+                <tbody>
+                  <tr>
+                    <td>Genesys Block</td>
+                    <td><br>
+                    </td>
+                    <td> March 7th, 2021</td>
+                  </tr>
+                  <tr>
+                    <td>Current Supply</td>
+                    <td><br>
+                    </td>
+                    <td>N/A</td>
+                  </tr>
+                  <tr>
+                    <td>Maximum Supply</td>
+                    <td><br>
+                    </td>
+                    <td>21,000,000</td>
+                  </tr>
+                  <tr>
+                    <td>Current Block Height</td>
+                    <td><br>
+                    </td>
+                    <td>N/A</td>
+                  </tr>
+                  <tr>
+                    <td>Block Time</td>
+                    <td><br>
+                    </td>
+                    <td>600 Seconds</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <br>
+            <div id="block-number-results" class="exprow">
+              <!-- Results will be displayed here --> </div>
+            <div><br>
+              <br>
+              <br>
+            </div>
+          </div>
+          <!-- /.row -->
+          <!-- /.row --> <font size="2">
+            <!-- /#page-wrapper -->
+            <!-- /#wrapper -->
+            <!-- JavaScript -->
+            <script src="js/jquery-1.10.2.js"></script>
+            <script src="js/bootstrap.js"></script>
+            <!-- Page Specific Plugins --> </font> </div>
+        <script>
+		// extract uri parameter
+		const params = new URLSearchParams(window.location.search);
+		const uriString = params.get('uristring');
+
+		if (uriString !== null) {
+			$('#block-number-input').val(uriString);
+			$('#block-number-form').submit();
+		}
+	</script> </div>
+    </div>
   </body>
 </html>

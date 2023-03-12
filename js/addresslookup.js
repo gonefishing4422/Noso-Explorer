@@ -44,7 +44,7 @@ function submitForm() {
           // If so, create a hyperlink to "https://example.com/number/{value}"
           const link = document.createElement('a');
           link.textContent = value;
-          link.href = `explorer.html?blocknumber=${value}`;
+          link.href = `blocklookup.html?blocknumber=${value}`;
           valueCell.appendChild(link);
         } else {
           // If not, just display the value
