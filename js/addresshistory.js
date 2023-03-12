@@ -24,9 +24,9 @@ $(document).ready(function(){
 						tableHtml += '<tr>';
 						tableHtml += '<td class="priority-1">' + cat + '</td>';
 						tableHtml += '<td class="priority-1">' + rowData.amount + '</td>';
-						tableHtml += '<td class="priority-2"><a href="blocklookup2.html?blocknumber=' + rowData.block + '">' + rowData.block + '</a></td>';
+						tableHtml += '<td class="priority-2"><a href="blocklookup.html?blocknumber=' + rowData.block + '">' + rowData.block + '</a></td>';
 						// tableHtml += '<td><a href="addresslookup2.html?input-field=' + rowData.receiveFrom + '">' + rowData.receiveFrom + '</a></td>';
-						tableHtml += '<td class="priority-3"><a href="addresslookup.html?uristring=' + rowData.receiveFrom + '">' + rowData.receiveFrom + '</a></td>';
+						tableHtml += '<td class="priority-3"><a href="addresslookup.html?addresslookup=' + rowData.receiveFrom + '">' + rowData.receiveFrom + '</a></td>';
 						tableHtml += '<td class="priority-4">' + rowData.reference + '</td>';
 						tableHtml += '<td class="priority-5">' + rowData.timestamp + '</td>';
 						tableHtml += '</tr>';
