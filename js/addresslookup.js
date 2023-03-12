@@ -65,7 +65,7 @@ nosoAddressPropCell.textContent = 'NosoAddress';
 
 // Create a hyperlink to "addresshistory.html" for the NosoAddress value
 const link = document.createElement('a');
-link.href = `addresshistory.html?nosoAddress=${encodeURIComponent(inputAddresslookup)}`;
+link.href = `addresshistory.html?input-field=${encodeURIComponent(inputAddresslookup)}`;
 link.textContent = inputAddresslookup;
 nosoAddressValueCell.appendChild(link);
 
