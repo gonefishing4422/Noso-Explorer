@@ -84,7 +84,7 @@ crossorigin="anonymous">
       <div id="page-wrapper">
         <div class="col-lg-12">
           <!-- /.search-form --> <br>
-          <div class="exprow">
+          <div class="row">
             
           
           <h3> Addresses with a large history can take up to 5 minutes</h3>
