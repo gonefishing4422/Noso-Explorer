@@ -173,10 +173,15 @@ div {
     max-width:800px;
 }
 
+#api-form {
+	display: none;
+}
+
 
 /* Top social media row */
 .toprow {
   margin: 0;
+  border: 0px solid black;
   border: 0px solid black;
     max-width:1450px;
 
@@ -291,7 +296,7 @@ table.tablesorter thead tr th:hover {
   height: 50px;
   border-radius: 50%;
   border: 5px solid rgba(0, 0, 0, 0.1);
-  border-top-color: #007bff;
+  border-top-color: #fbe04d;
   animation: spin 1s ease-in-out infinite;
 }
 

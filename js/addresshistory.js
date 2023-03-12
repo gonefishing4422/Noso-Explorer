@@ -1,8 +1,8 @@
 $(document).ready(function(){
 	var loader = $('#loader');
 	var table = $('#api-table tbody');
-	var form = $('#addresshistory-form');
-	var inputField = $('#nosoAddress');
+	var form = $('#api-form');
+	var inputField = $('#input-field');
 	var apiUrl = 'http://nosostats.ddns.net:49001/api/addressbasic/';
 
 	form.on('submit', function(event){
@@ -24,9 +24,9 @@ $(document).ready(function(){
 						tableHtml += '<tr>';
 						tableHtml += '<td>' + cat + '</td>';
 						tableHtml += '<td>' + rowData.amount + '</td>';
-						tableHtml += '<td><a href="blocklookup.html?blocknumber=' + rowData.block + '">' + rowData.block + '</a></td>';
-						// tableHtml += '<td><a href="addresshistory.html?nosoAddress=' + rowData.receiveFrom + '">' + rowData.receiveFrom + '</a></td>';
-						tableHtml += '<td><a href="addresslookup.html?nosoaddress=' + rowData.receiveFrom + '">' + rowData.receiveFrom + '</a></td>';
+						tableHtml += '<td><a href="blocklookup2.html?blocknumber=' + rowData.block + '">' + rowData.block + '</a></td>';
+						// tableHtml += '<td><a href="addresslookup2.html?input-field=' + rowData.receiveFrom + '">' + rowData.receiveFrom + '</a></td>';
+						tableHtml += '<td><a href="addresslookup.html?uristring=' + rowData.receiveFrom + '">' + rowData.receiveFrom + '</a></td>';
 						tableHtml += '<td>' + rowData.reference + '</td>';
 						tableHtml += '<td>' + rowData.timestamp + '</td>';
 						tableHtml += '</tr>';
