@@ -33,7 +33,7 @@ crossorigin="anonymous">
   </head>
   <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();"
 
-    color="#222222" style="                                                                                                                          background-image: url(&quot;&quot;);">
+    color="#222222" style="                                                                                                                           background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -122,6 +122,5 @@ crossorigin="anonymous">
         <script src="js/jquery-1.10.2.js"></script>
         <script src="js/bootstrap.js"></script>
         <!-- Page Specific Plugins --> </font> </div>
-    
   </body>
 </html>

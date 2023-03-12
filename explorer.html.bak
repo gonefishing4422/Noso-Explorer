@@ -108,7 +108,7 @@ crossorigin="anonymous">
         <table id="nosochain" class="styled-table">
           <thead>
             <tr>
-              <th class="priority-1"><a href="blocklookup.html?blocknumber=>Height</a></th>
+              <th class="priority-1"><a href="blocklookup.html?blocknumber=">Height</a></th>
               <th class="priority-1">Date-Time UTC+2</th>
               <th class="priority-1">Creator</th>
               <th class="priority-2">Hash</th>
