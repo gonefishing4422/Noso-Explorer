@@ -162,6 +162,18 @@ div {
     max-width:1280px;
 
 }
+.row-table {
+  margin: 0;
+  border: 0px solid black;
+  max-width:800px;
+
+}
+
+.columnClasses {
+    max-width:800px;
+}
+
+
 /* Top social media row */
 .toprow {
   margin: 0;
