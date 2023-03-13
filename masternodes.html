@@ -22,7 +22,8 @@ crossorigin="anonymous">
     <!---chart-->
     <script src="js/chartnodes.js"></script>
     <script src="js/nosonodes.js"></script>
-    <script>src="js/mn24.js"</script>
+    <script src="js/mn24.js"></script>
+    <script src="js/nodecount.js"></script>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Add custom CSS here -->
@@ -32,7 +33,7 @@ crossorigin="anonymous">
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
     <!--style-->
   </head>
-  <body onload="loadBestHeight();" color="#222222" style="                                                                                                                                   background-image: url(&quot;&quot;);">
+  <body onload="loadNodeIpAddressCount();" color="#222222" style="                                                                                                                                           background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -84,53 +85,53 @@ crossorigin="anonymous">
         </div>
         <!-- /.navbar-collapse --> </nav>
       <div id="page-wrapper">
+        <!-- /.row -->
         <div class="row">
           <div class="col-lg-12">
             <div>
               <div class="mn-row">
                 <div class="col-lg-4">
                   <div class="contentcontainer">
-                    <div class="contentchart"><br>
-                      Masternodes 24hr<br>
-                      <br>
-                      <div>
-                        <div id="mn24"></div>
-                         </div>
-                    </div>
-                    <div class="popwchart">Box 2</div>
+                    <div class="contentchart">
+                      <center> Active Masternodes<strong> <span id="nodeIpAddressCount">
+                          0</span></strong></center>
+                      <canvas width="300px" id="mn24"></canvas> </div>
+                    <div>Box 2</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- /.row -->
-          <div class="row">
-            <div class="col-lg-12">
-              <div>
-                <div class="row">
-                  <div class="col-lg-4">
-                    <!-- /.table -->
-                    <div>
-                      <table class="styled-table">
-                        <thead>
-                        </thead>
-                        <tbody id="uniqueLines">
-                        </tbody>
-                      </table>
-                    </div>
-                    <!-- /.table --> </div>
-                </div>
+        </div>
+        <!-- /.row -->
+        <div class="row">
+          <div class="col-lg-12">
+            <div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <!-- /.table -->
+                  <div>
+                    <table class="styled-table">
+                      <thead>
+                      </thead>
+                      <tbody id="uniqueLines">
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.table --> </div>
               </div>
             </div>
           </div>
-          <!-- /.row --> </div>
-        <!-- /.row --> </div>
-      <!-- /.row --> <font size="2">
-        <!-- /#page-wrapper -->
-        <!-- /#wrapper -->
-        <!-- JavaScript -->
-        <script src="js/jquery-1.10.2.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <!-- Page Specific Plugins --> </font> </div>
+        </div>
+      </div>
+      <!-- /.row --> </div>
+    <!-- /.row --> <font size="2">
+      <!-- /#page-wrapper -->
+      <!-- /#wrapper -->
+      <!-- JavaScript -->
+      <script src="js/jquery-1.10.2.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <!-- Page Specific Plugins --> </font>
+    
   </body>
 </html>
