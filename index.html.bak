@@ -20,8 +20,8 @@ crossorigin="anonymous">
     <script src="js/supply2.js"></script>
     <script src="js/circulating.js"></script>
     <script src="js/pendingorders.js"></script>
+    <script src="js/lastblockorderamount.js"></script>
     <script src="js/countdown.js"></script>
-    <script src="js/content-refresh.js"></script>
     <script src="js/nodelockfunds.js"></script>
     <script src="js/nodecount.js"></script>
     <script src="js/search.js"></script>
@@ -35,9 +35,9 @@ crossorigin="anonymous">
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
     <!--style-->
   </head>
-  <body onload="loadBestHeight();loadSupply();loadSupply2();loadCirculating();loadPendingOrders();fetchCountdown();loadNodeIpAddressCount();content-refresh();"
+  <body onload="loadBestHeight();loadSupply();loadSupply2();loadCirculating();loadPendingOrders();fetchCountdown();loadNodeIpAddressCount();"
 
-    color="#222222" style="                                                                                                                                                          background-image: url(&quot;&quot;);">
+    color="#222222" style="                                                                                                                                                             background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -147,8 +147,8 @@ crossorigin="anonymous">
                   <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
 
                       id="countdown-timer">0</span></p>
-                  <p class="announcement-text" style="width: 176px;">Block
-                    Time Remaining</p>
+                  <p class="announcement-text" style="width: 176px;">Block Time
+                    Remaining</p>
                 </div>
               </div>
             </div>
@@ -204,7 +204,7 @@ crossorigin="anonymous">
                     <p class="announcement-text" style="width: 176px;"><font color="white"><span
 
                           id="percentcoinslocked">0</span></font>&nbsp; NOSO
-                      Coins Locked</p>
+                      NODE Coins Locked</p>
                   </div>
                 </div>
               </div>
@@ -274,20 +274,20 @@ crossorigin="anonymous">
                 <div class="row">
                   <div class="col-xs-6 text-right">
                     <p class="announcement-heading" style="margin-left: 26px; width: 164px;">
-                      <span id="nosoamount">0</span> <br>
+                      <span id="lastblockorderamount">0</span> <br>
                       <font class="announcement-subheading">NOSO</font> </p>
                     <font size="2">
                       <p class="announcement-text" style="width: 176px;"> Noso
-                        Transferred on Block<font size="2"></font></p>
+                        Transferred on Last Block<font size="2"></font></p>
                     </font></div>
                 </div>
               </div>
-              <font size="2"> <a href="#"> </a>
+              <font size="2"> <a href="charts.html"> </a>
                 <div class="panel-footer announcement-bottom"><a href="#"> </a><a
 
                     href="coins.html">
                     <div class="row">
-                      <div class="col-xs-6">Coin Supply</div>
+                      <div class="col-xs-6">Noso Charts</div>
                       <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
                       </div>
                     </div>

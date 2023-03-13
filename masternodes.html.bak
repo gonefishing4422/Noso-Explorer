@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Noso Exporer</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
@@ -18,10 +19,10 @@ integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6h
 crossorigin="anonymous">
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/app.js"></script>
     <!---chart-->
     <script src="js/chartnodes.js"></script>
     <script src="js/nosonodes.js"></script>
+    <script>src="js/mn24.js"</script>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Add custom CSS here -->
@@ -31,9 +32,7 @@ crossorigin="anonymous">
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
     <!--style-->
   </head>
-  <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();"
-
-    color="#222222" style="                                                                                                                             background-image: url(&quot;&quot;);">
+  <body onload="loadBestHeight();" color="#222222" style="                                                                                                                                  background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -89,7 +88,18 @@ crossorigin="anonymous">
           <div class="col-lg-12">
             <div>
               <div class="mn-row">
-                <div class="col-lg-4"> </div>
+                <div class="col-lg-4">
+                  <div class="contentcontainer">
+                    <div class="contentchart"><br>
+                      Masternodes 24hr<br>
+                      <br>
+                      <div >
+                        <div><canvas id="mn24"></canvas></div>
+                      </div>
+                    </div>
+                    <div class="popwchart">Box 2</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -386,8 +386,12 @@ table.tablesorter thead tr th:hover {
 		display:none;
 		
 	}
+	.contentchart {
+		flex-basis:100%;
+		}
 	
 
+	
 	
 
 }
@@ -405,6 +409,8 @@ table.tablesorter thead tr th:hover {
 	.priority-5{
 		display:none;
 	}
+
+	
 
 
 
@@ -694,7 +700,23 @@ button[type="submit"] {
 button[type="submit"]:hover {
   opacity: 1;
 }
- 
+
+  /* popw-page*/
+    .contentcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    .contentchart {
+    width: 45%;
+    height: 500px;
+    margin: 10px;
+    color: #fbe04d;
+    background-color: black;
+    border-radius: 10px;
+    } 
 
 
   /* charts */
