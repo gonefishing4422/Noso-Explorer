@@ -28,8 +28,7 @@ crossorigin="anonymous">
   <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();updateTable();"
 
     color="#222222" style="                                                                                                                                                                      background-image: url(&quot;&quot;);">
-    <div id="wrapper">
-      <!-- Sidebar -->
+    <div id="wrapper"> <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header"> <button type="button" class="navbar-toggle"
@@ -109,16 +108,16 @@ crossorigin="anonymous">
           <thead>
             <tr>
               <th class="priority-1">Height</th>
-              <th class="priority-1">Date-Time UTC+2</th>
-              <th class="priority-1">Creator</th>
-              <th class="priority-2">Hash</th>
-              <th class="priority-3">Orders</th>
-              <th class="priority-4">Reward</th>
-              <th class="priority-5">Sent</th>
-              <th class="priority-6">Fees</th>
-              <th class="priority-7">PoPW Reward</th>
-              <th class="priority-7">Noso Node Addresses</th>
-              <th class="priority-7">Noso Node Reward</th>
+              <th class="priority-2">Date-Time UTC+2</th>
+              <th class="priority-3">Creator</th>
+              <th class="priority-4">Hash</th>
+              <th class="priority-5">Orders</th>
+              <th class="priority-6">Reward</th>
+              <th class="priority-7">Sent</th>
+              <th class="priority-8">Fees</th>
+              <th class="priority-8">PoPW Reward</th>
+              <th class="priority-8">Noso Node Addresses</th>
+              <th class="priority-8">Noso Node Reward</th>
             </tr>
           </thead>
           <tbody>

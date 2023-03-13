@@ -36,7 +36,7 @@ crossorigin="anonymous">
   </head>
   <body onload="loadBestHeight();loadSupply();loadSupply2();loadCirculating();loadPendingOrders();fetchCountdown();loadNodeIpAddressCount();"
 
-    color="#222222" style="                                                                                                                                                   background-image: url(&quot;&quot;);">
+    color="#222222" style="                                                                                                                                                          background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -141,13 +141,13 @@ crossorigin="anonymous">
         <div class="col-lg-3">
           <div class="panel panel-info">
             <div class="panel-head-tiles">
-              <div class="row">
-                <div class="col-xs-6 text-right">
+              <div class="row" id="refresh">
+                <div class="col-xs-6 text-right" id="divrefresh">
                   <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
 
                       id="countdown-timer">0</span></p>
-                  <p class="announcement-text" style="width: 176px;">Block Time
-                    Remaining</p>
+                  <p class="announcement-text" style="width: 176px;">Block
+                    Time Remaining</p>
                 </div>
               </div>
             </div>
@@ -324,7 +324,7 @@ crossorigin="anonymous">
             <div class="panel panel-info">
               <div class="panel-head-tiles">
                 <div class="row">
-                  <div class="col-xs-6 text-right">
+                  <div class="col-xs-6 text-right" id="countdown-div">
                     <p class="announcement-heading" style="margin-left: 26px; width: 164px;"><span
 
                         id="countdown-timer">0.0001</span><font size="2"> <font
@@ -459,6 +459,7 @@ crossorigin="anonymous">
         <!-- /#wrapper -->
         <!-- JavaScript -->
         <script src="js/jquery-1.10.2.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="js/bootstrap.js"></script>
         <!-- Page Specific Plugins -->
         <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>

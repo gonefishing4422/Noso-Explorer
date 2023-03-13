@@ -11,6 +11,8 @@ function fetchCountdown() {
       if (distance < 0) {
         clearInterval(countdownTimer);
         document.getElementById('countdown-timer').innerHTML = 'Block Created';
+        // Call fetchCountdown again to refresh the countdown timer
+        setTimeout(fetchCountdown, 5000);
       }
     })
     .catch(error => {
@@ -18,5 +20,5 @@ function fetchCountdown() {
     });
 }
 
-// Call fetchCountdown every 3 seconds
+// Call fetchCountdown every 1 second
 const countdownTimer = setInterval(fetchCountdown, 1000);
