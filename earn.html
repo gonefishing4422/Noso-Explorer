@@ -31,7 +31,7 @@ crossorigin="anonymous">
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
     <!--style-->
   </head>
-  <body color="#222222" style="                                                                                                                                          background-image: url(&quot;&quot;);">
+  <body color="#222222" style="                                                                                                                                             background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -84,33 +84,56 @@ crossorigin="anonymous">
         <!-- /.navbar-collapse --> </nav>
       <div id="page-wrapper">
         <div class="row">
-          <div class="contentcontainer">
-            <div class="contentchart"><br>
-              POPW PARTICIPATION<br>
-              <br>
-              <div id="chartdiv2">
-                <div id="chartpopw"></div>
-              </div>
+          <div class="exprow">
+            <form id="block-form" action="blocklookup.html?blocknumber" method="get"
+
+              style="display: none;"> <input id="block-search" name="blocknumber"
+
+                placeholder="Search Block Number" type="search"> <button type="submit">Search
+                Block</button> </form>
+            <form id="address-form" action="addresslookup.html?addresslookup" method="get"
+
+              style="display: none;"> <input id="address-search" name="addresslookup"
+
+                placeholder="Search Address" type="search"> <button type="submit">Search
+                Address</button> </form>
+            <form id="alias-form" action="aliaslookup.html?alias" method="get" style="display: none;">
+              <input id="alias-search" name="alias" placeholder="Search Alias" type="search">
+              <button type="submit">Search Alias</button> </form>
+            <div class="search1-wrapper"> <input id="search" placeholder="Search Block, Address, or A-Alias "
+
+                type="search"> <button type="submit1" onclick="search()"></button>
             </div>
-            <div class="popwchart">Box 2</div>
-          </div>
-          <div class="col-lg-12">
-            <!-- /.place Search here -->
-            <div>
-              <div class="col-lg-4">
-                <div class="panel panel-primary">
-                  <div class="panel-head">
-                    <h3 class="panel-title"><i class="fa fa-clock-o"></i> </h3>
+            <!-- Results will be displayed on Explorer page --> </div>
+          <div class="row">
+            <div class="contentcontainer">
+              <div class="contentchart"><br>
+                POPW PARTICIPATION<br>
+                <br>
+                <div id="chartdiv2">
+                  <div id="chartpopw"></div>
+                </div>
+              </div>
+              <div class="popwchart">Box 2</div>
+            </div>
+            <div class="col-lg-12">
+              <!-- /.place Search here -->
+              <div>
+                <div class="col-lg-4">
+                  <div class="panel panel-primary">
+                    <div class="panel-head">
+                      <h3 class="panel-title"><i class="fa fa-clock-o"></i> </h3>
+                    </div>
+                    <div class="panel-body">
+                      <!-- /.row -->
+                      <!-- /.row --> </div>
                   </div>
-                  <div class="panel-body">
-                    <!-- /.row -->
-                    <!-- /.row --> </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- /.row --> </div>
+          <!-- /.row --> </div>
+      </div>
       <!-- /.row --> </div>
     <font size="2">
       <!-- /#page-wrapper -->
@@ -118,6 +141,42 @@ crossorigin="anonymous">
       <!-- JavaScript -->
       <script src="js/jquery-1.10.2.js"></script>
       <script src="js/bootstrap.js"></script>
-      <!-- Page Specific Plugins --> </font>
+      <script>
+function search() {
+  const input = document.getElementById('search').value.trim();
+  if (/^\d{1,10}$/.test(input)) {
+    // Show block form and hide address form
+    document.getElementById('block-form').style.display = '';
+    document.getElementById('address-form').style.display = 'none';
+    document.getElementById('block-search').value = input;
+    document.getElementById('block-form').submit();
+  } else if (/^A-[a-zA-Z0-9]{1,31}$/.test(input)) {
+    // Show alias form and hide block and address forms
+    document.getElementById('alias-form').style.display = '';
+    document.getElementById('block-form').style.display = 'none';
+    document.getElementById('address-form').style.display = 'none';
+    document.getElementById('alias-search').value = input.substring(2);
+    document.getElementById('alias-form').submit();
+  } else if (/^[a-zA-Z0-9]{1,31}$/.test(input)) {
+    // Show address form and hide block and alias forms
+    document.getElementById('address-form').style.display = '';
+    document.getElementById('block-form').style.display = 'none';
+    document.getElementById('alias-form').style.display = 'none';
+    document.getElementById('address-search').value = input;
+    document.getElementById('address-form').submit();
+  } else {
+    // Invalid input, do nothing
+    return;
+  }
+}
+
+
+// Add event listener to search field to listen for "Enter" keypress
+document.getElementById('search').addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    search();
+  }
+});
+</script> <!-- Page Specific Plugins --> </font>
   </body>
 </html>
