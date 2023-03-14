@@ -443,6 +443,11 @@ table.tablesorter thead tr th:hover {
   **overflow:hidden;** /*(Optional)This might be useful for some overflow contents*/   
 }
 
+.hidden>div {
+	display:none;
+}
+
+
 @media screen and (max-width: 600px) {
   div.example {
     display: none;
