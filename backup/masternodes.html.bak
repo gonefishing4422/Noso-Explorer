@@ -2,11 +2,15 @@
 <html lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta http-equiv="refresh" content="6">
+    <meta http-equiv="refresh" content="600">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Noso Exporer</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
 
 integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
@@ -14,8 +18,11 @@ integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6h
 crossorigin="anonymous">
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/search.js"></script>
     <!---chart-->
+    <script src="js/chartnodes.js"></script>
+    <script src="js/nosonodes.js"></script>
+    <script src="js/mn24.js"></script>
+    <script src="js/nodecount.js"></script>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Add custom CSS here -->
@@ -25,10 +32,9 @@ crossorigin="anonymous">
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
     <!--style-->
   </head>
-  <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();"
-
-    color="#222222" style="                                                                                                                              background-image: url(&quot;&quot;);">
-    <div id="wrapper"> <!-- Sidebar -->
+  <body onload="loadNodeIpAddressCount();" color="#222222" style="                                                                                                                                                 background-image: url(&quot;&quot;);">
+    <div id="wrapper">
+      <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header"> <button type="button" class="navbar-toggle"
@@ -46,10 +52,10 @@ crossorigin="anonymous">
             <li><a href="explorer.html">Explorer</a></li>
             <!--  <li><a href="coins.html"> Coin Distribution</a></li>
             <li><a href="addresses.html"> Top Addresses</a></li> -->
-            <li><a href="masternodes.html"> Masternodes</a></li>
+            <li class="active"><a href="masternodes.html"> Masternodes</a></li>
             <li><a href="earn.html">PoPW </a></li>
             <li><a href="charts.html">Charts</a></li>
-            <!-- <li ><a href="market.html">&nbsp;Markets</a></li> -->
+            <!-- <li><a href="market.html">&nbsp;Markets</a></li> -->
           </ul>
           <!-- /.navbar-top-right -->
           <div class="toprow">
@@ -78,21 +84,52 @@ crossorigin="anonymous">
         </div>
         <!-- /.navbar-collapse --> </nav>
       <div id="page-wrapper">
+        <!-- /.row -->
         <div class="row">
           <div class="col-lg-12">
-            <!-- /.place Search here -->
-            <div> <iframe seamless="" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTLyxjOqh8xFNEsLb6TYv_uN05NKmgmRBJZin_H_5cmu6Gcwxnqt63OApP37sXsZtB5Repeh6HPPd2L/pubchart?oid=1892922716&amp;format=interactive"
-
-                height="446" frameborder="0" width="721"></iframe> </div>
+            <div>
+              <div class="mn-row">
+                <div class="col-lg-4">
+                  <div class="contentcontainer">
+                    <div class="contentchart">
+                      <center> Active Masternodes<strong> <span id="nodeIpAddressCount">
+                            0</span></strong></center>
+                      <canvas width="300px" id="mn24"></canvas> </div>
+                    <div><div id="chartnodes" style="width: 100%; height: 500px;"></div> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- /.row --> </div>
-        <!-- /.row --> </div>
-      <font size="2">
-        <!-- /#page-wrapper -->
-        <!-- /#wrapper -->
-        <!-- JavaScript -->
-        <script src="js/jquery-1.10.2.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <!-- Page Specific Plugins --> </font> </div>
+        </div>
+        <!-- /.row -->
+        <div class="row">
+          <div class="col-lg-12">
+            <div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <!-- /.table -->
+                  <div>
+                    <table class="styled-table">
+                      <thead>
+                      </thead>
+                      <tbody id="uniqueLines">
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.table --> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row --> </div>
+    <!-- /.row --> <font size="2">
+      <!-- /#page-wrapper -->
+      <!-- /#wrapper -->
+      <!-- JavaScript -->
+      <script src="js/jquery-1.10.2.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <!-- Page Specific Plugins --> </font>
   </body>
 </html>

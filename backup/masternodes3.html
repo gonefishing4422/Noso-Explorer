@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="refresh" content="120">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Noso Exporer</title>
+    <script src="app.js"></script>
+    <script src="js/chartpopw.js"></script>
+    <script src="js/chartnodes.js"></script>
+    <script src="js/chartpool.js"></script>
+    <script src="js/height.js"></script>
+    <script src="js/supply.js"></script>
+    <script src="js/circulating.js"></script>
+    <script src="js/pendingorders.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/nosonodes.js"></script>
+    <!-- Bootstrap core CSS -->
+    <!-- Add custom CSS here -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <!-- Page Specific CSS -->
+    <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+    <style>
+
+</style> <!--style-->
+  </head>
+  <body onload="loadBestHeight();loadSupply();loadCirculating();loadPendingOrders();"
+
+    color="#222222" style="                                                                 background-image: url(&quot;&quot;);"
+
+    id="uniquelines">
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header"> <button type="button" class="navbar-toggle"
+
+            data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle
+              navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+            <span class="icon-bar"></span> </button><a class="navbar-brand" href="index.html"><img
+
+              src="img/logo_clearbg.png" alt="nosologo" title="nosologo" style="width: 20px; height: 20px;">&nbsp;
+            Noso Explorer</a> </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav side-nav">
+            <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i>
+                NosoStats</a></li>
+            <li><a href="explorer.html">Explorer</a></li>
+            <li><a href="coins.html"> Coin Distribution</a></li>
+            <li><a href="addresses.html"> Top Addresses</a></li>
+            <li><a href="masternodes.html"> Masternodes</a></li>
+            <li><a href="earn.html">Earning</a></li>
+            <li><a href="charts.html">Charts</a></li>
+            <li><a href="market.html">&nbsp;Markets</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse --> </nav>
+      <div>
+        <div>
+          <div>
+            <!-- /.place Search here -->
+            <div> <font color="white">
+                <table class="table-node">
+                  <thead>
+                    <tr>
+                      <th>Status</th>
+                      <th>SN</th>
+                      <th>Address</th>
+                      <th>IP</th>
+                      <th>Height</th>
+                      <th>Wallet Version</th>
+                    </tr>
+                  </thead>
+                  <tbody id="uniqueLines">
+                  </tbody>
+                </table>
+              </font> </div>
+            <!-- Results will be displayed here --> </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
