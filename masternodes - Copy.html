@@ -32,7 +32,7 @@ crossorigin="anonymous">
   </head>
   <body onload="loadNodeIpAddressCount();loadBestHeight();loadSupply();loadSupply2();loadCirculating();loadPendingOrders();fetchCountdown();loadNodeIpAddressCount();"
 
-    color="#222222" style="                                                                                                                                                                                  background-image: url(&quot;&quot;);">
+    color="#222222" style="                                                                                                                                                                                 background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -100,14 +100,9 @@ crossorigin="anonymous">
 
                   name="addresslookup" placeholder="Search Address" type="search">
                 <button type="submit">Search Address</button> </form>
-              <form id="alias-form" action="aliaslookup.html?alias" method="get"
+              <div class="search1-wrapper"> <input id="search" placeholder="Search Block Number or Address"
 
-                style="display: none;"> <input id="alias-search" name="alias" placeholder="Search Alias"
-
-                  type="search"> <button type="submit">Search Alias</button> </form>
-              <div class="search1-wrapper"> <input id="search" placeholder="Search Block, Address, or A-Alias "
-
-                  type="search"> <button type="submit1" onclick="search()"></button>
+                  type="search1"> <button type="submit1" onclick="search()"></button>
               </div>
               <!-- Results will be displayed on Explorer page --> </div>
             <br>
@@ -176,18 +171,10 @@ function search() {
     document.getElementById('address-form').style.display = 'none';
     document.getElementById('block-search').value = input;
     document.getElementById('block-form').submit();
-  } else if (/^A-[a-zA-Z0-9]{1,31}$/.test(input)) {
-    // Show alias form and hide block and address forms
-    document.getElementById('alias-form').style.display = '';
-    document.getElementById('block-form').style.display = 'none';
-    document.getElementById('address-form').style.display = 'none';
-    document.getElementById('alias-search').value = input.substring(2);
-    document.getElementById('alias-form').submit();
   } else if (/^[a-zA-Z0-9]{1,31}$/.test(input)) {
-    // Show address form and hide block and alias forms
+    // Show address form and hide block form
     document.getElementById('address-form').style.display = '';
     document.getElementById('block-form').style.display = 'none';
-    document.getElementById('alias-form').style.display = 'none';
     document.getElementById('address-search').value = input;
     document.getElementById('address-form').submit();
   } else {
@@ -195,14 +182,6 @@ function search() {
     return;
   }
 }
-
-
-// Add event listener to search field to listen for "Enter" keypress
-document.getElementById('search').addEventListener('keypress', function (e) {
-  if (e.key === 'Enter') {
-    search();
-  }
-});
 </script>
   </body>
 </html>
