@@ -24,6 +24,8 @@ crossorigin="anonymous">
     <script src="js/countdown.js"></script>
     <script src="js/nodelockfunds.js"></script>
     <script src="js/nodecount.js"></script>
+    <script src="js/blockorders.js"></script>
+    <script src="js/blockamounts.js"></script>
     <!---chart-->
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -36,7 +38,7 @@ crossorigin="anonymous">
   </head>
   <body onload="loadBestHeight();loadSupply();loadSupply2();loadCirculating();loadPendingOrders();fetchCountdown();loadNodeIpAddressCount();"
 
-    color="#222222" style="                                                                                                                                                                    background-image: url(&quot;&quot;);">
+    color="#222222" style="                                                                                                                                                                         background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -377,17 +379,17 @@ crossorigin="anonymous">
               <div class="panel-head-tiles">
                 <div class="row">
                   <div class="col-xs-6 text-right">
-                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;">49
-                      <font class="announcement-subheading">TPS</font></p>
-                    <p class="announcement-text" style="width: 176px;">Transactions
-                      per Second</p>
+                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;">49,000
+                      <font class="announcement-subheading">NOSO</font></p>
+                    <p class="announcement-text" style="width: 176px;">NOSO
+                      Jackpot Balance</p>
                   </div>
                 </div>
               </div>
               <a href="charts.html"> </a>
               <div class="panel-footer announcement-bottom"><a href="#">
                   <div class="row">
-                    <div class="col-xs-6">Network Stats</div>
+                    <div class="col-xs-6">Noso Explorer</div>
                     <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i>
                     </div>
                   </div>
@@ -399,12 +401,12 @@ crossorigin="anonymous">
               <div class="panel-head-tiles">
                 <div class="row">
                   <div class="col-xs-6 text-right">
-                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;">$0.06</p>
+                    <p class="announcement-heading" style="margin-left: 26px; width: 164px;">$0.08</p>
                     <p class="announcement-text" style="width: 176px;">Price USD
                       / NOSO</p>
                   </div>
                 </div>
-              </div>
+                 </div>
               <a href="market.html">
                 <div class="panel-footer announcement-bottom">
                   <div class="row">
@@ -424,14 +426,14 @@ crossorigin="anonymous">
           <div class="exprow">
             <div class="flex-container">
               <div class="flex-child">
-                <div class="padding-container">
-                  <center> placeholder<strong> <span id="placeholder"></span></strong></center>
-                  <canvas id="placeholder"></canvas> </div>
+                <div class="padding-container"><br>
+                  <center> Noso Transferred Each Block<strong> <span id="placeholder"></span></strong></center>
+                  <canvas id="blockamounts"></canvas> </div>
               </div>
               <div class="flex-child">
                 <div class="padding-container"><br>
-                  <center> placeholder<strong> <span id="placeholder"></span></strong></center>
-                  <canvas id="placeholder"></canvas> </div>
+                  <center> Noso Orders Each Block<strong> <span id="placeholder"></span></strong></center>
+                  <canvas id="blockorders"></canvas> </div>
               </div>
               <div class="flex-child">
                 <div class="padding-container"><br>
