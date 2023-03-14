@@ -7,25 +7,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Noso Exporer</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/core.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/charts.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/maps.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/locales/es_ES.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/animated.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/dark.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
 
 integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
 
 crossorigin="anonymous">
     </script>
+    <script src="js/chartnodes.js"></script>
+    <script src="js/nodecount.js"></script>
+    <script src="js/search.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!---chart-->
-    <script src="js/chartnodes.js"></script>
     <script src="js/nosonodes.js"></script>
     <script src="js/mn24.js"></script>
-    <script src="js/nodecount.js"></script>
+    <!---chart-->
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Add custom CSS here -->
@@ -35,7 +30,9 @@ crossorigin="anonymous">
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
     <!--style-->
   </head>
-  <body onload="loadNodeIpAddressCount();" color="#222222" style="                                                                                                                                                  background-image: url(&quot;&quot;);">
+  <body onload="loadNodeIpAddressCount();loadBestHeight();loadSupply();loadSupply2();loadCirculating();loadPendingOrders();fetchCountdown();loadNodeIpAddressCount();"
+
+    color="#222222" style="                                                                                                                                                                                 background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -51,11 +48,11 @@ crossorigin="anonymous">
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
-            <li><a href="index.html">NosoStats</a></li>
+            <li class="active"><a href="index.html">NosoStats</a></li>
             <li><a href="explorer.html">Explorer</a></li>
             <!--  <li><a href="coins.html"> Coin Distribution</a></li>
             <li><a href="addresses.html"> Top Addresses</a></li> -->
-            <li class="active"><a href="masternodes.html"> Masternodes</a></li>
+            <li><a href="masternodes.html"> Masternodes</a></li>
             <li><a href="earn.html">PoPW </a></li>
             <li><a href="charts.html">Charts</a></li>
             <!-- <li><a href="market.html">&nbsp;Markets</a></li> -->
@@ -87,55 +84,104 @@ crossorigin="anonymous">
         </div>
         <!-- /.navbar-collapse --> </nav>
       <div id="page-wrapper">
-        <!-- /.row -->
         <div class="row">
           <div class="col-lg-12">
-            <div>
-              <div class="mn-row">
-                <div class="col-lg-4">
-                  <div class="contentcontainer">
-                    <div class="contentchart">
-                      <center> Active Masternodes<strong> <span id="nodeIpAddressCount">
-                            0</span></strong></center>
-                      <canvas width="300px" id="mn24"></canvas> </div>
-                    <div class="contentcontainer">
-                       
-											 <div id="chartnodes" style="width: 500px; height: 300px;"></div>
-                    </div>
-                  </div>
-                </div>
+            <!-- /.Top row search --> <br>
+            <div class="exprow">
+              <form id="block-form" action="blocklookup.html?blocknumber" method="get"
+
+                style="display: none;"> <input id="block-search" name="blocknumber"
+
+                  placeholder="Search Block Number" type="search"> <button type="submit">Search
+                  Block</button> </form>
+              <form id="address-form" action="addresslookup.html?addresslookup"
+
+                method="get" style="display: none;"> <input id="address-search"
+
+                  name="addresslookup" placeholder="Search Address" type="search">
+                <button type="submit">Search Address</button> </form>
+              <div class="search1-wrapper"> <input id="search" placeholder="Search Block Number or Address"
+
+                  type="search1"> <button type="submit1" onclick="search()"></button>
               </div>
-            </div>
+              <!-- Results will be displayed on Explorer page --> </div>
+            <br>
           </div>
-        </div><br><br>
+        </div>
         <!-- /.row -->
         <div class="row">
-          <div class="col-lg-12">
-            <div>
-              <div class="row">
-                <div class="col-lg-4">
-                  <!-- /.table -->
-                  <div>
-                    <table class="styled-table">
-                      <thead>
-                      </thead>
-                      <tbody id="uniqueLines">
-                      </tbody>
-                    </table>
-                  </div>
-                  <!-- /.table --> </div>
-              </div>
+          <div class="flex-container">
+            <div class="flex-child">
+              <div class="padding-container">
+                <center> Active Masternodes<strong> <span id="nodeIpAddressCount"></span></strong></center>
+                <canvas id="mn24"></canvas> </div>
+            </div>
+            <div class="padding-container"><br>
+              <div class="flex-child">
+                <center> placeholder<strong> <span id="placeholder"></span></strong></center>
+                <canvas id="placeholder"></canvas> </div>
+            </div>
+            <div class="padding-container"><br>
+              <div class="flex-child">
+                <center> placeholder<strong> <span id="placeholder"></span></strong></center>
+                <canvas id="placeholder"></canvas> </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- /.row --> </div>
-    <!-- /.row --> <font size="2">
-      <!-- /#page-wrapper -->
-      <!-- /#wrapper -->
-      <!-- JavaScript -->
-      <script src="js/jquery-1.10.2.js"></script>
-      <script src="js/bootstrap.js"></script>
-      <!-- Page Specific Plugins --> </font>
+      <!-- /.row -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div>
+            <div class="row">
+              <div class="col-lg-4">
+                <!-- /.table -->
+                <div>
+                  <table class="styled-table">
+                    <thead>
+                    </thead>
+                    <tbody id="uniqueLines">
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table --> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+      <!-- /#page-wrapper --> </div>
+    <!-- /#wrapper -->
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!-- Page Specific Plugins -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+    <script src="js/morris/chart-data-morris.js"></script>
+    <script src="js/tablesorter/jquery.tablesorter.js"></script>
+    <script src="js/tablesorter/tables.js"></script>
+    <script>
+function search() {
+  const input = document.getElementById('search').value.trim();
+  if (/^\d{1,10}$/.test(input)) {
+    // Show block form and hide address form
+    document.getElementById('block-form').style.display = '';
+    document.getElementById('address-form').style.display = 'none';
+    document.getElementById('block-search').value = input;
+    document.getElementById('block-form').submit();
+  } else if (/^[a-zA-Z0-9]{1,31}$/.test(input)) {
+    // Show address form and hide block form
+    document.getElementById('address-form').style.display = '';
+    document.getElementById('block-form').style.display = 'none';
+    document.getElementById('address-search').value = input;
+    document.getElementById('address-form').submit();
+  } else {
+    // Invalid input, do nothing
+    return;
+  }
+}
+</script>
   </body>
 </html>
