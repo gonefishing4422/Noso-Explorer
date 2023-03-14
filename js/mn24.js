@@ -14,8 +14,8 @@ fetch('https://nosostats2.nosofish.xyz:49443/api/qMnOverLast144')
                     data: values,
                     backgroundColor: 'transparent',
                     borderColor: '#fbe04d',
-                    borderWidth: 3,
-                    pointRadius: .5
+                    borderWidth: 1,
+                    pointRadius: 0.0
                 }]
             },
 options: {
@@ -27,7 +27,7 @@ options: {
         yAxes: [{
             ticks: {
                 beginAtZero: true,
-                fontColor: '#fbe04d' // set y-axis tick color
+                fontColor: '#bbb' // set y-axis tick color
             },
             gridLines: {
                 color: '#707070', // set horizontal grid lines color

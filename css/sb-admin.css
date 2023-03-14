@@ -370,67 +370,38 @@ table.tablesorter thead tr th:hover {
 
 @media screen and (max-width: 600px) {
 
-	.priority-8{
-		display:none;
-	}
-	.priority-7{
-		display:none;
-	}
-	.priority-6{
-		display:none;
-	}
-	.priority-5{
-		display:none;
-	}
-	.priority-4{
-		display:none;
-		
-	}
-	.contentchart {
-		flex-basis:100%;
-		}
-	
+  /* hide columns with priorities 4 and above */
+  .priority-4, .priority-5, .priority-6, .priority-7, .priority-8 {
+    display: none;
+  }
 
-	
-	
+  /* adjust priority classes for remaining columns */
+  .priority-1, .priority-2 {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .priority-3 {
+    flex-basis: 0;
+    order: 1;
+  }
 
-}
-@media screen and (max-width: 1000px) {
-
-	.priority-8{
-		display:none;
-	}
-	.priority-7{
-		display:none;
-	}
-	.priority-6{
-		display:none;
-	}
-	.priority-5{
-		display:none;
-	}
-
-	
-
-
-
-}
-	
-@media screen and (max-width: 1300px) {
-
-	.priority-8{
-		display:none;
-	}
-	.priority-7{
-		display:none;
-	}
-	.priority-6{
-		display:none;
-	}
-
-
-
-
+  /* make two visible cells fill mobile screen */
+  .styled-table td.priority-1,
+  .styled-table td.priority-2 {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  .styled-table td.priority-1:before,
+  .styled-table td.priority-2:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
+  .styled-table td.priority-1:after,
+  .styled-table td.priority-2:after {
+    content: ':';
+  }
 }
 
 .td_explorer {    
