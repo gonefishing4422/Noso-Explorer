@@ -1,50 +1,38 @@
-    const ctx = document.getElementById('popcoins').getContext('2d');
-    const data = {
-      labels: [
-        'Master Nodes',
-        'Project Funds',
-        'Proof of Participation on Work'
-      ],
-      datasets: [{
-        label: 'Coins Distribution',
-        data: [21.5, 5, 23.5],
-        backgroundColor: ['#e1c945', '#64591e', '#af9c35'],
-        borderColor: 'black',
-        borderWidth: 2
-      }]
-    };
-    const options = {
-      plugins: {
-        legend: {
-          display: false
-        },
-        tooltip: {
-          callbacks: {
-            label: function(context) {
-              var label = context.label || '';
+   // Fetch data from the API
+    fetch('https://nosostats2.nosofish.xyz:49443/api/newCoinsDistribution')
+      .then(response => response.json())
+      .then(data => {
+        // Extract relevant data from response
+        const mnsInNoso = data.mnsInNoso;
+        const posInNoso = data.posInNoso;
+        const powInNoso = data.powInNoso;
 
-              if (label) {
-                label += ': ';
-              }
-              if (context.parsed && context.parsed > 0) {
-                label += context.parsed + '%';
-              }
-              return label;
+        // Calculate percentages
+        const totalBlockReward = 50;
+        const mnsPercentage = (mnsInNoso / totalBlockReward) * 100;
+        const posPercentage = (posInNoso / totalBlockReward) * 100;
+        const powPercentage = (powInNoso / totalBlockReward) * 100;
+
+        // Create pie chart using Chart.js library
+        const ctx = document.getElementById('popcoins').getContext('2d');
+        const popcoinsChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Projectfunds', 'Masternodes', 'PoPW'],
+            datasets: [{
+              data: [posPercentage, mnsPercentage, powPercentage],
+              backgroundColor: [
+                '#fbe04d',
+                '#e1c945',
+                '#c8b33d'
+              ]
+            }]
+          },
+          options: {
+            legend: {
+              display: false
             }
           }
-        },
-        datalabels: {
-          display: false
-        }
-      },
-      maintainAspectRatio: false,
-      responsive: true,
-      layout: {
-        padding: 5
-      }
-    };
-    const popcoins = new Chart(ctx, {
-      type: 'pie',
-      data: data,
-      options: options
-    });
+        });
+      })
+      .catch(error => console.error(error));
