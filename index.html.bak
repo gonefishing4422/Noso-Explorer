@@ -9,7 +9,7 @@
     <title>Noso Exporer</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
 
 integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
@@ -43,7 +43,7 @@ crossorigin="anonymous">
   </head>
   <body onload="loadBestHeight();loadSupply();loadSupply2();loadCirculating();loadPendingOrders();fetchCountdown();loadNodeIpAddressCount();"
 
-    color="#222222" style="                                                                                                                                                                                           background-image: url(&quot;&quot;);">
+    color="#222222" style="                                                                                                                                                                                             background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -447,10 +447,12 @@ crossorigin="anonymous">
               </div>
             </div>
           </div>
-        </div> </div> </div>
-        <!-- /.row -->
-        <!-- JavaScript -->
-        <script>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+    <!-- JavaScript -->
+    <script>
 function search() {
   const input = document.getElementById('search').value.trim();
   if (/^\d{1,10}$/.test(input)) {
