@@ -13,8 +13,8 @@ integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6h
 
 crossorigin="anonymous">
     </script>
-    <script src="js/chartpopw.js"></script>
-    <script src="js/chartnodes.js"></script>
+  <!--    <script src="js/chartpopw.js"></script>
+    <script src="js/chartnodes.js"></script> -->
     <script src="js/height.js"></script>
     <script src="js/supply.js"></script>
     <script src="js/supply2.js"></script>
