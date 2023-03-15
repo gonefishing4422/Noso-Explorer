@@ -21,4 +21,5 @@ function fetchCountdown() {
 }
 
 // Call fetchCountdown every 1 second
-const countdownTimer = setInterval(fetchCountdown, 1000);
+fetchCountdown();
+setInterval(fetchCountdown, 1000);
