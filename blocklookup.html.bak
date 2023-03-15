@@ -25,7 +25,7 @@ crossorigin="anonymous">
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
     <!--style-->
   </head>
-  <body color="#222222" style="                                                                                                                                                             background-image: url(&quot;&quot;);">
+  <body color="#222222" style="                                                                                                                                                              background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -79,28 +79,31 @@ crossorigin="anonymous">
       <div id="page-wrapper">
         <div class="col-lg-12">
           <div class="row">
-          <div class="exprow">
-            <!-- / .Multi Search form -->
-            <form id="block-form" action="blocklookup.html?blocknumber" method="get"
+            <div class="exprow">
+              <!-- / .Multi Search form -->
+              <form id="block-form" action="blocklookup.html?blocknumber" method="get"
 
-              style="display: none;"> <input id="block-search" name="blocknumber"
+                style="display: none;"> <input id="block-search" name="blocknumber"
 
-                placeholder="Search Block Number" type="search"> <button type="submit">Search
-                Block</button> </form>
-            <form id="address-form" action="addresslookup.html?addresslookup" method="get"
+                  placeholder="Search Block Number" type="search"> <button type="submit">Search
+                  Block</button> </form>
+              <form id="address-form" action="addresslookup.html?addresslookup"
 
-              style="display: none;"> <input id="address-search" name="addresslookup"
+                method="get" style="display: none;"> <input id="address-search"
 
-                placeholder="Search Address" type="search"> <button type="submit">Search
-                Address</button> </form>
-            <form id="alias-form" action="aliaslookup.html?alias" method="get" style="display: none;">
-              <input id="alias-search" name="alias" placeholder="Search Alias" type="search">
-              <button type="submit">Search Alias</button> </form>
-            <div class="search1-wrapper"> <input id="search" placeholder="Search Block, Address, or A-Alias "
+                  name="addresslookup" placeholder="Search Address" type="search">
+                <button type="submit">Search Address</button> </form>
+              <form id="alias-form" action="aliaslookup.html?alias" method="get"
 
-                type="search"> <button type="submit1" onclick="search()"></button>
-            </div>
-            <!-- Results will be displayed on Explorer page --> </div></div>
+                style="display: none;"> <input id="alias-search" name="alias" placeholder="Search Alias"
+
+                  type="search"> <button type="submit">Search Alias</button> </form>
+              <div class="search1-wrapper"> <input id="search" placeholder="Search Block, Address, or A-Alias "
+
+                  type="search"> <button type="submit1" onclick="search()"></button>
+              </div>
+              <!-- Results will be displayed on Explorer page --> </div>
+         
           <!-- / .Multi Search form -->
           <!-- / .Hidden block search-form --> <br>
           <div class="hidden">
@@ -113,21 +116,21 @@ crossorigin="anonymous">
           <!-- / .Hidden block search-form --> <br>
           <div id="block-number-results" class="exprow">
             <!-- Results will be displayed here --> </div>
+        </div> </div>
+        <div><br>
+          <br>
+          <br>
         </div>
-          <div><br>
-            <br>
-            <br>
-          </div>
-        </div>
-        <!-- /.row -->
-        <!-- /.row --> <font size="2">
-          <!-- /#page-wrapper -->
-          <!-- /#wrapper -->
-          <!-- JavaScript -->
-          <script src="js/jquery-1.10.2.js"></script>
-          <script src="js/bootstrap.js"></script>
-          <!-- Page Specific Plugins --> </font> </div>
-      <script>
+      </div>
+      <!-- /.row -->
+      <!-- /.row --> <font size="2">
+        <!-- /#page-wrapper -->
+        <!-- /#wrapper -->
+        <!-- JavaScript -->
+        <script src="js/jquery-1.10.2.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!-- Page Specific Plugins --> </font> </div>
+    <script>
 		// extract uri parameter
 		const params = new URLSearchParams(window.location.search);
 		const uriString = params.get('uristring');
@@ -136,7 +139,7 @@ crossorigin="anonymous">
 			$('#block-number-input').val(uriString);
 			$('#block-number-form').submit();
 		}
-	</script> </div>
+	</script>
     <script>
 function search() {
   const input = document.getElementById('search').value.trim();

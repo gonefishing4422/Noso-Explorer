@@ -120,8 +120,8 @@ crossorigin="anonymous">
                         Alias Name:</label> <input id="aliaslookup1"
 
                         type="text"> <button type="submit">Search</button> </form>
-                    <div id="aliassearch"></div>
-                  </div>
+                    </div>
+                  <div id="aliassearch"></div>
                 </div>
               </div>
             </div>
