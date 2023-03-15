@@ -23,5 +23,5 @@ function loadBestHeight() {
   xhttp.open("GET", "https://nosostats.com:49443/api/dBheightS", true);
   xhttp.send();
 }
-// Refresh the function every 20 seconds
-setInterval(loadBestHeight, 5000);
+// Refresh the function every 10 seconds
+setInterval(loadBestHeight, 10000);
