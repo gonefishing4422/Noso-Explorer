@@ -8,10 +8,6 @@
     <meta name="author" content="">
     <title>Noso Exporer</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!--scripts for navbar hamburger below-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <!--scripts for navbar hamburger above-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
 
 integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
@@ -45,8 +41,7 @@ crossorigin="anonymous">
   </head>
   <body onload="loadBestHeight();loadSupply();loadSupply2();loadCirculating();loadPendingOrders();fetchCountdown();loadNodeIpAddressCount();"
 
-    color="#222222" style="                                                                                                                                                                                               background-image: url(&quot;&quot;);">
-    
+    color="#222222" style="                                                                                                                                                                                                background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -456,11 +451,11 @@ crossorigin="anonymous">
     <!-- /.row -->
     <!-- JavaScript -->
     <!-- JavaScript -->
-    <!--scripts for navbar hamburger below-->    
+    <!--scripts for navbar hamburger below-->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
     <!--scripts for navbar hamburger above-->
-    <!-- Page Specific Plugins --> 
+    <!-- Page Specific Plugins -->
     <!--scripts for search bar below-->
     <script>
 function search() {
@@ -498,7 +493,7 @@ document.getElementById('search').addEventListener('keypress', function (e) {
     search();
   }
 });
-</script>
- <!--scripts for search bar above-->
+</script> <!--scripts for search bar above-->
+    
   </body>
 </html>
