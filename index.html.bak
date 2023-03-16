@@ -45,7 +45,8 @@ crossorigin="anonymous">
   </head>
   <body onload="loadBestHeight();loadSupply();loadSupply2();loadCirculating();loadPendingOrders();fetchCountdown();loadNodeIpAddressCount();"
 
-    color="#222222" style="                                                                                                                                                                                             background-image: url(&quot;&quot;);">
+    color="#222222" style="                                                                                                                                                                                               background-image: url(&quot;&quot;);">
+    
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -454,6 +455,9 @@ crossorigin="anonymous">
     </div>
     <!-- /.row -->
     <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!-- Page Specific Plugins --> 
     <script>
 function search() {
   const input = document.getElementById('search').value.trim();
