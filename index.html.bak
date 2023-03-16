@@ -455,9 +455,13 @@ crossorigin="anonymous">
     </div>
     <!-- /.row -->
     <!-- JavaScript -->
+    <!-- JavaScript -->
+    <!--scripts for navbar hamburger below-->    
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
+    <!--scripts for navbar hamburger above-->
     <!-- Page Specific Plugins --> 
+    <!--scripts for search bar below-->
     <script>
 function search() {
   const input = document.getElementById('search').value.trim();
@@ -495,5 +499,6 @@ document.getElementById('search').addEventListener('keypress', function (e) {
   }
 });
 </script>
+ <!--scripts for search bar above-->
   </body>
 </html>
