@@ -78,6 +78,16 @@ div {
   margin: 0;
   background-color: black;
 }
+.navbar-logo {
+  margin: 0;
+  background-color: transparent;
+  color: #fbe04d;
+}
+.navbar-logo:hover {
+  margin: 0;
+  background-color: transparent;
+  color: white;
+}
 .navbar-fixed-top {
   margin: 0;
   background-color: black;
