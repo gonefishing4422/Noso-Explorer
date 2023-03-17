@@ -33,7 +33,7 @@ crossorigin="anonymous">
      
     </style>
   </head>
-  <body color="#222222" style="                                                                                                                                                            background-image: url(&quot;&quot;);">
+  <body color="#222222" style="                                                                                                                                                             background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -144,30 +144,36 @@ type="submit"> </form>
             <script>
 function search() {
   const input = document.getElementById('search').value.trim();
-  if (/^\d{1,10}$/.test(input)) {
-    // Show block form and hide address form
-    document.getElementById('block-form').style.display = '';
-    document.getElementById('address-form').style.display = 'none';
-    document.getElementById('block-search').value = input;
-    document.getElementById('block-form').submit();
-  } else if (/^A-[a-zA-Z0-9]{1,31}$/.test(input)) {
-    // Show alias form and hide block and address forms
-    document.getElementById('alias-form').style.display = '';
-    document.getElementById('block-form').style.display = 'none';
-    document.getElementById('address-form').style.display = 'none';
-    document.getElementById('alias-search').value = input.substring(2);
-    document.getElementById('alias-form').submit();
-  } else if (/^[a-zA-Z0-9]{1,31}$/.test(input)) {
-    // Show address form and hide block and alias forms
-    document.getElementById('address-form').style.display = '';
-    document.getElementById('block-form').style.display = 'none';
-    document.getElementById('alias-form').style.display = 'none';
-    document.getElementById('address-search').value = input;
-    document.getElementById('address-form').submit();
-  } else {
-    // Invalid input, do nothing
-    return;
-  }
+if (/^\d{1,10}$/.test(input)) {
+  // Show block form and hide other forms
+  document.getElementById('block-form').style.display = '';
+  document.getElementById('address-form').style.display = 'none';
+  document.getElementById('alias-form').style.display = 'none';
+  document.getElementById('block-search').value = input;
+  document.getElementById('block-form').submit();
+} else if (/^A-[a-zA-Z0-9]{1,31}$/.test(input)) {
+  // Show alias form and hide other forms
+  document.getElementById('alias-form').style.display = '';
+  document.getElementById('block-form').style.display = 'none';
+  document.getElementById('address-form').style.display = 'none';
+  document.getElementById('alias-search').value = input.substring(2);
+  document.getElementById('alias-form').submit();
+} else if (/^[a-zA-Z0-9]{1,31}$/.test(input)) {
+  // Show address form and hide other forms
+  document.getElementById('address-form').style.display = '';
+  document.getElementById('block-form').style.display = 'none';
+  document.getElementById('alias-form').style.display = 'none';
+  document.getElementById('address-search').value = input;
+  document.getElementById('address-form').submit();
+} else {
+  // Invalid input, hide all forms except for the new order form
+  document.getElementById('block-form').style.display = 'none';
+  document.getElementById('address-form').style.display = 'none';
+  document.getElementById('alias-form').style.display = 'none';
+  document.getElementById('order-form').style.display = '';
+  document.getElementById('order-search').value = input;
+  document.getElementById('order-form').submit();
+}
 }
 
 
