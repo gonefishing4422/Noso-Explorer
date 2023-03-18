@@ -6,7 +6,7 @@ fetch('https://nosostats.com:49443/api/nodeListS')
 		nodes.sort((a, b) => b.continuouslyActive - a.continuouslyActive);
 
 		// Select top 10 nodes
-		const topNodes = nodes.slice(0, 10);
+		const topNodes = nodes.slice(0, 25);
 
 		// Create chart
 		const ctx = document.getElementById('topnodesup').getContext('2d');
