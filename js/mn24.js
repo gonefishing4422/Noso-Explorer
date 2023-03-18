@@ -1,5 +1,5 @@
 function loadChart() {
-  fetch('https://nosostats2.nosofish.xyz:49443/api/qMnOverLast144')
+  fetch('https://nosostats.com:49443/api/qMnOverLast144')
     .then(response => response.json())
     .then(data => {
       const labels = data.map(entry => entry[0]);
@@ -11,7 +11,7 @@ function loadChart() {
         data: {
           labels: labels,
           datasets: [{
-            label: 'qMn Over Last 144 Blocks',
+            label: 'Active Masternodes',
             data: values,
             backgroundColor: 'transparent',
             borderColor: '#fbe04d',

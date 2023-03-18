@@ -1,5 +1,5 @@
    // Fetch data from the API
-    fetch('https://nosostats2.nosofish.xyz:49443/api/newCoinsDistribution')
+    fetch('https://nosostats.com:49443/api/newCoinsDistribution')
       .then(response => response.json())
       .then(data => {
         // Extract relevant data from response
@@ -20,9 +20,13 @@
           data: {
             labels: ['Projectfunds', 'Masternodes', 'PoPW'],
             datasets: [{
+                      label: 'Distribution Percentage',
+                      borderColor: '#c8b33d',
+           	      borderWidth: 1,
+ 
               data: [posPercentage, mnsPercentage, powPercentage],
               backgroundColor: [
-                '#fbe04d',
+                '#c8b33d',
                 '#e1c945',
                 '#c8b33d'
               ]
