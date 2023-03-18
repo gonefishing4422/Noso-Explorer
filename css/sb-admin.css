@@ -739,7 +739,7 @@ button[type="submit"]:hover {
 .flex-child:first-child {
    color: #fbe04d;
   margin-right: 20px; 
-  margin-top: 20px;
+  /* margin-top: 20px; */
   border: 2px solid #222222;
   border-radius: 5px;
   min-width: 33.33%;
