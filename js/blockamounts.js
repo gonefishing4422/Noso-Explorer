@@ -13,6 +13,8 @@ fetch('https://nosostats.com:49443/api/24hOrdersAmounts')
         }]
       },
       options: {
+        responsive: true, // set responsive to true to allow chart to scale up/down to fit container
+        maintainAspectRatio: true, // set maintainAspectRatio to true to maintain aspect ratio while scaling
         scales: {
           xAxes: [{
             ticks: {

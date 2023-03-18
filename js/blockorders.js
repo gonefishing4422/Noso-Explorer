@@ -1,7 +1,12 @@
 fetch('https://nosostats.com:49443/api/24hOrdersAmounts')
   .then(response => response.json())
   .then(data => {
-    const ctx = document.getElementById('blockorders').getContext('2d');
+    const canvas = document.getElementById('blockorders');
+    const parent = canvas.parentNode;
+    canvas.style.maxWidth = parent.offsetWidth + "px";
+    canvas.style.maxHeight = parent.offsetHeight + "px";
+
+    const ctx = canvas.getContext('2d');
     const chart = new Chart(ctx, {
       type: 'bar',
       data: {
@@ -13,6 +18,8 @@ fetch('https://nosostats.com:49443/api/24hOrdersAmounts')
         }]
       },
       options: {
+        maintainAspectRatio: false,
+        responsive: true,
         scales: {
           xAxes: [{
             ticks: {

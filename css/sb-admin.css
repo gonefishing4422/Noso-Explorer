@@ -729,21 +729,22 @@ button[type="submit"]:hover {
   color: #bbb;
   flex-basis: 33.33%; /* updated to 33.33% for three items */
   border: 2px solid #222222;
-  background-color: #222222;
-  min-width: 100px;
+    background-color: black;
+ 
   border-radius: 5px;
-  max-height: 200px;
+  max-height: 300px;
   overflow: hidden; /* updated to hide scrollbars */
 }
 
 .flex-child:first-child {
    color: #fbe04d;
+      background-color: black;
   margin-right: 20px; 
   /* margin-top: 20px; */
   border: 2px solid #222222;
   border-radius: 5px;
   min-width: 33.33%;
-  min-height: 200px;
+  min-height: 100%;
 }
 
 .flex-child:nth-child(2) {
@@ -751,7 +752,7 @@ button[type="submit"]:hover {
    background-color: black;
   margin-right: 20px; /* added margin to second child element */
     min-width: 33.33%;
-    min-height: 200px;
+    min-height: 100%;
 
 }
 
@@ -766,12 +767,13 @@ button[type="submit"]:hover {
 
 .padding-container {
  color: #fbe04d;
+ 
   background-color: black;
 }
 
 
 #mn24 {
-  min-width: 80%;
+  min-width: 100%;
   min-height: 100%;
   
 
