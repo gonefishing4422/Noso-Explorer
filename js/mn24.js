@@ -29,10 +29,13 @@ function loadChart() {
               ticks: {
                 beginAtZero: true,
                 fontColor: '#bbb' // set y-axis tick color
+                
+		
               },
               gridLines: {
                 color: '#707070', // set horizontal grid lines color
-                zeroLineColor: '#fbe04d' // set color of the horizontal line at y = 0
+                zeroLineColor: '#fbe04d', // set color of the horizontal line at y = 0'
+                
               }
             }]
           },

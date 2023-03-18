@@ -17,8 +17,8 @@ fetch('https://nosostats.com:49443/api/nodeListS')
 				datasets: [{
 					label: 'Uptime',
 					data: topNodes.map(node => node.continuouslyActive),
-					backgroundColor: 'rgba(54, 162, 235, 0.5)',
-					borderColor: 'rgba(54, 162, 235, 1)',
+					backgroundColor: '#fbe04d',
+					borderColor: '#fbe04d',
 					borderWidth: 1
 				}]
 			},
@@ -29,12 +29,14 @@ fetch('https://nosostats.com:49443/api/nodeListS')
 					yAxes: [{
 						ticks: {
 							beginAtZero: true,
-							fontSize: 5
+							fontSize: 9,
+							fontColor: '#bbb'
 						}
 					}],
 					xAxes: [{
 						ticks: {
-							fontSize: 5
+							fontSize: 5,
+							fontColor: '#bbb'
 						}
 					}]
 				},
