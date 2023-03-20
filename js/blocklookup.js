@@ -48,7 +48,9 @@ $(function() {
 		//tableHtml += '<tr><th>PoS Reward</th><td>' + response.data.pos.posRewardInPedro + '</td></tr>';
 		//tableHtml += '<tr><th>PoS Addresses</th><td>' + response.data.pos.posAddresses + '</td></tr>';
 		tableHtml += '<tr><th>Block Orders</th><td><a target="_blank" href="blocktxlookup.html?blocknumber=' + response.data.blockNumber + '">block ' + response.data.blockNumber + " orders" + '</a></td></tr>';	
+		//tableHtml += '<tr><th>PoPW Reward</th><td>' + response.data.powRewardInPedro + '</td></tr>';
 		tableHtml += '<tr><th>PoPW Reward</th><td>' + response.data.powRewardInPedro + '</td></tr>';
+		tableHtml += '<tr><th>Block Creator</th><td><a target="_blank" href="popwblockcreator.html?blocknumber=' + response.data.blockNumber + '">block ' + response.data.blockNumber + " creator" +  '</a></td></tr>';
 		tableHtml += '<tr><th>Solution</th><td>' + response.data.solution + '</td></tr>';
 		tableHtml += '<tr><th>Target Hash</th><td>' + response.data.targetHash + '</td></tr>';
 		//tableHtml += '<tr><th>Unique Address</th><td>' + response.data.uniqueAddresesList + '</td></tr>';
