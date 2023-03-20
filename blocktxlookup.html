@@ -62,52 +62,63 @@ crossorigin="anonymous">
                 </div>
               </div>
               <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const blockNumber = urlParams.get('blocknumber');
+const urlParams = new URLSearchParams(window.location.search);
+const blockNumber = urlParams.get('blocknumber');
 
-        if (!blockNumber) {
-            console.error("Block number not specified in URL parameter 'blocknumber'");
+if (!blockNumber) {
+  console.error("Block number not specified in URL parameter 'blocknumber'");
+} else {
+  const apiUrl = `https://nosostats.com:49443/api/blockNumber/${blockNumber}`;
+
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      const apiTable = document.getElementById('blocktxtable');
+      const tableBody = apiTable.getElementsByTagName('tbody')[0];
+
+      data.txsAnalyzed.forEach(tx => {
+        console.log(tx);
+        const row = tableBody.insertRow();
+        const senderCell = row.insertCell();
+        const receiverCell = row.insertCell();
+        const transferIdCell = row.insertCell();
+        const orderIdCell = row.insertCell();
+        const orderAmountCell = row.insertCell();
+        const orderFeeCell = row.insertCell();
+        const referenceCell = row.insertCell();
+        const orderTypeCell = row.insertCell();
+        const timestampCell = row.insertCell();
+
+        if (tx.controlType === "multiInput") {
+          let senders = [];
+          tx.inputSegment.forEach(segment => {
+            if (segment.sender && !senders.includes(segment.sender)) {
+              senders.push(segment.sender);
+            }
+          });
+          senderCell.innerHTML = senders.join(", ");
         } else {
-            const apiUrl = `https://nosostats.com:49443/api/blockNumber/${blockNumber}`;
-
-            fetch(apiUrl)
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data);
-                    const apiTable = document.getElementById('blocktxtable');
-                    const tableBody = apiTable.getElementsByTagName('tbody')[0];
-
-                    data.txsAnalyzed.forEach(tx => {
-                        console.log(tx);
-                        const row = tableBody.insertRow();
-                        const senderCell = row.insertCell();
-                        const receiverCell = row.insertCell();
-                        const transferIdCell = row.insertCell();
-                        const orderIdCell = row.insertCell();
-                        const orderAmountCell = row.insertCell();
-                        const orderFeeCell = row.insertCell();
-                        const referenceCell = row.insertCell();
-                        const orderTypeCell = row.insertCell();
-                        const timestampCell = row.insertCell();
-
-                        senderCell.innerHTML = tx.inputSegment[0].sender;
-                        receiverCell.innerHTML = tx.receiver;
-                        transferIdCell.innerHTML = tx.inputSegment[0].transferId;
-                        orderIdCell.innerHTML = `<a href="orderlookup.html?orderid=${tx.orderId}">${tx.orderId}</a>`;
-                        orderAmountCell.innerHTML = tx.orderAmountInPedro;
-                        orderFeeCell.innerHTML = tx.orderFeeInPedro;
-                        referenceCell.innerHTML = tx.reference;
-                        orderTypeCell.innerHTML = tx.orderType;
-                        timestampCell.innerHTML = tx.timestamp;
-                    });
-                })
-                .catch(error => console.error(error));
+          senderCell.innerHTML = tx.inputSegment[0].sender;
         }
+
+        receiverCell.innerHTML = tx.receiver;
+        transferIdCell.innerHTML = tx.inputSegment[0].transferId;
+        orderIdCell.innerHTML = `<a href="orderlookup.html?orderid=${tx.orderId}">${tx.orderId}</a>`;
+        orderAmountCell.innerHTML = tx.orderAmountInPedro;
+        orderFeeCell.innerHTML = tx.orderFeeInPedro;
+        referenceCell.innerHTML = tx.reference;
+        orderTypeCell.innerHTML = tx.orderType;
+        timestampCell.innerHTML = tx.timestamp;
+      });
+    })
+    .catch(error => console.error(error));
+}
+
     </script> </div>
           </div>
         </div>
       </div>
     </div>
-    
   </body>
 </html>

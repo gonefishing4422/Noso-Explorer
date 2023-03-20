@@ -41,7 +41,7 @@ $(function() {
 		tableHtml += '<tr><th>Masternode Reward</th><td><a target="_blank" href="mnslookup.html?block=' + response.data.blockNumber + '">' + response.data.mns.mnsRewardInPedro + '</a></td></tr>';
 		//tableHtml += '<tr><th>Masternode Reward</th><td>' + response.data.mns.mnsRewardInPedro + '</td></tr>';
 		//tableHtml += '<tr><th><a href="masternodes.html">Masternode Addresses</a></th><td>' + response.data.mns.mnsAddresses + '</td></tr>';
-	// table for Masternode and PoS addresses needs created
+	
 		tableHtml += '<tr><th>PoS Count</th><td>' + response.data.posQ + '</td></tr>';
 		//tableHtml += '<tr><th>PoS Count</th><td><a target="_blank" href="poslookup.html?block=' + response.data.blockNumber + '">' + response.data.posQ + '</a></td></tr>';
 		tableHtml += '<tr><th>PoS Reward</th><td><a target="_blank" href="poslookup.html?block=' + response.data.blockNumber + '">' + response.data.pos.posRewardInPedro + '</a></td></tr>';	
