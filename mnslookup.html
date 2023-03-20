@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Noso Exporer</title>
-        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
 
 integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
@@ -85,7 +85,7 @@ crossorigin="anonymous">
     var blockNumber = urlParams.get('block');
 
     // Construct the API URL using the block number
-    var apiUrl = "https://nosostats2.nosofish.xyz:49443/api/blockNumber/" + blockNumber;
+    var apiUrl = "https://nosostats.com:49443/api/blockNumber/" + blockNumber;
 
     // Make an XMLHttpRequest to fetch the API data
     var xhr = new XMLHttpRequest();
@@ -102,5 +102,6 @@ crossorigin="anonymous">
     };
     xhr.send();
   </script>
+    
   </body>
 </html>
