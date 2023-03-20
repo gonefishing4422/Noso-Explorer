@@ -57,4 +57,4 @@ loadChart();
 // Reload chart every 300 seconds (5 minutes)
 setInterval(() => {
   loadChart();
-}, 300000);
+}, 30000);
