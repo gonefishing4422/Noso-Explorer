@@ -35,15 +35,15 @@ crossorigin="anonymous">
               <table id="blocktxtable" class="styled-table">
                 <thead>
                   <tr>
-                    <th >Sender</th>
-                    <th>Receiver</th>
-                    <th>Transfer ID</th>
-                    <th>Order ID</th>
-                    <th>Order Amount (Pedro)</th>
-                    <th>Order Fee (Pedro)</th>
-                    <th>Reference</th>
-                    <th>Order Type</th>
-                    <th>Timestamp</th>
+                    <th class="priority-1">Sender</th>
+                    <th class="priority-2">Receiver</th>
+                    <th class="priority-4">Transfer ID</th>
+                    <th class="priority-3">Order ID</th>
+                    <th class="priority-5">Order Amount (Pedro)</th>
+                    <th class="priority-6">Order Fee (Pedro)</th>
+                    <th class="priority-7">Reference</th>
+                    <th class="priority-8">Order Type</th>
+                    <th class="priority-8">Timestamp</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -75,7 +75,7 @@ if (!blockNumber) {
     .then(data => {
       console.log(data);
       const apiTable = document.getElementById('blocktxtable');
-      const tableBody = apiTable.getElementsByTagName('tbody')[0];
+      const tableBody = apiTable.createTBody();
 
       data.txsAnalyzed.forEach(tx => {
         console.log(tx);
@@ -89,6 +89,17 @@ if (!blockNumber) {
         const referenceCell = row.insertCell();
         const orderTypeCell = row.insertCell();
         const timestampCell = row.insertCell();
+
+        // Add priority classes to td elements
+        senderCell.classList.add('priority-1');
+        receiverCell.classList.add('priority-2');
+        transferIdCell.classList.add('priority-4');
+        orderIdCell.classList.add('priority-3');
+        orderAmountCell.classList.add('priority-5');
+        orderFeeCell.classList.add('priority-6');
+        referenceCell.classList.add('priority-7');
+        orderTypeCell.classList.add('priority-8');
+        timestampCell.classList.add('priority-8');
 
         if (tx.controlType === "multiInput") {
           let senders = [];
@@ -120,5 +131,6 @@ if (!blockNumber) {
         </div>
       </div>
     </div>
+    
   </body>
 </html>
