@@ -5,7 +5,8 @@ fetch('https://nosostats.com:49443/api/24hOrdersAmounts')
     const chart = new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: data.map(item => ''), // empty labels to hide x-axis labels
+        labels: data.map(item => item[0]),
+       // labels: data.map(item => ''), // empty labels to hide x-axis labels
         datasets: [{
           label: 'NOSO', // y-axis label
           backgroundColor: '#fbe04d', // bar color
