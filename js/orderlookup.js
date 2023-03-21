@@ -20,17 +20,15 @@ fetch(apiUrl)
       "Order Fee (Pedro)": order.orderFeeInPedro,
       "Control Type": order.controlType,
       "SN": order.sn,
-      "Timestamp": order.timestamp
+      "Timestamp": order.timestamp,
+      "Input Segment Order Amount (Noso)": inputSegment[0].orderAmountInNoso,
+      "Input Segment Order Amount (Pedro)": inputSegment[0].orderAmountInPedro,
+      "Input Segment Order Fee (Noso)": inputSegment[0].orderFeeInNoso,
+      "Input Segment Order Fee (Pedro)": inputSegment[0].orderFeeInPedro,
+      "Input Segment Order Signature": inputSegment[0].orderSignature,
+      "Input Segment Sender": `<a href="addresslookup.html?addresslookup=${inputSegment[0].sender}">${inputSegment[0].sender}</a>`,
+      "Input Segment Transfer ID": inputSegment[0].transferId
     };
-
-    // Add input segment data to orderData
-    inputSegment.forEach((segment, index) => {
-      orderData[`Input Segment ${index+1} Sender`] = `<a href="addresslookup.html?addresslookup=${segment.sender}">${segment.sender}</a>`;
-      orderData[`Input Segment ${index+1} Transfer ID`] = segment.transferId;
-      orderData[`Input Segment ${index+1} Order Amount (Pedro)`] = segment.orderAmountInPedro;
-      orderData[`Input Segment ${index+1} Order Fee (Pedro)`] = segment.orderFeeInPedro;
-      orderData[`Input Segment ${index+1} Order Signature`] = segment.orderSignature;
-    });
 
     const table = document.getElementById("orderTable");
     const tableBody = document.createElement("tbody");
@@ -51,3 +49,4 @@ fetch(apiUrl)
     table.appendChild(tableBody);
   })
   .catch(error => console.error(error));
+

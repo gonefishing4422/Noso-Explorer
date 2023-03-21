@@ -56,26 +56,53 @@ function submitForm() {
         tableBody.appendChild(row);
       }
 
-// Create a custom row for NosoAddress
-const nosoAddressRow = document.createElement('tr');
-const nosoAddressPropCell = document.createElement('td');
-const nosoAddressValueCell = document.createElement('td');
+      // Add the missing fields from the "analyzed" object if present
+      if (data.analyzed) {
+        for (const [key, value] of Object.entries(data.analyzed)) {
+          const row = document.createElement('tr');
+          const propCell = document.createElement('td');
+          const valueCell = document.createElement('td');
 
-nosoAddressPropCell.textContent = 'NosoAddress';
+          propCell.textContent = key;
 
-// Create a hyperlink to "addresshistory.html" for the NosoAddress value
-const link = document.createElement('a');
-link.href = `addresshistory.html?input-field=${encodeURIComponent(inputAddresslookup)}`;
-link.textContent = inputAddresslookup;
-nosoAddressValueCell.appendChild(link);
+          // Check if the value is a number with 10 or fewer digits
+          if (/^\d{1,10}$/.test(value)) {
+            // If so, create a hyperlink to "https://example.com/number/{value}"
+            const link = document.createElement('a');
+            link.textContent = value;
+            link.href = `blocklookup.html?blocknumber=${value}`;
+            valueCell.appendChild(link);
+          } else {
+            // If not, just display the value
+            valueCell.textContent = value;
+          }
 
-nosoAddressRow.appendChild(nosoAddressPropCell);
-nosoAddressRow.appendChild(nosoAddressValueCell);
-tableBody.appendChild(nosoAddressRow);
+          row.appendChild(propCell);
+          row.appendChild(valueCell);
+          tableBody.appendChild(row);
+        }
+      }
 
+      // Create a custom row for NosoAddress
+      const nosoAddressRow = document.createElement('tr');
+      const nosoAddressPropCell = document.createElement('td');
+      const nosoAddressValueCell = document.createElement('td');
+
+      nosoAddressPropCell.textContent = 'NosoAddress';
+
+      // Create a hyperlink to "addresshistory.html" for the NosoAddress value
+      const link = document.createElement('a');
+      link.href = `addresshistory.html?input-field=${encodeURIComponent(inputAddresslookup)}`;
+      link.textContent = inputAddresslookup;
+      nosoAddressValueCell.appendChild(link);
+
+      nosoAddressRow.appendChild(nosoAddressPropCell);
+      nosoAddressRow.appendChild(nosoAddressValueCell);
+      tableBody.appendChild(nosoAddressRow);
 
       // Hide the spinner once the content is rendered on the page
       spinner.style.display = 'none';
     })
     .catch(error => console.error(error));
 }
+
