@@ -31,7 +31,7 @@ fetch('https://nosostats.com:49443/api/newCoinsDistribution')
           data: [posPercentage, mnsPercentage, powPercentage],
           backgroundColor: [
             '#3d8cc8',
-            '#3dc8bf ',
+            '#3dc8bf',
             '#c8b33d'
           ]
         }]

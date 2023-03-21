@@ -32,7 +32,7 @@ crossorigin="anonymous">
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
     <!--style-->
   </head>
-  <body color="#222222" style="                                                                                                                                                        background-image: url(&quot;&quot;);">
+  <body color="#222222" style="                                                                                                                                                             background-image: url(&quot;&quot;);">
     <div id="wrapper">
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -120,9 +120,10 @@ crossorigin="anonymous">
             <div class="row">
               <div class="contentcontainer">
                 <div class="contentchart"><br>
-                  POPW PARTICIPATION<br>
+                  <p class="col-xs-6">POPW PARTICIPATION</p>
                   <br>
-                  <div id="chartdiv2"> 
+                  <br>
+                  <div id="chartdiv2">
                     <div id="chartpopw"></div>
                   </div>
                 </div>
@@ -138,6 +139,26 @@ crossorigin="anonymous">
                         <!-- /.row --> </div>
                     </div>
                   </div>
+                </div>
+                <div>
+                  <p class="col-xs-6">PoPW POOLS</p>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <table id="poolStats" class="styled-table">
+                    <thead>
+                      <tr>
+                        <th>Pool Name</th>
+                        <th>Last Found</th>
+                        <th>Participants</th>
+                        <th>Pool Fee %</th>
+                        <th>PoP Hash</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -163,6 +184,27 @@ crossorigin="anonymous">
       <!-- JavaScript -->
       <script src="js/jquery-1.10.2.js"></script>
       <script src="js/bootstrap.js"></script>
+      <script>
+    const url = "https://nosostats2.nosofish.xyz:49443/api/poolStatsV2";
+    const tableBody = document.querySelector("#poolStats tbody");
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        data.forEach(pool => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${pool.pool}</td>
+            <td>${pool.LastFound}</td>
+            <td>${pool.Miners}</td>
+            <td>${pool.PoolFee}</td>
+            <td>${pool.PoolHash}</td>
+          `;
+          tableBody.appendChild(row);
+        });
+      })
+      .catch(error => console.error(error));
+  </script>
       <script>
 function search() {
   const input = document.getElementById('search').value.trim();

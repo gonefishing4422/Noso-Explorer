@@ -10,12 +10,12 @@ fetch('https://nosostats.com:49443/api/last143V2')
 				<td class="priority-2">${item[1]}</td>
 				<td class="priority-3">${item[2]}</td>
 				<td class="priority-4">${item[3]}</td>
-				<td class="priority-5">${item[4]}</td>
+				<td class="priority-5"><a target="_blank" href="blocktxlookup.html?blocknumber=${item[0]}">${item[4]}</a></td>
 				<td class="priority-6">${item[5]}</td>
 				<td class="priority-7">${item[6]}</td>
 				<td class="priority-8">${item[7]}</td>
 				<td class="priority-8">${item[8]}</td>
-				<td class="priority-8">${item[9]}</td>
+				<td class="priority-8"><a target="_blank" href="mnslookup.html?block=${item[0]}">${item[9]}</a></td>
 				<td class="priority-8">${item[10]}</td>
 			`;
 			tableBody.appendChild(row);
@@ -40,12 +40,12 @@ setInterval(() => {
 				<td class="priority-2">${item[1]}</td>
 				<td class="priority-3">${item[2]}</td>
 				<td class="priority-4">${item[3]}</td>
-				<td class="priority-5">${item[4]}</td>
+				<td class="priority-5"><a target="_blank" href="blocktxlookup.html?blocknumber=${item[0]}">${item[4]}</a></td>
 				<td class="priority-6">${item[5]}</td>
 				<td class="priority-7">${item[6]}</td>
 				<td class="priority-8">${item[7]}</td>
 				<td class="priority-8">${item[8]}</td>
-				<td class="priority-8">${item[9]}</td>
+				<td class="priority-8"><a target="_blank" href="mnslookup.html?block=${item[0]}">${item[9]}</a></td>
 				<td class="priority-8">${item[10]}</td>
 			`;
 			tableBody.appendChild(row);
