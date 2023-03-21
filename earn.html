@@ -33,8 +33,7 @@ crossorigin="anonymous">
     <!--style-->
   </head>
   <body color="#222222" style="                                                                                                                                                             background-image: url(&quot;&quot;);">
-    <div id="wrapper">
-      <!-- Sidebar -->
+    <div id="wrapper"> <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header"> <button type="button" class="navbar-toggle"
@@ -149,11 +148,11 @@ crossorigin="anonymous">
                   <table id="poolStats" class="styled-table">
                     <thead>
                       <tr>
-                        <th>Pool Name</th>
-                        <th>Last Found</th>
-                        <th>Participants</th>
-                        <th>Pool Fee %</th>
-                        <th>PoP Hash</th>
+                        <th class="priority-1">Pool Name</th>
+                        <th class="priority-2">Last Found</th>
+                        <th class="priority-3">Participants</th>
+                        <th class="priority-4">Pool Fee %</th>
+                        <th class="priority-5">PoP Hash</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -194,11 +193,11 @@ crossorigin="anonymous">
         data.forEach(pool => {
           const row = document.createElement("tr");
           row.innerHTML = `
-            <td>${pool.pool}</td>
-            <td>${pool.LastFound}</td>
-            <td>${pool.Miners}</td>
-            <td>${pool.PoolFee}</td>
-            <td>${pool.PoolHash}</td>
+            <td class="priority-1">${pool.pool}</td>
+            <td class="priority-2">${pool.LastFound}</td>
+            <td class="priority-3">${pool.Miners}</td>
+            <td class="priority-4">${pool.PoolFee}</td>
+            <td class="priority-5">${pool.PoolHash}</td>
           `;
           tableBody.appendChild(row);
         });
