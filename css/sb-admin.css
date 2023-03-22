@@ -218,10 +218,26 @@ div {
   display: flex;
   align-items: left;
   justify-content: left;
- 
-
-}
+ }
+ .announcement-heading2 {
+  font-size: 20px;
+  margin: 0;
+  color: #fbe04d;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+ }
 .announcement-subheading
+{
+  font-size: 12px;S
+  margin: 0;
+  color: darkgrey;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  padding: 10px;
+}
+.announcement-subheading2
 {
   font-size: 12px;
   margin: 0;
@@ -229,11 +245,10 @@ div {
   display: flex;
   align-items: left;
   justify-content: left;
-  padding: 10px;
+  padding: 1px;
 
 
 }
-
 .announcement-text {
   margin: 0;
    color: darkgrey;
