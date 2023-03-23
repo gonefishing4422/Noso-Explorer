@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Noso Exporer</title>
-        <!-- Include Highcharts library -->
+    <!-- Include Highcharts library -->
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/stock.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
@@ -85,9 +85,7 @@ crossorigin="anonymous">
         <div class="row">
           <div class="col-lg-12">
             <!-- /.place Search here -->
-            <div>    <div id="chart-container"></div>
-
-</div>
+            <div>    <div id="chart-container"></div> </div>
           </div>
           <!-- /.row --> </div>
         <br>
@@ -108,9 +106,9 @@ crossorigin="anonymous">
         <!-- JavaScript -->
         <script src="js/jquery-1.10.2.js"></script>
         <script src="js/bootstrap.js"></script>
-            <script>
+<script>
         // Define API URL
-        const apiUrl = 'https://sheet2api.com/v1/zKvvWCRme5dR/candle-stick-chart';
+        const apiUrl = 'https://script.googleusercontent.com/macros/echo?user_content_key=SKm21MdQ0jTiuYocVOSlOd1QJ513hxYkRGnQqySpp8Oaf2eZMGFK8ct7yTiw7skPeJsMu_88w0R_4VkGx2U3MotNEQli2LPxOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa8dOZ37bQvLpDqfzIzaxAovTjOTTt0gY3j9Lam-N6hU1-G1inrffEnoWzLsMQoGNHiY0h2tvTRUhpd2rhn-FbteLAT44JOpfDEALmaJ23tE4qJ0tK8yblfjNTb08BaOKao-MU68o_Nwx&lib=MRl1lVzY3QJXnb269PFds4EOpxNO1S_A_';
 
         // Make API request
         fetch(apiUrl)
@@ -132,7 +130,7 @@ crossorigin="anonymous">
                         backgroundColor: 'black'
                     },
                     title: {
-                        text: 'NOSO / USD',
+                        text: 'Candlestick Chart',
                         style: {
                             color: 'white'
                         }
@@ -143,8 +141,7 @@ crossorigin="anonymous">
                             style: {
                                 color: 'white'
                             }
-                        },
-                        lineColor: '#bbbbbb'
+                        }
                     },
                     yAxis: {
                         title: {
@@ -157,20 +154,14 @@ crossorigin="anonymous">
                             style: {
                                 color: 'white'
                             }
-                        },
-                        gridLineColor: '#bbbbbb'
-                    },
-                    plotOptions: {
-                        candlestick: {
-                            color: 'red',
-                            upColor: 'green',
-                            lineColor: 'yellow',
-                            upLineColor: 'yellow'
                         }
                     },
                     series: [{
                         name: 'Price',
-                        data: data.map(d => [d.Date, d.open, d.high, d.low, d.close]),
+                        data: data.slice(1).map(d => [d.Date, d.open, d.high, d.low, d.close]),
+                        upColor: 'green',
+                        color: 'red',
+                        lineColor: 'yellow',
                         tooltip: {
                             valueDecimals: 2
                         }
@@ -181,7 +172,7 @@ crossorigin="anonymous">
                 Highcharts.stockChart('chart-container', options);
             })
             .catch(error => console.error(error));
-    </script> 
+    </script>
         <!-- Page Specific Plugins --> </font> </div>
   </body>
 </html>
