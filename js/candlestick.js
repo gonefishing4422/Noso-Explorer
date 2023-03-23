@@ -18,7 +18,7 @@
                     chart: {
                         type: 'candlestick',
                         height: 500,
-                        backgroundColor: 'black'
+                        backgroundColor: '#222222'
                     },
                     title: {
                         text: 'P2P trades | NOSO/USD',
