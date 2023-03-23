@@ -2,11 +2,13 @@
 <html lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta http-equiv="refresh" content="6">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Noso Exporer</title>
+        <!-- Include Highcharts library -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/stock.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
 
 integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
@@ -42,12 +44,13 @@ crossorigin="anonymous">
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
-            <li><a href="index.html"><i class="fa fa-dashboard"></i>
-                NosoStats</a></li>
-            <li class="active"><a href="explorer.html"><i class="fa fa-search"></i> Explorer</a></li>
+            <li><a href="index.html"><i class="fa fa-dashboard"></i> NosoStats</a></li>
+            <li class="active"><a href="explorer.html"><i class="fa fa-search"></i>
+                Explorer</a></li>
             <!--  <li><a href="coins.html"> Coin Distribution</a></li>
             <li><a href="addresses.html"> Top Addresses</a></li> -->
-            <li><a href="masternodes.html"><i class="fa fa-globe"></i> Masternodes</a></li>
+            <li><a href="masternodes.html"><i class="fa fa-globe"></i>
+                Masternodes</a></li>
             <li><a href="earn.html"><i class="fa fa-wrench"></i> PoPW </a></li>
             <!-- <li><a href="charts.html">Charts</a></li>
             <!-- <li><a href="market.html">&nbsp;Markets</a></li> -->
@@ -82,9 +85,9 @@ crossorigin="anonymous">
         <div class="row">
           <div class="col-lg-12">
             <!-- /.place Search here -->
-            <div> <iframe seamless="" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTLyxjOqh8xFNEsLb6TYv_uN05NKmgmRBJZin_H_5cmu6Gcwxnqt63OApP37sXsZtB5Repeh6HPPd2L/pubchart?oid=1892922716&amp;format=interactive"
+            <div>    <div id="chart-container"></div>
 
-                height="446" frameborder="0" width="721"></iframe> </div>
+</div>
           </div>
           <!-- /.row --> </div>
         <br>
@@ -105,6 +108,80 @@ crossorigin="anonymous">
         <!-- JavaScript -->
         <script src="js/jquery-1.10.2.js"></script>
         <script src="js/bootstrap.js"></script>
+            <script>
+        // Define API URL
+        const apiUrl = 'https://sheet2api.com/v1/zKvvWCRme5dR/candle-stick-chart';
+
+        // Make API request
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                // Parse date values
+                data.forEach(d => {
+                    d.Date = Date.parse(d.Date);
+                });
+
+                // Sort data by date
+                data.sort((a, b) => a.Date - b.Date);
+
+                // Create chart options object
+                const options = {
+                    chart: {
+                        type: 'candlestick',
+                        height: 500,
+                        backgroundColor: 'black'
+                    },
+                    title: {
+                        text: 'NOSO / USD',
+                        style: {
+                            color: 'white'
+                        }
+                    },
+                    xAxis: {
+                        type: 'datetime',
+                        labels: {
+                            style: {
+                                color: 'white'
+                            }
+                        },
+                        lineColor: '#bbbbbb'
+                    },
+                    yAxis: {
+                        title: {
+                            text: 'Price',
+                            style: {
+                                color: 'white'
+                            }
+                        },
+                        labels: {
+                            style: {
+                                color: 'white'
+                            }
+                        },
+                        gridLineColor: '#bbbbbb'
+                    },
+                    plotOptions: {
+                        candlestick: {
+                            color: 'red',
+                            upColor: 'green',
+                            lineColor: 'yellow',
+                            upLineColor: 'yellow'
+                        }
+                    },
+                    series: [{
+                        name: 'Price',
+                        data: data.map(d => [d.Date, d.open, d.high, d.low, d.close]),
+                        tooltip: {
+                            valueDecimals: 2
+                        }
+                    }]
+                };
+
+                // Render chart
+                Highcharts.stockChart('chart-container', options);
+            })
+            .catch(error => console.error(error));
+    </script> 
         <!-- Page Specific Plugins --> </font> </div>
   </body>
 </html>
