@@ -15,16 +15,16 @@ fetch(apiUrl)
       "Reference": order.reference,
       "Receiver": `<a href="${receiverLink}">${order.receiver}</a>`,
       "Order Amount (Noso)": order.orderAmountInNoso,
-      "Order Amount (Pedro)": order.orderAmountInPedro,
+      
       "Order Fee (Noso)": order.orderFeeInNoso,
-      "Order Fee (Pedro)": order.orderFeeInPedro,
+      
       "Control Type": order.controlType,
       "SN": order.sn,
       "Timestamp": order.timestamp,
       "Input Segment Order Amount (Noso)": inputSegment[0].orderAmountInNoso,
-      "Input Segment Order Amount (Pedro)": inputSegment[0].orderAmountInPedro,
+      
       "Input Segment Order Fee (Noso)": inputSegment[0].orderFeeInNoso,
-      "Input Segment Order Fee (Pedro)": inputSegment[0].orderFeeInPedro,
+      
       "Input Segment Order Signature": inputSegment[0].orderSignature,
       "Input Segment Sender": `<a href="addresslookup.html?addresslookup=${inputSegment[0].sender}">${inputSegment[0].sender}</a>`,
       "Input Segment Transfer ID": inputSegment[0].transferId
