@@ -39,13 +39,15 @@ $(function() {
 		tableHtml += '<tr><th>Time Total</th><td>' + response.data.timeTotal + '</td></tr>';
 		tableHtml += '<tr><th>Masternode Count</th><td>' + response.data.mnsQ + '</td></tr>';
 		//tableHtml += '<tr><th>Masternode Count</th><td><a target="_blank" href="mnslookup.html?block=' + response.data.blockNumber + '">' + response.data.mnsQ + '</a></td></tr>';
-		tableHtml += '<tr><th>Masternode Reward</th><td><a target="_blank" href="mnslookup.html?block=' + response.data.blockNumber + '">' + (response.data.mns.mnsRewardInPedro * 0.00000001) + '</a></td></tr>';		//tableHtml += '<tr><th>Masternode Reward</th><td>' + response.data.mns.mnsRewardInPedro + '</td></tr>';
+		tableHtml += '<tr><th>Masternode Reward</th><td><a target="_blank" href="mnslookup.html?block=' + response.data.blockNumber + '">' + (response.data.mns.mnsRewardInPedro * 0.00000001) + '</a></td></tr>';
+
+		//tableHtml += '<tr><th>Masternode Reward</th><td>' + response.data.mns.mnsRewardInPedro + '</td></tr>';
 		//tableHtml += '<tr><th><a href="masternodes.html">Masternode Addresses</a></th><td>' + response.data.mns.mnsAddresses + '</td></tr>';
 	
 		tableHtml += '<tr><th>PoS Count</th><td>' + response.data.posQ + '</td></tr>';
 		//tableHtml += '<tr><th>PoS Count</th><td><a target="_blank" href="poslookup.html?block=' + response.data.blockNumber + '">' + response.data.posQ + '</a></td></tr>';
 	
-		tableHtml += '<tr><th>PoS Reward</th><td><a target="_blank" href="poslookup.html?block=' + response.data.blockNumber + '">' + (response.data.mns.posRewardInPedro * 0.00000001) + '</a></td></tr>';
+		 tableHtml += '<tr><th>PoS Reward</th><td><a target="_blank" href="poslookup.html?block=' + response.data.blockNumber + '">' + (response.data.pos.posRewardInPedro * 0.00000001) + '</a></td></tr>';
 		//tableHtml += '<tr><th>PoS Reward</th><td>' + response.data.pos.posRewardInPedro + '</td></tr>';
 		//tableHtml += '<tr><th>PoS Addresses</th><td>' + response.data.pos.posAddresses + '</td></tr>';
 		tableHtml += '<tr><th>Block Orders</th><td><a target="_blank" href="blocktxlookup.html?blocknumber=' + response.data.blockNumber + '">block ' + response.data.blockNumber + " orders" + '</a></td></tr>';	
