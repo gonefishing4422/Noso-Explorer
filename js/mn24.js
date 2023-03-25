@@ -28,8 +28,8 @@ function loadChart() {
             yAxes: [{
               ticks: {
                 beginAtZero: true,
-                fontColor: '#bbb' // set y-axis tick color
-                
+                fontColor: '#bbb', // set y-axis tick color
+        	suggestedMax: 300 // set the initial maximum y-axis limit                
 		
               },
               gridLines: {
