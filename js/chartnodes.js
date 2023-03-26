@@ -9,14 +9,15 @@ am5.ready(function() {
           })
         );
         chart.children.unshift(am5.Label.new(root, {
-          text: "",
-          fontSize: 25,
-          fontWeight: "500",
-          textAlign: "center",
-          x: am5.percent(70),
-          centerX: am5.percent(50),
-          paddingTop: 0,
-          paddingBottom: 0
+	 text: "",
+	  fontSize: 18,
+	  fontWeight: "500",
+	  textAlign: "start",
+	  x: am5.percent(28),
+	  centerX: am5.percent(50),
+	  paddingTop: 0,
+	  paddingBottom: 0,
+	  fill: am5.color(0xbb9f06) // set font color to red
         }));
         var bubbleSeries = chart.series.push(
           am5map.MapPointSeries.new(root, {
@@ -32,7 +33,7 @@ am5.ready(function() {
             am5.Circle.new(root, {
               radius: 20,
               fillOpacity: 0.7,
-              fill: am5.color(0xbb9f06), //
+              fill: am5.color(0xbb9f06), 
               cursorOverStyle: "pointer",
               tooltipText: `{name}: [bold]{value}[/]`
             }, circleTemplate)
