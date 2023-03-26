@@ -20,7 +20,7 @@ form.addEventListener('submit', (event) => {
 
 function submitForm() {
   const inputAddresslookup = form.elements['addresslookup'].value;
-  const apiUrl = `https://nosostats2.nosofish.xyz:49443/api/analyzeAddress/${inputAddresslookup}`;
+  const apiUrl = `https://nosostats.com:49443/api/analyzeAddress/${inputAddresslookup}`;
 
   // Show the spinner while waiting for the API response
   spinner.style.display = 'inline-block';

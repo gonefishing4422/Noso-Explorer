@@ -7,7 +7,7 @@ $(function() {
   $('#block-number-form').submit(function(event) {
     event.preventDefault(); // Prevent the form from submitting normally
     var blocknumber = $('#block-number-input').val();
-    var apiUrl = 'https://nosostats2.nosofish.xyz:49443/api/blockNumberS/' + blocknumber;
+    var apiUrl = 'https://nosostats.com:49443/api/blockNumberS/' + blocknumber;
 
     $.ajax({
       url: apiUrl,

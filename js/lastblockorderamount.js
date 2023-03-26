@@ -1,5 +1,5 @@
 function fetchData() {
-  fetch('https://nosostats2.nosofish.xyz:49443/api/24hOrdersAmounts')
+  fetch('https://nosostats.com:49443/api/24hOrdersAmounts')
     .then(response => response.json())
     .then(data => {
       const lastAmount = data[data.length - 1][2];

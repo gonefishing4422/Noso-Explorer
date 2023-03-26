@@ -2,7 +2,7 @@
 			$('#aliaslookupform').submit(function(event) {
 				event.preventDefault(); // Prevent the form from submitting normally
 				var aliasName = $('#aliaslookup1').val();
-				var apiUrl = 'https://nosostats2.nosofish.xyz:49443/api/aliasFinder/' + aliasName;
+				var apiUrl = 'https://nosostats.com:49443/api/aliasFinder/' + aliasName;
 
 				$.ajax({
 					url: apiUrl,

@@ -92,7 +92,7 @@ am5.ready(function() {
             }
         }
         async function updateData() {
-          let response = await fetch('https://nosostats2.nosofish.xyz:49443/api/popwGlobe');
+          let response = await fetch('https://nosostats.com:49443/api/popwGlobe');
           let data = await response.json();
           bubbleSeries.data.setAll(data);
     	}

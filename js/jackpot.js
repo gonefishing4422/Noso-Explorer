@@ -1,4 +1,4 @@
-fetch('https://nosostats2.nosofish.xyz:49443/api/analyzeAddress/NPrjectPrtcRandmJacptE5')
+fetch('https://nosostats.com:49443/api/analyzeAddress/NPrjectPrtcRandmJacptE5')
     .then(response => response.json())
     .then(data => {
         const totalBalance = Math.round(data.TotalBalance);

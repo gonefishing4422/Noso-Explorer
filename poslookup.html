@@ -8,8 +8,10 @@
     <meta name="author" content="">
     <title>Noso Exporer</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
-integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+
+integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+
 crossorigin="anonymous">
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -33,17 +35,14 @@ crossorigin="anonymous">
               <table id="postable" class="styled-table">
                 <thead>
                   <tr>
-                    <th>PoS Addresses</th>
-                    <th>PoS Addresses Count</th>
-                    <th>PoSQ</th>
-                    <th>PoS Reward In Pedro</th>
+                    <th>Proof os Stake Addresses</th>
+                    <th>Proof of Stake Quantity</th>
+                    <th>Proof of Stake Reward</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td id="posAddresses"><br>
-                    </td>
-                    <td id="posAddressesCount"><br>
                     </td>
                     <td id="posQ"><br>
                     </td>
@@ -60,7 +59,8 @@ crossorigin="anonymous">
       <br>
       <div class="exprow">
         <div>
-          <div class="row"> <img src="img/logo_clearbg.png" alt="nosologo" title="nosologo"
+          <div class="row"> <img src="img/logo_clearbg.png" alt="nosologo" title="nosologo"
+
               style="width: 15px; height: 15px;">&nbsp;<font size="1px" color="#bbb">Powered
               by NOSO Blockchain&nbsp; | &nbsp; Built by the NOSO Community</font>
           </div>
@@ -83,12 +83,15 @@ crossorigin="anonymous">
         var data = JSON.parse(xhr.responseText);
         var posAddresses = data.pos.posAddresses.join(", ");
         document.getElementById("posAddresses").textContent = posAddresses;
-        document.getElementById("posAddressesCount").textContent = data.posAddresses;
+
         document.getElementById("posQ").textContent = data.posQ;
-        document.getElementById("posRewardInPedro").textContent = data.pos.posRewardInPedro;
+        var posRewardInPedro = parseFloat(data.pos.posRewardInPedro) * 0.00000001;
+        document.getElementById("posRewardInPedro").textContent = posRewardInPedro.toFixed(8);
       }
     };
     xhr.send();
+
      </script>
+    
   </body>
 </html>
