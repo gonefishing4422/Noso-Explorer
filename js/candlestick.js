@@ -23,7 +23,7 @@
                     title: {
                         text: 'P2P trades | NOSO/USD',
                         style: {
-                            color: 'white'
+                            color: '#fbe04d'
                         }
                     },
                     xAxis: {
