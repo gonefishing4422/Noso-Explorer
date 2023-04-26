@@ -493,11 +493,7 @@ table.tablesorter thead tr th:hover {
 }
 
 
-@media screen and (max-width: 600px) {
-  div.example {
-    display: none;
-  }
-}
+
 
 /* Flot Chart Containers */
 
